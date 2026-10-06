@@ -10,6 +10,8 @@ export const site = {
   authorTagline: '在美國東岸生活的台灣人，把自己走過的流程整理成筆記，避免自己忘記，也希望能幫助更多人。',
   logo: '/images/jollux-bear-mark.png',
   locale: 'zh_TW',
+  // Google Analytics 4 的評估 ID；留空字串就不載入。
+  gaId: 'G-L1TM8KWDTH',
 }
 
 export function absoluteUrl(path = '/') {
