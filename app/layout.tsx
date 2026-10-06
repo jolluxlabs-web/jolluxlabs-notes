@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { site } from '@/content/site'
 
@@ -34,6 +35,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
       <body>
         {children}
+        {/* Vercel Web Analytics */}
+        <Analytics />
         {site.gaId && (
           <>
             {/* Google Analytics（gtag.js） */}
