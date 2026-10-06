@@ -76,4 +76,4 @@ npm run dev
 npx vercel --prod
 ```
 
-正式網站網址是 <https://meiguo-notes-nextjs.vercel.app/>。之後若接上 GitHub，也可以改用 GitHub 自動部署。
+正式網站網址是 <https://life.jolluxlabs.com/>。之後若接上 GitHub，也可以改用 GitHub 自動部署。

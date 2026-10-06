@@ -2,7 +2,7 @@
 // 換成自己的網域時，改 url（或在 Vercel 設定環境變數 NEXT_PUBLIC_SITE_URL）。
 export const site = {
   name: '美國生活筆記',
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://meiguo-notes-nextjs.vercel.app').replace(/\/$/, ''),
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://life.jolluxlabs.com').replace(/\/$/, ''),
   description: '把在美國生活遇到的事情，整理成用得上的中文實用筆記。',
   // 作者：會顯示在「關於我」與每篇文章，也會寫進結構化資料。
   author: '美國生活筆記',
