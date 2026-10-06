@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+.DS_Store
+*.log
+.vercel
+*.tsbuildinfo
+
+# IG 原稿資料夾（網站用到的圖已複製到 public/images）
+/DMV/
+/fidelity/
+/shell/
+/global-entry/
