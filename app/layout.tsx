@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     images: [{ url: site.logo, width: 512, height: 512, alt: site.name }],
   },
   twitter: { card: 'summary', title: site.name, description: site.description, images: [site.logo] },
+  verification: site.googleSiteVerification ? { google: site.googleSiteVerification } : undefined,
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

@@ -12,6 +12,8 @@ export const site = {
   locale: 'zh_TW',
   // Google Analytics 4 的評估 ID；留空字串就不載入。
   gaId: 'G-L1TM8KWDTH',
+  // Google Search Console 的 HTML 標記驗證碼；留空字串就不輸出。
+  googleSiteVerification: '6vSzubefPh7xKWUygyR4Iyjp2BbLM5OoCqpPtTQytqU',
 }
 
 export function absoluteUrl(path = '/') {
