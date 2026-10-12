@@ -19,6 +19,8 @@ export const site = {
     description: '整理 DOL 和 USCIS 公開資料，追蹤 H‑1B 抽籤與 PERM 綠卡每一步的進度（英文網站）',
   },
   logo: '/images/jollux-bear-mark.png',
+  // 分享到 LINE、FB、X 時的預覽圖（1200×630）。文章頁改用各自的封面圖。
+  shareImage: { url: '/images/share.png', width: 1200, height: 630, alt: '美國生活筆記：把在美國生活遇到的事情，整理成用得上的中文實用筆記。' },
   locale: 'zh_TW',
   // Google Analytics 4 的評估 ID；留空字串就不載入。
   gaId: 'G-L1TM8KWDTH',

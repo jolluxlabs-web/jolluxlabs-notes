@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: category.title,
     description: category.description,
     alternates: { canonical: path },
-    openGraph: { url: path, title: category.title, description: category.description, images: [{ url: site.logo, width: 512, height: 512, alt: site.name }] },
+    openGraph: { url: path, title: category.title, description: category.description, images: [site.shareImage] },
     // 還沒有文章的分類先不給搜尋引擎收錄，避免被當成空白頁。
     robots: notesIn(category).length === 0 ? { index: false, follow: true } : undefined,
   }
