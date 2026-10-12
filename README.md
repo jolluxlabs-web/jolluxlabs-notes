@@ -8,7 +8,7 @@
 | --- | --- |
 | 首頁自我介紹 | `app/page.tsx` |
 | 文章標題、日期、分類、摘要、前言、目錄 | `content/notes.ts` |
-| Global Entry 文章正文 | `content/notes/global-entry.mdx` |
+| 文章正文（檔名就是網址的 slug） | `content/notes/<slug>.mdx` |
 | 新文章的寫作範本 | `content/ARTICLE_TEMPLATE.mdx` |
 | 網站顏色、字體與排版 | `app/globals.css` |
 | 網站名稱、網址、作者（結構化資料與 sitemap 會用到） | `content/site.ts` |
@@ -18,24 +18,18 @@
 
 以下以「美國駕照」為例。網址會是 `/notes/drivers-license`。
 
-1. 複製 `content/ARTICLE_TEMPLATE.mdx`，命名為 `content/notes/drivers-license.mdx`。把範本中的示意文字、圖片檔名和來源連結換成真正內容；不需要的段落可以刪掉。
-2. 打開 `content/notes.ts`，在最上方加入：
-
-   ```tsx
-   import DriversLicense from './notes/drivers-license.mdx'
-   ```
-
-3. 在同一檔案的 `notes` 清單裡新增一筆：
+1. 複製 `content/ARTICLE_TEMPLATE.mdx`，命名為 `content/notes/drivers-license.mdx`。**檔名必須和 slug 完全相同。**把範本中的示意文字、圖片檔名和來源連結換成真正內容；不需要的段落可以刪掉。
+2. 打開 `content/notes.ts`，在 `entries` 清單裡新增一筆：
 
    ```tsx
    {
      slug: 'drivers-license',
      title: '美國駕照申請筆記',
-     categorySlug: 'daily-life',
+     categorySlug: 'identity-documents',
      date: '2026-09-17',
-     dateLabel: '2026 年 9 月',
-     dateDisplay: '2026 年 9 月 17 日',
      summary: '這篇文章的簡短摘要，會顯示在搜尋結果中。',
+     coverImage: '/images/drivers-license/cover.png',
+     coverAlt: '封面圖的文字說明',
      intro: '文章開頭的兩三句介紹。',
      sections: [
        { id: 'overview', title: '這篇筆記要解決什麼問題？' },
@@ -44,19 +38,22 @@
        { id: 'experience', title: '我的經驗與提醒' },
        { id: 'sources', title: '資料來源' },
      ],
-     Content: DriversLicense,
    },
    ```
 
-4. 如果 `daily-life` 是新分類，也在 `categories` 清單新增：
+   - `categorySlug` 必須是 `categoryEntries` 清單裡已有的分類；打錯時編輯器會畫紅線。要開新分類，就在 `categoryEntries` 加一筆。
+   - 目錄的 `id` 必須和正文標題的 `id` 相同；例如 `{ id: 'steps' }` 對應 `<h2 id="steps">實際步驟</h2>`。`title` 是目錄裡顯示的短標題，可以和正文標題不同。
+   - 「2026 年 9 月」這類日期文字會從 `date` 自動產生，不用自己寫。清單順序也不重要，網站一律新文章排前面。
 
-   ```tsx
-   { slug: 'daily-life', title: '日常生活', description: '在美國生活的實用流程與經驗。' },
+3. 在終端機執行檢查：
+
+   ```bash
+   npm run check
    ```
 
-   `categorySlug` 必須和分類的 `slug` 完全相同。目錄的 `id` 必須和正文標題的 `id` 相同；例如 `{ id: 'steps' }` 對應 `<h2 id="steps">實際步驟</h2>`。
+   它會確認正文檔案存在、目錄的 `id` 都找得到、日期格式正確。有問題會列出是哪一篇、哪一項。`npm run build` 和部署前也會自動跑這個檢查，沒通過就不會上線。
 
-完成後，首頁、分類頁和文章頁都會使用同一筆資料。不要把範本檔直接放在 `content/notes/`；它只是供你複製的底稿。
+完成後，首頁、分類頁、文章頁和 sitemap 都會使用同一筆資料。不要把範本檔直接放在 `content/notes/`；它只是供你複製的底稿。
 
 ## 在電腦上預覽
 

@@ -1,11 +1,10 @@
 import Link from 'next/link'
 import SiteHeader from './components/SiteHeader'
 import JsonLd from './components/JsonLd'
-import { activeCategories, categoryFor, notes } from '@/content/notes'
+import { activeCategories, notes } from '@/content/notes'
 import { absoluteUrl, site } from '@/content/site'
 
 export default function HomePage() {
-  const latest = [...notes].sort((a, b) => b.date.localeCompare(a.date))
   const structuredData = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -28,10 +27,10 @@ export default function HomePage() {
       {
         '@type': 'ItemList',
         name: '最近更新',
-        itemListElement: latest.map((note, index) => ({
+        itemListElement: notes.map((note, index) => ({
           '@type': 'ListItem',
           position: index + 1,
-          url: absoluteUrl(`/notes/${note.slug}`),
+          url: absoluteUrl(note.href),
           name: note.title,
         })),
       },
@@ -48,7 +47,7 @@ export default function HomePage() {
           <Link className="sidebar-link active" href="/"><span>所有筆記</span></Link>
           <p className="sidebar-label sidebar-group">分類</p>
           {activeCategories.map((category) => (
-            <Link className="sidebar-link" href={`/topics/${category.slug}`} key={category.slug}><span>{category.title}</span></Link>
+            <Link className="sidebar-link" href={category.href} key={category.slug}><span>{category.title}</span></Link>
           ))}
         </aside>
 
@@ -66,13 +65,13 @@ export default function HomePage() {
           </section>
 
           <section id="latest" className="home-section" aria-labelledby="latest-title">
-            <div className="section-heading"><h2 id="latest-title">最近更新</h2><span>{latest.length} 篇文章</span></div>
+            <div className="section-heading"><h2 id="latest-title">最近更新</h2><span>{notes.length} 篇文章</span></div>
             <div className="note-list">
-              {latest.map((note) => (
-                <Link className="note-item" href={`/notes/${note.slug}`} key={note.slug}>
+              {notes.map((note) => (
+                <Link className="note-item" href={note.href} key={note.slug}>
                   <span className="note-thumb"><img src={note.coverImage} alt="" /></span>
                   <span className="note-copy"><strong>{note.title}</strong><small>{note.summary}</small></span>
-                  <span className="note-meta">{categoryFor(note.categorySlug)?.title}<br /><time dateTime={note.date}>{note.dateLabel}</time></span>
+                  <span className="note-meta">{note.category.title}<br /><time dateTime={note.date}>{note.dateLabel}</time></span>
                 </Link>
               ))}
             </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { categoryFor, notes } from '@/content/notes'
+import { noteBySlug, notes } from '@/content/notes'
 import { absoluteUrl, site } from '@/content/site'
 import SiteHeader from '@/app/components/SiteHeader'
 import DocsSidebar from '@/app/components/DocsSidebar'
@@ -10,15 +10,18 @@ import { breadcrumbList } from '@/app/components/breadcrumbs'
 
 type Props = { params: Promise<{ slug: string }> }
 
+// 只產生 catalog 裡登記的筆記，其他網址一律 404。
+export const dynamicParams = false
+
 export function generateStaticParams() {
   return notes.map((note) => ({ slug: note.slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  const note = notes.find((item) => item.slug === slug)
+  const note = noteBySlug(slug)
   if (!note) return { title: '文章' }
-  const path = `/notes/${note.slug}`
+  const path = note.href
   return {
     title: note.title,
     description: note.summary,
@@ -29,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: note.title,
       description: note.summary,
       publishedTime: note.date,
-      section: categoryFor(note.categorySlug)?.title,
+      section: note.category.title,
       images: [{ url: note.coverImage, alt: note.coverAlt }],
     },
     twitter: { card: 'summary_large_image', title: note.title, description: note.summary, images: [note.coverImage] },
@@ -38,11 +41,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function NotePage({ params }: Props) {
   const { slug } = await params
-  const note = notes.find((item) => item.slug === slug)
+  const note = noteBySlug(slug)
   if (!note) notFound()
-  const category = categoryFor(note.categorySlug)
-  if (!category) notFound()
-  const Content = note.Content
+  const { category } = note
+  const { default: Content } = await import(`@/content/notes/${note.slug}.mdx`)
   // 本文目錄：桌機放在左側欄，手機放在文章上方。
   const toc = (className: string) => note.sections.length > 0 && (
     <nav className={`toc ${className}`} aria-label="本文目錄">
@@ -52,7 +54,7 @@ export default async function NotePage({ params }: Props) {
       ))}
     </nav>
   )
-  const url = absoluteUrl(`/notes/${note.slug}`)
+  const url = absoluteUrl(note.href)
 
   const structuredData = {
     '@context': 'https://schema.org',
@@ -77,8 +79,8 @@ export default async function NotePage({ params }: Props) {
       },
       breadcrumbList([
         { name: '首頁', path: '/' },
-        { name: category.title, path: `/topics/${category.slug}` },
-        { name: note.title, path: `/notes/${note.slug}` },
+        { name: category.title, path: category.href },
+        { name: note.title, path: note.href },
       ]),
     ],
   }
@@ -91,7 +93,7 @@ export default async function NotePage({ params }: Props) {
         <DocsSidebar current={category.slug}>{toc('toc-sidebar')}</DocsSidebar>
         <article className="docs-main">
         <header className="article-hero">
-          <div className="breadcrumb"><Link href="/">首頁</Link><span>/</span><Link href={`/topics/${category.slug}`}>{category.title}</Link><span>/</span><strong>文章</strong></div>
+          <div className="breadcrumb"><Link href="/">首頁</Link><span>/</span><Link href={category.href}>{category.title}</Link><span>/</span><strong>文章</strong></div>
           <span className="pill">{category.title}</span>
           <h1>{note.title}</h1>
           <div className="post-meta"><time dateTime={note.date}>{note.dateDisplay}</time><span>·</span><Link href="/about">{site.author}</Link></div>
@@ -99,7 +101,7 @@ export default async function NotePage({ params }: Props) {
         </header>
         <div className="article-layout">
           {toc('toc-inline')}
-          <div className="article-body"><Content /><Link className="end-link" href={`/topics/${category.slug}`}>← 回到{category.title}筆記</Link></div>
+          <div className="article-body"><Content /><Link className="end-link" href={category.href}>← 回到{category.title}筆記</Link></div>
         </div>
         </article>
       </div>

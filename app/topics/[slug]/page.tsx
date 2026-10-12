@@ -17,14 +17,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const category = categoryFor((await params).slug)
   if (!category) return { title: '主題' }
-  const path = `/topics/${category.slug}`
+  const path = category.href
   return {
     title: category.title,
     description: category.description,
     alternates: { canonical: path },
     openGraph: { url: path, title: category.title, description: category.description, images: [{ url: site.logo, width: 512, height: 512, alt: site.name }] },
     // 還沒有文章的分類先不給搜尋引擎收錄，避免被當成空白頁。
-    robots: notesIn(category.slug).length === 0 ? { index: false, follow: true } : undefined,
+    robots: notesIn(category).length === 0 ? { index: false, follow: true } : undefined,
   }
 }
 
@@ -32,8 +32,8 @@ export default async function TopicPage({ params }: Props) {
   const category = categoryFor((await params).slug)
   if (!category) notFound()
 
-  const entries = notesIn(category.slug).sort((a, b) => b.date.localeCompare(a.date))
-  const path = `/topics/${category.slug}`
+  const entries = notesIn(category)
+  const path = category.href
   const structuredData = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -49,7 +49,7 @@ export default async function TopicPage({ params }: Props) {
           itemListElement: entries.map((note, index) => ({
             '@type': 'ListItem',
             position: index + 1,
-            url: absoluteUrl(`/notes/${note.slug}`),
+            url: absoluteUrl(note.href),
             name: note.title,
           })),
         },
@@ -77,7 +77,7 @@ export default async function TopicPage({ params }: Props) {
             )}
             <div className="topic-entries">
               {entries.map((note) => (
-                <Link className="topic-entry" href={`/notes/${note.slug}`} key={note.slug}>
+                <Link className="topic-entry" href={note.href} key={note.slug}>
                   <span className="entry-thumb"><img src={note.coverImage} alt="" /></span><span className="entry-copy"><strong>{note.title}</strong><span>{note.summary}</span></span>
                   <span className="entry-meta"><time dateTime={note.date}>{note.dateLabel}</time><span aria-hidden="true">↗</span></span>
                 </Link>

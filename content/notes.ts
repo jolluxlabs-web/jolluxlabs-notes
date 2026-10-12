@@ -1,33 +1,54 @@
-import type { ComponentType } from 'react'
-import GlobalEntry from './notes/global-entry.mdx'
-import TaiwanLicenseUsStates from './notes/taiwan-license-us-states.mdx'
-import FidelityAccount from './notes/fidelity-account.mdx'
-import ShellGasSavings from './notes/shell-gas-savings.mdx'
+// Note catalog：所有筆記和主題分類的唯一來源。頁面、sitemap 和結構化資料都從這裡取資料。
+// 正文放在 content/notes/<slug>.mdx，檔名必須和 slug 相同；npm run check 會檢查。
 
-export type Note = {
+// 主題有自己的頁面；新增主題時，在這裡加一筆。
+const categoryEntries = [
+  { slug: 'travel', icon: '✈️', title: '出入境與旅行', description: '申請流程、旅行準備與入境相關筆記。' },
+  { slug: 'identity-documents', icon: '🪪', title: '身分與文件', description: '身分證件、簽證、申請文件與重要資料。' },
+  { slug: 'us-life', icon: '🏡', title: '美國生活', description: '在美國生活時會遇到的實用流程與經驗。' },
+  { slug: 'banking-credit', icon: '💳', title: '銀行與信用卡', description: '銀行帳戶、信用建立、信用卡與付款。' },
+  { slug: 'insurance-healthcare', icon: '🩺', title: '保險與醫療', description: '醫療保險、看診流程與健康相關筆記。' },
+  { slug: 'work-taxes', icon: '💼', title: '工作與報稅', description: '求職、工作文件、薪資與報稅整理。' },
+  { slug: 'shopping-daily', icon: '🛍️', title: '購物與日常', description: '採買、退貨、生活服務與日常小事。' },
+  { slug: 'home-buying', icon: '🔑', title: '買房', description: '看房、貸款、交易流程與居住規劃。' },
+] as const
+
+export type CategorySlug = (typeof categoryEntries)[number]['slug']
+export type Category = (typeof categoryEntries)[number] & { href: string }
+
+export const categories: Category[] = categoryEntries.map((entry) => ({ ...entry, href: `/topics/${entry.slug}` }))
+
+// 作者要填的欄位；日期標籤、分類物件和網址由 catalog 算出來。
+type NoteEntry = {
   slug: string
   title: string
-  categorySlug: string
+  categorySlug: CategorySlug
+  // 格式 YYYY-MM-DD
   date: string
-  dateLabel: string
-  dateDisplay: string
   summary: string
   coverImage: string
   coverAlt: string
   intro: string
+  // 本文目錄：id 必須和正文的 <h2 id="..."> 相同；title 是目錄裡顯示的短標題。
   sections: { id: string; title: string }[]
-  Content: ComponentType
+}
+
+export type Note = NoteEntry & {
+  category: Category
+  href: string
+  // 例如「2026 年 9 月」
+  dateLabel: string
+  // 例如「2026 年 9 月 16 日」
+  dateDisplay: string
 }
 
 // 新文章先登記在這裡，首頁就會自動列出。
-export const notes: Note[] = [
+const entries: NoteEntry[] = [
   {
     slug: 'global-entry',
     title: '台灣護照申請 Global Entry：從良民證到面試',
     categorySlug: 'travel',
     date: '2026-09-16',
-    dateLabel: '2026 年 9 月',
-    dateDisplay: '2026 年 9 月 16 日',
     summary: '和 TSA PreCheck 的差別、良民證、TTP 填表、信用卡報銷、面試文件與通過後的使用方式。',
     coverImage: '/images/global-entry-logo.png',
     coverAlt: 'Global Entry 標誌',
@@ -41,15 +62,12 @@ export const notes: Note[] = [
       { id: 'use', title: '通過後怎麼用' },
       { id: 'notes', title: '申請前提醒' },
     ],
-    Content: GlobalEntry,
   },
   {
     slug: 'taiwan-license-us-states',
     title: '台灣駕照換美國駕照：各州免試、筆試規定總整理',
     categorySlug: 'identity-documents',
     date: '2026-10-05',
-    dateLabel: '2026 年 10 月',
-    dateDisplay: '2026 年 10 月 5 日',
     summary: '哪些州筆試路試都免、哪些只考筆試、要準備什麼文件、筆試及格標準與中文考試，以及換照流程。',
     coverImage: '/images/dmv/cover.png',
     coverAlt: '台灣駕照換美國駕照的封面圖',
@@ -63,15 +81,12 @@ export const notes: Note[] = [
       { id: 'other-states', title: '要重新考的州' },
       { id: 'process', title: '換照流程' },
     ],
-    Content: TaiwanLicenseUsStates,
   },
   {
     slug: 'fidelity-account',
     title: '在美國怎麼開 Fidelity？沒有工作也能開投資帳戶',
     categorySlug: 'banking-credit',
     date: '2026-10-05',
-    dateLabel: '2026 年 10 月',
-    dateDisplay: '2026 年 10 月 5 日',
     summary: '已有 401(k) 怎麼登入、第一次開戶、線上驗證卡關改紙本、連結銀行、小額交易驗證與入金。',
     coverImage: '/images/fidelity/logo.png',
     coverAlt: 'Fidelity Investments 標誌',
@@ -86,15 +101,12 @@ export const notes: Note[] = [
       { id: 'verification', title: '帳戶驗證' },
       { id: 'recap', title: '最後整理' },
     ],
-    Content: FidelityAccount,
   },
   {
     slug: 'shell-gas-savings',
     title: 'Shell 加油省錢攻略：不辦信用卡也能少付油錢',
     categorySlug: 'shopping-daily',
     date: '2026-10-05',
-    dateLabel: '2026 年 10 月',
-    dateDisplay: '2026 年 10 月 5 日',
     summary: 'Fuel Rewards 新戶優惠、會員等級、Shell S Pay、Race Day、T-Mobile Tuesdays、超市點數與 Upside 回饋。',
     coverImage: '/images/shell/shell-fuel-rewards.png',
     coverAlt: 'Shell Fuel Rewards 會員計畫的標誌',
@@ -111,29 +123,35 @@ export const notes: Note[] = [
       { id: 'payment', title: '付款方式怎麼選' },
       { id: 'summary', title: '總結' },
     ],
-    Content: ShellGasSavings,
   },
 ]
 
-// 主題有自己的頁面；新增主題時，在這裡加一筆。
-export const categories = [
-  { slug: 'travel', icon: '✈️', title: '出入境與旅行', description: '申請流程、旅行準備與入境相關筆記。' },
-  { slug: 'identity-documents', icon: '🪪', title: '身分與文件', description: '身分證件、簽證、申請文件與重要資料。' },
-  { slug: 'us-life', icon: '🏡', title: '美國生活', description: '在美國生活時會遇到的實用流程與經驗。' },
-  { slug: 'banking-credit', icon: '💳', title: '銀行與信用卡', description: '銀行帳戶、信用建立、信用卡與付款。' },
-  { slug: 'insurance-healthcare', icon: '🩺', title: '保險與醫療', description: '醫療保險、看診流程與健康相關筆記。' },
-  { slug: 'work-taxes', icon: '💼', title: '工作與報稅', description: '求職、工作文件、薪資與報稅整理。' },
-  { slug: 'shopping-daily', icon: '🛍️', title: '購物與日常', description: '採買、退貨、生活服務與日常小事。' },
-  { slug: 'home-buying', icon: '🔑', title: '買房', description: '看房、貸款、交易流程與居住規劃。' },
-]
-
-export function categoryFor(slug: string) {
+export function categoryFor(slug: string): Category | undefined {
   return categories.find((category) => category.slug === slug)
 }
 
-export function notesIn(categorySlug: string) {
-  return notes.filter((note) => note.categorySlug === categorySlug)
+function toNote(entry: NoteEntry): Note {
+  const [year, month, day] = entry.date.split('-').map(Number)
+  return {
+    ...entry,
+    category: categoryFor(entry.categorySlug)!,
+    href: `/notes/${entry.slug}`,
+    dateLabel: `${year} 年 ${month} 月`,
+    dateDisplay: `${year} 年 ${month} 月 ${day} 日`,
+  }
+}
+
+// 新到舊排列；同一天的照清單順序。
+export const notes: Note[] = entries.map(toNote).sort((a, b) => b.date.localeCompare(a.date))
+
+export function noteBySlug(slug: string) {
+  return notes.find((note) => note.slug === slug)
+}
+
+// 這個分類的筆記，新到舊排列。
+export function notesIn(category: Category) {
+  return notes.filter((note) => note.category === category)
 }
 
 // 側欄和 sitemap 只列出已經有文章的分類；空分類的頁面不給搜尋引擎收錄。
-export const activeCategories = categories.filter((category) => notesIn(category.slug).length > 0)
+export const activeCategories = categories.filter((category) => notesIn(category).length > 0)
