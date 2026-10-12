@@ -7,6 +7,7 @@ import SiteHeader from '@/app/components/SiteHeader'
 import DocsSidebar from '@/app/components/DocsSidebar'
 import JsonLd from '@/app/components/JsonLd'
 import Breadcrumb from '@/app/components/Breadcrumb'
+import { InstagramCard } from '@/app/components/Instagram'
 import { trailForNote } from '@/app/breadcrumbs'
 import { forNote } from '@/app/structured-data'
 
@@ -73,7 +74,7 @@ export default async function NotePage({ params }: Props) {
         </header>
         <div className="article-layout">
           {toc('toc-inline')}
-          <div className="article-body"><Content /><Link className="end-link" href={category.href}>← 回到{category.title}筆記</Link></div>
+          <div className="article-body"><Content /><InstagramCard text="喜歡這篇筆記？到 IG 追蹤更多 🐻" /><Link className="end-link" href={category.href}>← 回到{category.title}筆記</Link></div>
         </div>
         </article>
       </div>
