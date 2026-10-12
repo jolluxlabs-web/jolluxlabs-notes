@@ -29,8 +29,8 @@ export const notes: Note[] = [
     dateLabel: '2026 年 9 月',
     dateDisplay: '2026 年 9 月 16 日',
     summary: '和 TSA PreCheck 的差別、良民證、TTP 填表、信用卡報銷、面試文件與通過後的使用方式。',
-    coverImage: '/images/global-entry-cover.jpg',
-    coverAlt: '警察刑事紀錄證明（良民證）範例，標示出申請 Global Entry 要填的文號位置',
+    coverImage: '/images/global-entry-logo.png',
+    coverAlt: 'Global Entry 標誌',
     intro: '從良民證、線上申請到面試，照著順序準備。這篇依照我整理的材料與 CBP 官方資訊編寫，申請前仍請以官方頁面為準。',
     sections: [
       { id: 'what', title: '這是什麼' },
@@ -73,8 +73,8 @@ export const notes: Note[] = [
     dateLabel: '2026 年 10 月',
     dateDisplay: '2026 年 10 月 5 日',
     summary: '已有 401(k) 怎麼登入、第一次開戶、線上驗證卡關改紙本、連結銀行、小額交易驗證與入金。',
-    coverImage: '/images/fidelity/micro-deposit.jpg',
-    coverAlt: 'Fidelity 小額驗證交易的通知畫面',
+    coverImage: '/images/fidelity/logo.png',
+    coverAlt: 'Fidelity Investments 標誌',
     intro: '從開 Brokerage Account、線上驗證卡關改走紙本，到連結銀行和入金，整理我自己開 Fidelity 的經驗。',
     sections: [
       { id: 'start', title: '先看你是哪一種' },
@@ -96,8 +96,8 @@ export const notes: Note[] = [
     dateLabel: '2026 年 10 月',
     dateDisplay: '2026 年 10 月 5 日',
     summary: 'Fuel Rewards 新戶優惠、會員等級、Shell S Pay、Race Day、T-Mobile Tuesdays、超市點數與 Upside 回饋。',
-    coverImage: '/images/shell/new-members.png',
-    coverAlt: 'Shell Fuel Rewards 新會員前三次加油省 10、20、30 美分的優惠圖',
+    coverImage: '/images/shell/shell-fuel-rewards.png',
+    coverAlt: 'Shell Fuel Rewards 會員計畫的標誌',
     intro: '同一家 Shell、加一樣的油，善用免費會員、App 付款和現金回饋，一次加滿就可能少付幾美元。',
     sections: [
       { id: 'overview', title: '為什麼不付原價' },
