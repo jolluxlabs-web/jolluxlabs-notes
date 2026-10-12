@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: '關於我',
   description,
   alternates: { canonical: '/about' },
-  openGraph: { type: 'profile', url: '/about', title: `關於我｜${site.name}`, description, images: [{ url: site.logo, width: 512, height: 512, alt: site.name }] },
+  openGraph: { type: 'profile', url: '/about', title: `關於我｜${site.name}`, description, images: [site.shareImage] },
 }
 
 export default function AboutPage() {

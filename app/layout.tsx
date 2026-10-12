@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     url: '/',
     title: site.name,
     description: site.description,
-    images: [{ url: site.logo, width: 512, height: 512, alt: site.name }],
+    images: [site.shareImage],
   },
-  twitter: { card: 'summary', title: site.name, description: site.description, images: [site.logo] },
+  twitter: { card: 'summary_large_image', title: site.name, description: site.description, images: [site.shareImage] },
   verification: site.googleSiteVerification ? { google: site.googleSiteVerification } : undefined,
 }
 
