@@ -2,11 +2,13 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { noteBySlug, notes } from '@/content/notes'
-import { absoluteUrl, site } from '@/content/site'
+import { site } from '@/content/site'
 import SiteHeader from '@/app/components/SiteHeader'
 import DocsSidebar from '@/app/components/DocsSidebar'
 import JsonLd from '@/app/components/JsonLd'
-import { breadcrumbList } from '@/app/components/breadcrumbs'
+import Breadcrumb from '@/app/components/Breadcrumb'
+import { trailForNote } from '@/app/breadcrumbs'
+import { forNote } from '@/app/structured-data'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -54,46 +56,16 @@ export default async function NotePage({ params }: Props) {
       ))}
     </nav>
   )
-  const url = absoluteUrl(note.href)
-
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'BlogPosting',
-        '@id': `${url}#article`,
-        mainEntityOfPage: url,
-        url,
-        headline: note.title,
-        description: note.summary,
-        abstract: note.intro,
-        image: absoluteUrl(note.coverImage),
-        datePublished: note.date,
-        dateModified: note.date,
-        inLanguage: 'zh-Hant',
-        articleSection: category.title,
-        author: { '@type': 'Person', '@id': absoluteUrl('/about#author'), name: site.author, url: absoluteUrl('/about') },
-        publisher: { '@type': 'Organization', '@id': absoluteUrl('/#publisher'), name: site.name, logo: { '@type': 'ImageObject', url: absoluteUrl(site.logo) } },
-        isPartOf: { '@id': absoluteUrl('/#website') },
-        hasPart: note.sections.map((section) => ({ '@type': 'WebPageElement', name: section.title, url: `${url}#${section.id}` })),
-      },
-      breadcrumbList([
-        { name: '首頁', path: '/' },
-        { name: category.title, path: category.href },
-        { name: note.title, path: note.href },
-      ]),
-    ],
-  }
 
   return (
     <main className="docs-page article-page">
-      <JsonLd data={structuredData} />
+      <JsonLd data={forNote(note)} />
       <SiteHeader />
       <div className="docs-layout">
         <DocsSidebar current={category.slug}>{toc('toc-sidebar')}</DocsSidebar>
         <article className="docs-main">
         <header className="article-hero">
-          <div className="breadcrumb"><Link href="/">首頁</Link><span>/</span><Link href={category.href}>{category.title}</Link><span>/</span><strong>文章</strong></div>
+          <Breadcrumb trail={trailForNote(note)} />
           <span className="pill">{category.title}</span>
           <h1>{note.title}</h1>
           <div className="post-meta"><time dateTime={note.date}>{note.dateDisplay}</time><span>·</span><Link href="/about">{site.author}</Link></div>

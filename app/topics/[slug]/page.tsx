@@ -2,11 +2,13 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { categories, categoryFor, notesIn } from '@/content/notes'
-import { absoluteUrl, site } from '@/content/site'
+import { site } from '@/content/site'
 import SiteHeader from '@/app/components/SiteHeader'
 import DocsSidebar from '@/app/components/DocsSidebar'
 import JsonLd from '@/app/components/JsonLd'
-import { breadcrumbList } from '@/app/components/breadcrumbs'
+import Breadcrumb from '@/app/components/Breadcrumb'
+import { trailForTopic } from '@/app/breadcrumbs'
+import { forTopic } from '@/app/structured-data'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -33,42 +35,15 @@ export default async function TopicPage({ params }: Props) {
   if (!category) notFound()
 
   const entries = notesIn(category)
-  const path = category.href
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'CollectionPage',
-        url: absoluteUrl(path),
-        name: category.title,
-        description: category.description,
-        inLanguage: 'zh-Hant',
-        isPartOf: { '@id': absoluteUrl('/#website') },
-        mainEntity: {
-          '@type': 'ItemList',
-          itemListElement: entries.map((note, index) => ({
-            '@type': 'ListItem',
-            position: index + 1,
-            url: absoluteUrl(note.href),
-            name: note.title,
-          })),
-        },
-      },
-      breadcrumbList([
-        { name: '首頁', path: '/' },
-        { name: category.title, path },
-      ]),
-    ],
-  }
 
   return (
     <main className="docs-page topic-page">
-      <JsonLd data={structuredData} />
+      <JsonLd data={forTopic(category)} />
       <SiteHeader />
       <div className="docs-layout">
         <DocsSidebar current={category.slug} />
         <div className="docs-main">
-          <div className="breadcrumb"><Link href="/">首頁</Link><span>/</span><span>分類</span><span>/</span><strong>{category.title}</strong></div>
+          <Breadcrumb trail={trailForTopic(category)} />
           <header className="topic-hero"><span className="topic-icon" aria-hidden="true">{category.icon}</span><p className="eyebrow">TOPIC · {category.slug.toUpperCase()}</p><h1>{category.title}</h1><p>{category.description}</p></header>
           <section aria-label={`${category.title}文章`}>
             <div className="docs-section-label"><span>這個主題的筆記</span><span>{entries.length} 篇</span></div>

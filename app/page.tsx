@@ -2,44 +2,12 @@ import Link from 'next/link'
 import SiteHeader from './components/SiteHeader'
 import JsonLd from './components/JsonLd'
 import { activeCategories, notes } from '@/content/notes'
-import { absoluteUrl, site } from '@/content/site'
+import { forHome } from './structured-data'
 
 export default function HomePage() {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'WebSite',
-        '@id': absoluteUrl('/#website'),
-        url: absoluteUrl('/'),
-        name: site.name,
-        description: site.description,
-        inLanguage: 'zh-Hant',
-        publisher: { '@id': absoluteUrl('/#publisher') },
-      },
-      {
-        '@type': 'Organization',
-        '@id': absoluteUrl('/#publisher'),
-        name: site.name,
-        url: absoluteUrl('/'),
-        logo: absoluteUrl(site.logo),
-      },
-      {
-        '@type': 'ItemList',
-        name: '最近更新',
-        itemListElement: notes.map((note, index) => ({
-          '@type': 'ListItem',
-          position: index + 1,
-          url: absoluteUrl(note.href),
-          name: note.title,
-        })),
-      },
-    ],
-  }
-
   return (
     <main className="home-page">
-      <JsonLd data={structuredData} />
+      <JsonLd data={forHome()} />
       <SiteHeader />
       <div className="home-layout">
         <aside className="home-sidebar" aria-label="筆記導覽">

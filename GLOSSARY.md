@@ -22,3 +22,7 @@ _Avoid_: heading, chapter
 **Note catalog**:
 網站上所有 Note 和 Category 的唯一清單，Note 一律依發布日期新到舊排列。
 _Avoid_: registry, posts list
+
+**Breadcrumb trail**（麵包屑路徑）:
+從首頁到目前頁面的層級，例如「首頁 → Category → Note」。畫面上的麵包屑和給搜尋引擎的結構化資料用的是同一條。
+_Avoid_: path, navigation
