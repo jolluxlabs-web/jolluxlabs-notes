@@ -12,11 +12,11 @@ function InstagramGlyph() {
   )
 }
 
-// 折線圖示：代表 Jollux Labs 的進度追蹤
-function TrackerGlyph() {
+// 綠卡（證件卡）圖示：代表 Jollux Labs 的 H-1B・綠卡進度追蹤
+function GreenCardGlyph() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M3 3v18h18" /><path d="m7 15 4-4 3 3 6-6" /><path d="M16 8h4v4" />
+      <rect x="2" y="5" width="20" height="14" rx="2" /><circle cx="8" cy="11" r="2" /><path d="M5 16c.6-1.5 1.7-2 3-2s2.4.5 3 2" /><path d="M14 10h5M14 14h3" />
     </svg>
   )
 }
@@ -50,11 +50,11 @@ export function InstagramCard({ text = '在 Instagram 追蹤美國生活小筆�
 
 export function JolluxLabsSidebarLink() {
   const { name, url, short } = site.jolluxLabs
-  return <SidebarLink href={url} label={`${name}：${short}`} icon={<TrackerGlyph />}>{name}<small>{short}</small></SidebarLink>
+  return <SidebarLink href={url} label={`${name}：${short}`} icon={<GreenCardGlyph />}>{name}<small>{short}</small></SidebarLink>
 }
 
 // MDX 裡可以直接寫 <JolluxLabsCard />
 export function JolluxLabsCard() {
   const { name, url, description } = site.jolluxLabs
-  return <LinkCard href={url} icon={<TrackerGlyph />} title={name} text={description} action="前往" />
+  return <LinkCard href={url} icon={<GreenCardGlyph />} title={name} text={description} action="前往" />
 }
