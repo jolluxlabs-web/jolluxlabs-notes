@@ -119,6 +119,7 @@ export function forAbout() {
       description: site.authorTagline,
       url: absoluteUrl('/about'),
       image: absoluteUrl(site.logo),
+      sameAs: [site.instagram],
     },
     breadcrumbList(trailForAbout()),
   )
