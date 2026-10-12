@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import SiteHeader from './components/SiteHeader'
 import JsonLd from './components/JsonLd'
+import SidebarAuthor from './components/SidebarAuthor'
 import { activeCategories, notes } from '@/content/notes'
 import { forHome } from './structured-data'
 
@@ -17,6 +18,7 @@ export default function HomePage() {
           {activeCategories.map((category) => (
             <Link className="sidebar-link" href={category.href} key={category.slug}><span>{category.title}</span></Link>
           ))}
+          <SidebarAuthor />
         </aside>
 
         <div className="home-content">

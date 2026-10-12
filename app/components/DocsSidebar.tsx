@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { activeCategories } from '@/content/notes'
+import SidebarAuthor from './SidebarAuthor'
 
 export default function DocsSidebar({ current, children }: { current: string; children?: ReactNode }) {
   return (
@@ -9,6 +10,7 @@ export default function DocsSidebar({ current, children }: { current: string; ch
       <Link href="/" className="sidebar-home">全部筆記</Link>
       {activeCategories.map((item) => <Link key={item.slug} className={`sidebar-link ${item.slug === current ? 'active' : ''}`} href={item.href}>{item.title}</Link>)}
       {children}
+      <SidebarAuthor current={current === 'about'} />
     </aside>
   )
 }

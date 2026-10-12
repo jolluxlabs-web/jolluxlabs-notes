@@ -11,11 +11,11 @@ function InstagramGlyph() {
   )
 }
 
-// 頁首右上角的小圓鈕
-export function InstagramButton() {
+// 左側欄最下面的 IG 連結（手機版側欄變成橫向分類列時不顯示）
+export function InstagramSidebarLink() {
   return (
-    <a className="ig-button" href={site.instagram} target="_blank" rel="noopener noreferrer" aria-label={`Instagram ${handle}`}>
-      <InstagramGlyph />
+    <a className="sidebar-ig" href={site.instagram} target="_blank" rel="noopener noreferrer" aria-label={`Instagram ${handle}`}>
+      <InstagramGlyph /><span>{handle}</span>
     </a>
   )
 }

@@ -25,7 +25,7 @@ export default function AboutPage() {
       <JsonLd data={forAbout()} />
       <SiteHeader />
       <div className="docs-layout">
-        <DocsSidebar current="" />
+        <DocsSidebar current="about" />
         <article className="docs-main">
           <Breadcrumb trail={trailForAbout()} />
           <header className="about-hero">

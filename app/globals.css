@@ -48,12 +48,10 @@ img { max-width: 100% }
 .site-logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font: 17px/1 var(--round); white-space: nowrap }
 .logo-mark { width: 40px; height: 40px; border-radius: 50%; background: var(--accent-soft); object-fit: contain; transition: transform .3s }
 .site-logo:hover .logo-mark { transform: rotate(-12deg) scale(1.08) }
-.site-nav { display: flex; gap: 8px; font-size: 14px; font-weight: 700 }
+/* 電腦版的「關於我」在左側欄；頁首的只在手機版顯示 */
+.site-nav { display: none; gap: 8px; font-size: 14px; font-weight: 700 }
 .site-nav a { text-decoration: none; padding: 7px 16px; border-radius: 999px; background: var(--honey-soft); color: var(--bear) }
 .site-nav a:hover { background: var(--honey); color: var(--ink) }
-.site-nav .ig-button { display: grid; place-items: center; width: 36px; padding: 0; color: #fff; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%); transition: transform .2s }
-.site-nav .ig-button:hover { color: #fff; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%); transform: translateY(-2px) }
-.ig-button svg { width: 20px; height: 20px }
 
 /* ===== 側欄 ===== */
 .home-layout, .docs-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 48px }
@@ -77,6 +75,10 @@ img { max-width: 100% }
 .sidebar-link.active { background: var(--accent-soft); color: var(--bear) }
 .sidebar-link.active::before { background: var(--accent) }
 .sidebar-home { color: var(--ink) }
+.sidebar-author { margin-top: 18px; padding-top: 12px; border-top: 2px dashed var(--line) }
+.sidebar-ig { display: flex; align-items: center; gap: 8px; padding: 8px 10px 4px; color: var(--muted); font-size: 13px; font-weight: 700; text-decoration: none; transition: color .2s }
+.sidebar-ig:hover { color: var(--bear) }
+.sidebar-ig svg { flex: none; width: 20px; height: 20px }
 
 /* ===== 首頁 ===== */
 .home-content { padding-top: 36px; min-width: 0 }
@@ -262,7 +264,7 @@ img { max-width: 100% }
 .article-body .ig-card { display: flex; align-items: center; gap: 16px; max-width: 460px; margin: 30px 0 0; padding: 16px 18px; border: 2px solid var(--line); border-radius: 22px; background: var(--bg); color: var(--ink); text-decoration: none; font-weight: 400; box-shadow: var(--shadow); transition: transform .2s, border-color .2s }
 .article-body .ig-card:hover { transform: translateY(-2px); border-color: var(--accent); color: var(--ink) }
 .article-body p + .ig-card { margin-top: 6px }
-.ig-icon { flex: none; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; color: #fff; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%) }
+.ig-icon { flex: none; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; color: #fff; background: var(--ink) }
 .ig-icon svg { width: 28px; height: 28px }
 .ig-copy { flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.5 }
 .ig-copy strong { font: 18px/1.4 var(--round); color: var(--bear) }
@@ -285,6 +287,8 @@ img { max-width: 100% }
   .toc-inline a { display: inline-block; margin-right: 4px }
   .home-sidebar, .docs-sidebar { position: static; max-height: none; display: flex; gap: 6px; overflow-x: auto; margin-top: 18px; padding: 8px; border-radius: 999px }
   .sidebar-label { display: none }
+  .sidebar-author { display: none }
+  .site-nav { display: flex }
   .sidebar-link, .sidebar-home { flex: none; margin: 0; white-space: nowrap }
   .home-content, .docs-main { padding-top: 22px }
   .home-intro { padding: 30px 24px; border-radius: 26px }
