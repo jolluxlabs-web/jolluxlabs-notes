@@ -1,6 +1,6 @@
 import type { MDXComponents } from 'mdx/types'
-import { InstagramCard } from '@/app/components/Instagram'
+import { InstagramCard, JolluxLabsCard } from '@/app/components/ExternalLinks'
 
 export function useMDXComponents(): MDXComponents {
-  return { InstagramCard }
+  return { InstagramCard, JolluxLabsCard }
 }

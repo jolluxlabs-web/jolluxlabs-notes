@@ -7,7 +7,7 @@ import SiteHeader from '@/app/components/SiteHeader'
 import DocsSidebar from '@/app/components/DocsSidebar'
 import JsonLd from '@/app/components/JsonLd'
 import Breadcrumb from '@/app/components/Breadcrumb'
-import { InstagramCard } from '@/app/components/Instagram'
+import { InstagramCard } from '@/app/components/ExternalLinks'
 import { trailForNote } from '@/app/breadcrumbs'
 import { forNote } from '@/app/structured-data'
 
