@@ -45,6 +45,27 @@ export type Note = NoteEntry & {
 // 新文章先登記在這裡，首頁就會自動列出。
 const entries: NoteEntry[] = [
   {
+    slug: 'ezpass-east-coast',
+    title: 'E-ZPass 怎麼申請？東岸開車的過路費筆記',
+    categorySlug: 'us-life',
+    date: '2026-10-13',
+    summary: '以紐約、新澤西為例，整理 E-ZPass 帳戶選擇、申請資料、預付與自動儲值、感應器安裝、跨州折扣及租車注意事項。',
+    coverImage: '/images/ezpass/logo.png',
+    coverAlt: 'E-ZPass 標誌',
+    intro: '東岸開車常會遇到收費公路、橋梁和隧道。先選適合常走路線的 E-ZPass 帳戶，再把車牌、付款和感應器設定好，過路費就比較好管理。這篇以紐約、新澤西為例，依官方資料整理。',
+    sections: [
+      { id: 'overview', title: 'E-ZPass 是什麼' },
+      { id: 'choose', title: '申請哪一州的帳戶' },
+      { id: 'prepare', title: '要準備什麼' },
+      { id: 'apply', title: '申請與付款設定' },
+      { id: 'mount', title: '感應器怎麼裝' },
+      { id: 'tolls', title: '過路費與帳單' },
+      { id: 'rental', title: '租車怎麼使用' },
+      { id: 'checklist', title: '出發前檢查清單' },
+      { id: 'sources', title: '官方資料' },
+    ],
+  },
+  {
     slug: 'global-entry',
     title: '台灣護照申請 Global Entry：從良民證到面試',
     categorySlug: 'travel',

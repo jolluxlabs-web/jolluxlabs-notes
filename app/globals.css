@@ -231,6 +231,10 @@ img { max-width: 100% }
 
 .article-figure { margin: 10px 0 28px; padding: 10px 10px 4px; background: #fff; border: 2px solid var(--line); border-radius: 22px; box-shadow: 0 4px 0 rgba(154, 87, 65, .05) }
 .article-figure img { display: block; width: 100%; border-radius: 14px }
+/* 標誌類小圖：維持原尺寸置中，不拉滿整欄 */
+.logo-figure img { width: auto; max-width: min(340px, 100%); margin: 20px auto 8px; border-radius: 0 }
+/* 說明小圖：用原始尺寸，不放大糊掉 */
+.native-figure img { width: auto; max-width: 100%; margin: 6px auto 0; border-radius: 0 }
 .figure-narrow { max-width: 420px; margin-inline: auto }
 .article-figure figcaption { padding: 8px 6px 4px; color: var(--quiet); font-size: 13px; line-height: 1.7; text-align: center }
 
