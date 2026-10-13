@@ -55,7 +55,10 @@ const entries: NoteEntry[] = [
     intro: '東岸開車常會遇到收費公路、橋梁和隧道。先選適合常走路線的 E-ZPass 帳戶，再把車牌、付款和感應器設定好，過路費就比較好管理。這篇以紐約、新澤西為例，依官方資料整理。',
     sections: [
       { id: 'overview', title: 'E-ZPass 是什麼' },
+      { id: 'states', title: '哪些州可以用' },
+      { id: 'without', title: '沒有 E-ZPass 會怎樣' },
       { id: 'choose', title: '申請哪一州的帳戶' },
+      { id: 'fees', title: '各州月費' },
       { id: 'prepare', title: '要準備什麼' },
       { id: 'apply', title: '申請與付款設定' },
       { id: 'mount', title: '感應器怎麼裝' },
