@@ -58,6 +58,7 @@ const entries: NoteEntry[] = [
       { id: 'compare', title: '和 TSA PreCheck 比較' },
       { id: 'eligible', title: '先準備良民證' },
       { id: 'steps', title: '申請步驟' },
+      { id: 'credit-card', title: '信用卡報銷申請費' },
       { id: 'interview', title: '面試要帶什麼' },
       { id: 'use', title: '通過後怎麼用' },
       { id: 'notes', title: '申請前提醒' },

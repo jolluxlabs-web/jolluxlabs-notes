@@ -251,6 +251,11 @@ img { max-width: 100% }
 .compare-table thead .featured { background: var(--honey); color: var(--ink) }
 .compare-table .no { color: var(--quiet) }
 .compare-table small { color: var(--quiet); font-size: 12px; font-weight: 600 }
+/* 信用卡報銷表：金額和頻率不換行 */
+.card-table td:nth-child(2), .card-table td:nth-child(3) { white-space: nowrap }
+/* 面試文件清單：說明欄靠左，分組列加底色 */
+.doc-table th, .doc-table td { text-align: left }
+.doc-table tbody tr.group th { width: auto; padding: 10px 16px; background: var(--accent-soft); color: var(--bear); font: 15px/1.5 var(--round) }
 .article-body ol:not(.steps) { padding-left: 0; list-style: none; counter-reset: item }
 .article-body ol:not(.steps) > li { position: relative; padding-left: 36px; margin-bottom: 10px; counter-increment: item }
 .article-body ol:not(.steps) > li::before { content: counter(item); position: absolute; left: 0; top: .25em; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--accent-soft); color: var(--bear); font: 800 12px/1 var(--sans) }
