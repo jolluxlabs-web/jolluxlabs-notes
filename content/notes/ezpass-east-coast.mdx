@@ -1,18 +1,18 @@
 <aside className="quick-box">
   <strong className="quick-label">先看重點</strong>
   <ul>
-    <li><strong>一個帳戶跨州通用</strong>：20 個州都能用，不用每州各辦一個</li>
-    <li><strong>沒有 E-ZPass 會貴很多</strong>：紐約市的橋和隧道，一趟多付 US$4.57</li>
-    <li><strong>選帳戶看常走的路</strong>：常進紐約市就辦 NY，外州 E-ZPass 在紐約算車牌價</li>
-    <li><strong>預付制</strong>：先存錢進帳戶，建議開自動儲值</li>
-    <li><strong>Tag 要貼對位置</strong>：沒讀到，通常拿不到 E-ZPass 價</li>
+    <li><strong>一個帳戶跨州通用</strong>：20 個州有支援的道路、橋梁或隧道，不用每州各辦一個</li>
+    <li><strong>E-ZPass 通常比較省</strong>：許多收費路段的 E-ZPass 費率比車牌收費低，優惠依路段和帳戶而異</li>
+    <li><strong>選帳戶看常走的路</strong>：先比較常走路段的折扣和帳戶費用，不一定要辦居住州的帳戶</li>
+    <li><strong>一般帳戶採預付制</strong>：可開自動儲值；NY 另有不用預存餘額的 Pay Per Trip</li>
+    <li><strong>Tag 要貼對位置</strong>：沒讀到時，可能改按較高的車牌辨識費率收費</li>
   </ul>
 </aside>
 
 <p className="section-number">01 / OVERVIEW</p>
 <h2 id="overview">E-ZPass 是什麼？像台灣的電子收費嗎？</h2>
 
-可以把 E-ZPass 想成東岸常用的電子過路費系統：先開帳戶，把 **Tag／Transponder（感應器）** 裝在車上，經過支援的收費設施時讀取感應器，再從帳戶扣款。一般預付帳戶會先存一筆錢，之後用來付過路費。
+可以把 E-ZPass 想成東岸常用的電子過路費系統：先開帳戶，把 **Tag／Transponder（感應器）** 裝在車上，經過支援的收費設施時讀取感應器，再從帳戶扣款。和台灣的電子收費一樣，都是自動收取過路費；不過美國有多個帳戶發行機構，接受的路段和優惠條件要分別確認。
 
 <figure className="article-figure logo-figure">
   <img src="/images/ezpass/logo-wordmark.png" alt="E-ZPass 標誌" width="453" height="131" loading="lazy" />
@@ -40,14 +40,18 @@ E-ZPass 目前可以在 **20 個州**使用（2026 年 10 月查核）：
   </table>
 </div>
 
-- **DC 不在清單上**：DC 本身幾乎沒有收費道路，住 DMV 的人用到的多半是 Maryland、Virginia 的收費路
-- **Florida 收費路都能用**：佛州自己發的是 SunPass，但州內收費路都接受 E-ZPass，開車南下不用另辦
+- **DC 不在清單上**：住 DMV（Washington, DC、Maryland、Virginia）地區的人，用到的多半是 Maryland、Virginia 的收費路
+- **Florida 收費路都能用**：依 Florida’s Turnpike 官方說明，州內所有收費道路及多數收費橋梁接受 E-ZPass，開車南下通常不用另辦 SunPass；個別橋梁仍要先確認
 - **有些州只有部分道路接受**：例如 Georgia 是 Peach Pass 的路段，Michigan、Minnesota 也只有特定橋梁或車道；開到這些州前，先查官方清單
 
 <p className="section-number">03 / WITHOUT E-ZPASS</p>
 <h2 id="without">沒有 E-ZPass 會怎樣？</h2>
 
-沒有 E-ZPass 也能開，系統會拍下車牌，把帳單（**Tolls by Mail**）寄到家，但**比 E-ZPass 貴很多**。以紐約市 MTA 的橋和隧道為例（小客車單程，2026 年）：
+在**支援車牌收費的路段**，沒有 E-ZPass 通常也能通行。系統會拍下車牌，再把帳單寄給車輛登記人，費率通常比 E-ZPass 高。紐約稱這種付款方式為 **Tolls by Mail**；如果是租車，帳單可能先寄給租車公司，再依合約向你收費。
+
+但**部分 Express Lanes 或 E-ZPass-only 車道要求使用感應器**，不能把「事後等帳單」當成一般付款方式。例如 Virginia 的部分 Express Lanes，沒有 E-ZPass 會產生未繳通行費，寄出的帳單還會加收行政費。
+
+以 MTA 管理的 **Queens Midtown Tunnel** 為例（一般小客車單程，2026 年 1 月 4 日起生效）：
 
 <div className="compare-table">
   <table>
@@ -55,16 +59,19 @@ E-ZPass 目前可以在 **20 個州**使用（2026 年 10 月查核）：
       <tr><th>付款方式</th><th>單程過路費</th></tr>
     </thead>
     <tbody>
-      <tr><th>E-ZPass NY</th><td className="featured">US$7.46</td></tr>
-      <tr><th>Tolls by Mail</th><td>US$12.03</td></tr>
+      <tr><th>NY 帳戶，NY Tag 正常讀取</th><td className="featured">US$7.46</td></tr>
+      <tr><th>NY 帳戶，靠車牌辨識扣款（Mid-Tier）</th><td>US$9.79</td></tr>
+      <tr><th>Tolls by Mail／非 NY 帳戶費率</th><td>US$12.03</td></tr>
     </tbody>
   </table>
 </div>
 
-<small>Tolls by Mail：沒有 E-ZPass，或用外州 E-ZPass 時適用。</small>
+<small>其他橋隧費率可能不同，請查 MTA 官方費率表；符合居民優惠的帳戶另依方案計算。</small>
 
-- 一趟差 **US$4.57**，每天通勤來回，一個月就差將近 **US$200**
-- **外州 E-ZPass 在紐約也算車牌價**；常過紐約的橋，辦 NY 帳戶比較划算
+此處的 **NY 帳戶**指 New York Customer Service Center（NYCSC）帳戶，與住址或車牌登記州無關。非 NY 帳戶按 Tolls by Mail 的費率收費，Tag 正常讀取時仍可從 E-ZPass 帳戶扣款。
+
+- 正常讀取 NY Tag 與 Tolls by Mail 的單程價差是 **US$4.57**。假設每月通勤 22 天、每天兩次同價收費，合計差 **US$201.08**；實際差額依路線與收費方向計算
+- **優惠看收費機構**：MTA 橋隧、Thruway 對 NY 帳戶有較低費率；George Washington Bridge、Lincoln Tunnel 等 Port Authority 橋隧，則是 NY、NJ 帳戶都能享有 E-ZPass 優惠
 - 帳單忘了繳，還會加收滯納金
 
 <p className="section-number">04 / CHOOSE YOUR ACCOUNT</p>
@@ -76,9 +83,10 @@ E-ZPass 目前可以在 **20 個州**使用（2026 年 10 月查核）：
   <table>
     <thead><tr><th>你的情況</th><th>建議</th><th>為什麼</th></tr></thead>
     <tbody>
-      <tr><th>常進紐約市、走 Thruway（不管住哪）</th><td className="featured">辦 NY</td><td>外州 E-ZPass 在紐約算車牌價，一趟多付 US$4 以上</td></tr>
-      <tr><th>幾乎只走 NJ 的收費路</th><td>NJ 或 NY 都可以</td><td>NJ 有月費，但 NJ 道路可能有本州折扣</td></tr>
-      <tr><th>住其他州</th><td>辦自己州的</td><td>本州道路的折扣，通常只給本州帳戶</td></tr>
+      <tr><th>常走 MTA 橋隧或 Thruway</th><td className="featured">優先考慮 NY</td><td>NY 帳戶有較低費率，不限紐約居民</td></tr>
+      <tr><th>主要走 George Washington Bridge、Lincoln／Holland Tunnel 等 Port Authority 橋隧</th><td>NY、NJ 都有優惠</td><td>再比較帳戶固定費用，以及其他常走道路的折扣</td></tr>
+      <tr><th>常在離峰時段走 NJ Turnpike</th><td>優先考慮 NJ</td><td>小客車離峰優惠適用 NJ E-ZPass 帳戶；其他 NJ 道路另查方案</td></tr>
+      <tr><th>主要走其他州的收費路</th><td>比較常走路段的方案</td><td>部分優惠限定指定帳戶或居民，先確認資格與固定費用</td></tr>
     </tbody>
   </table>
 </div>
@@ -86,24 +94,26 @@ E-ZPass 目前可以在 **20 個州**使用（2026 年 10 月查核）：
 <p className="section-number">05 / ACCOUNT FEES</p>
 <h2 id="fees">各州帳戶要收月費嗎？</h2>
 
-東岸幾個主要州的帳戶固定費用（2026 年 10 月查核）：
+以下以**一般個人帳戶**為主，整理幾個主要帳戶的固定費用（2026 年 10 月查核）。商業帳戶、紙本帳單及 Tag 遺失等費用另計：
 
 <div className="compare-table">
   <table>
     <thead><tr><th>帳戶</th><th>固定費用</th><th>備註</th></tr></thead>
     <tbody>
-      <tr><th>New York</th><td className="featured">沒有月費</td><td>基本方案先預付 US$25 當帳戶餘額</td></tr>
+      <tr><th>NY：MTA／Thruway／NYSBA 帳戶</th><td className="featured">免月費</td><td>標準預付方案需先預付 US$25；Pay Per Trip 另依方案辦理</td></tr>
+      <tr><th>NY：Port Authority（PANYNJ）帳戶</th><td>每月 US$1</td><td>同屬 NY 系統，但有帳戶服務費；申請時確認所屬機構</td></tr>
       <tr><th>New Jersey</th><td>每月 US$1</td><td>Tag 押金 US$10，設定自動儲值就免</td></tr>
       <tr><th>Maryland</th><td>外州地址每月 US$1.50</td><td>上一期經過 MD 收費站 3 次以上就免；MD 地址不收</td></tr>
       <tr><th>Virginia</th><td className="featured">沒有月費</td><td>線上開戶每個 Tag 先預付 US$20 當餘額</td></tr>
       <tr><th>Pennsylvania</th><td>每個 Tag 每年 US$3</td><td>Tag 押金 US$10，設定自動儲值就免</td></tr>
-      <tr><th>Massachusetts</th><td>Tag 免費</td><td>官網沒有列出月費</td></tr>
+      <tr><th>Massachusetts</th><td>Tag 免費；費用表未列一般帳戶月費</td><td>線上帳單免費，郵寄帳單每份 US$0.60</td></tr>
     </tbody>
   </table>
 </div>
 
 - 住 DC、Virginia 的人如果辦 **Maryland 帳戶**，不常走 MD 收費路的月份就會被收月費
-- 其他州的費用，到該州 E-ZPass 官網確認
+- **NY 要確認帳戶所屬機構**：NYSBA 是紐約州橋梁管理局；PANYNJ 是紐約與新澤西港務局，官方條款列有每月 US$1 服務費。帳戶所屬機構可從 Tag 標示確認
+- 預付餘額是拿來付過路費，與月費、年費或可退還的 Tag 押金不同；其他帳戶的費用，到帳戶發行機構官網確認
 
 <p className="section-number">06 / PREPARATION</p>
 <h2 id="prepare">申請前要準備什麼？</h2>
@@ -114,28 +124,32 @@ E-ZPass 目前可以在 **20 個州**使用（2026 年 10 月查核）：
 - **車輛資料**：車牌號碼、車牌登記州，以及表單要求的車輛資訊。
 - **付款資料**：預計使用的信用卡、金融卡或銀行帳戶資料；可用的付款方式依申請頁面為準。
 - **使用需求**：預計申請幾個 Tag（感應器）。
-- **折扣方案**：各州及發卡機構的優惠不同，可先到所選 E-ZPass 的官方網站，查看是否有符合使用需求的方案。
+- **折扣方案**：各州及帳戶發行機構的優惠不同，可先到所選 E-ZPass 的官方網站，查看是否有符合使用需求的方案。
 
 <p className="section-number">07 / APPLY & PAYMENT</p>
 <h2 id="apply">怎麼申請？</h2>
 
-各州申請流程大同小異，都是這四步：
+一般個人帳戶的申請流程大致分成四步：
 
-1. **到發卡機構官網開帳戶**：自用車選個人帳戶；公司登記的車要選商業帳戶。
+1. **到帳戶發行機構官網開帳戶**：一般自用車選個人帳戶；公司或商業用途的車，依申請資格選擇商業帳戶。
 2. **填資料**：聯絡地址、車輛資料和要幾個 Tag。
-3. **設定付款**：E-ZPass 是**預付制**，過路費從餘額扣。
-4. **送出，等 Tag 寄來**：收到後裝到車上就能用。
+3. **設定付款**：一般帳戶採**預付制**，過路費從餘額扣；NY 另有 Pay Per Trip 方案。
+4. **送出，等 Tag 寄來**：收到後依說明確認註冊或啟用狀態，再固定到車上使用；跨州資料同步可能需要時間。
 
-付款建議開 **Auto Replenishment（自動儲值）**，餘額低於門檻時會自動從卡片補錢。所以信用卡帳單上看到的扣款，通常是儲值，不是某一趟的過路費。
+**預付帳戶**建議開 Auto Replenishment（自動儲值），餘額低於門檻時，自動從卡片或銀行帳戶補錢。帳單上的扣款通常是儲值金額。
 
-各州不同的地方，主要是**申請入口、預付金額和月費**。
+<aside className="quick-box">
+  <strong className="quick-label">備註：NY Pay Per Trip</strong>
+  <p>連結 Checking Account（支票帳戶），依已入帳的過路費扣款，<strong>不用預存餘額</strong>。</p>
+</aside>
 
 **以紐約、新澤西為例：**
 
 <h3>紐約：E-ZPass NY</h3>
 
 - **入口**：[E-ZPass NY](https://www.e-zpassny.com/) → **Open Account → Private**
-- **費用**：沒有月費，基本方案先預付 US$25 當帳戶餘額。
+- **費用**：標準預付方案需先預付 US$25 當帳戶餘額；MTA／Thruway／NYSBA 一般個人帳戶免月費，PANYNJ 帳戶每月 US$1。
+- **付款選擇**：預付帳戶可設定自動儲值；Pay Per Trip 不需預存餘額，但要連結支票帳戶。
 - **要準備**：車牌號碼，以及信用卡或 Checking Account（支票帳戶）資料。
 - **不想線上申請**：可以在部分商店買現成的 **On-the-Go Tag**，回家再上網註冊。
 
@@ -154,7 +168,7 @@ E-ZPass 目前可以在 **20 個州**使用（2026 年 10 月查核）：
 1. 清潔要黏貼的玻璃位置。
 2. 把固定貼條裝在 Tag 上，撕開保護膜。
 3. 標籤朝向車內、箭頭向上。
-4. 貼在擋風玻璃上方：後視鏡中央支架右側至少 1 inch，並在玻璃染色帶下方至少 1 inch。
+4. 貼在擋風玻璃上方：後視鏡中央支架右側至少 1 inch（約 2.5 公分），並在玻璃染色帶下方至少 1 inch。
 
 <figure className="article-figure native-figure">
   <img src="/images/ezpass/mount-steps.png" alt="E-ZPass 感應器安裝四步驟：清潔擋風玻璃、把固定貼條裝在 Tag 上、撕掉保護膜、貼在後視鏡後方" width="598" height="144" loading="lazy" />
@@ -165,7 +179,7 @@ E-ZPass 目前可以在 **20 個州**使用（2026 年 10 月查核）：
 
 <aside className="quick-box">
   <strong className="quick-label">Tag 沒讀到，可能就沒有 E-ZPass 價</strong>
-  <p><strong>Tag 沒讀到 → 改拍車牌 → 通常拿不到 E-ZPass 折扣</strong>。紐約 Thruway 就算車牌有登錄，也照車牌價收，所以 Tag 要裝對位置。</p>
+  <p><strong>Tag 沒讀到時，登錄車牌不保證拿到相同優惠</strong>。Thruway 即使能用車牌對到帳戶，仍按 Tolls by Mail 費率收費；MTA 的 NY 帳戶若靠車牌扣款，則適用較高的 Mid-Tier 費率。其他道路依各收費機構規則。</p>
 </aside>
 
 <p className="section-number">09 / RENTAL CARS</p>
@@ -174,17 +188,17 @@ E-ZPass 目前可以在 **20 個州**使用（2026 年 10 月查核）：
 通常可以，但**租車公司和自己的帳戶兩邊都要設定好**：
 
 1. **取車前問租車公司**：能不能用自己的 Tag？車上的租車公司收費裝置要怎麼處理？走車牌收費的路段怎麼扣款、有沒有服務費？
-2. **把租車車牌加進帳戶**：Tag 沒讀到時，系統才能用車牌對到你的帳戶。有些帳戶可以設定使用期間。
-3. **還車時**：帶走自己的 Tag，確認租車車牌的使用期間已經結束，並保存租車合約和帳單。
+2. **確認自己的帳戶規定**：依帳戶發行機構指示，處理租車車牌登錄及使用期間；也要確認 Tag 適用相同車輛類別。不確定時先問客服。
+3. **還車時**：帶走自己的 Tag；若曾登錄租車車牌，確認使用期間已結束，或依機構指示移除車牌，並保存租車合約和帳單。
 
-實際怎麼收費，以租車公司的條款為準；車牌怎麼加進帳戶，各州不同。
+租車公司的 Tag 和自己的 Tag 不要同時啟用；依租車公司指示關閉或收妥原有裝置。實際怎麼收費，以租車公司的條款為準；租車車牌怎麼處理，依自己的帳戶規定。
 
 **以紐約、新澤西為例：**
 
 <h3>紐約：E-ZPass NY</h3>
 
-- **已有 NY Tag**：官方沒有寫出像 NJ 這樣的租車設定步驟，帶去租車前先問 NY 客服
-- **沒有 E-ZPass**：可以開 **Temporary Travel Account（TTA）**，用租車車牌付紐約區域的過路費
+- **已有 NY Tag**：先向 NY 客服確認租車車牌應如何處理，以及 Tag 是否適用該車輛類別，再依租車公司的規定使用
+- **沒有 E-ZPass**：可以考慮 **Temporary Travel Account（TTA）**，用租車車牌及信用卡支付 NY E-ZPass 區域支援的過路費，不必等紙本帳單。TTA 屬於 Tolls by Mail 的車牌付款方式，**不等同使用 NY Tag 的 E-ZPass 優惠**，也不能取代要求感應器的車道
 
 [NY 官方帳戶類型與 TTA 說明](https://www.e-zpassny.com/ezpass/account-types)
 
@@ -192,15 +206,14 @@ E-ZPass 目前可以在 **20 個州**使用（2026 年 10 月查核）：
 
 - **設定方式**：登入 → **Tags/Vehicles → Vehicle List → Add a Vehicle** → 勾選 **Rental Vehicle**
 - **使用期間**：填開始和結束的日期、時間。開始日期必須是當天，不能還車後才補填
-- **為什麼要填期間**：這樣只會扣到你租車期間的過路費，不會扣到其他租客的
-
+- **為什麼要填期間**：讓系統依你的租車期間辨識通行紀錄，避免其他租客的過路費扣到你的帳戶
 
 <p className="section-number">10 / BEFORE YOU DRIVE</p>
 <h2 id="checklist">出發前，快速檢查這幾件事</h2>
 
-- **路線**：要走的路接受 E-ZPass
-- **帳戶**：餘額夠，信用卡沒過期
-- **車牌**：這台車的車牌已經加進帳戶
+- **路線**：要走的路接受 E-ZPass，並確認車道的付款與使用規定
+- **帳戶**：預付餘額夠，或 Pay Per Trip 的銀行帳戶有足夠資金；付款卡片沒有過期
+- **車牌**：自用車車牌已登錄；租車依帳戶發行機構規定處理
 - **Tag**：貼在擋風玻璃上，沒有放在儀表板
 - **租車**：問過租車公司怎麼收過路費
 
@@ -214,18 +227,33 @@ E-ZPass 目前可以在 **20 個州**使用（2026 年 10 月查核）：
 <p className="section-number">11 / SOURCES</p>
 <h2 id="sources">官方資料與更新日期</h2>
 
-本文依官方資料整理，查核日期 **2026 年 10 月 13 日**。費用和申請方式可能調整，以各州 E-ZPass 官網為準。
+本文依官方資料整理，查核日期 **2026 年 10 月 14 日**。費用和申請方式可能調整，以帳戶發行機構及實際道路、橋隧的官方規定為準。
 
 <div className="sources">
   <h3>官方資料</h3>
   <a href="https://www.e-zpassgroup.org/e-zpass-program" target="_blank" rel="noopener noreferrer">E-ZPass Group｜使用範圍 ↗</a>
   <a href="https://www.ny.gov/services/get-e-zpass" target="_blank" rel="noopener noreferrer">紐約州｜申請 E-ZPass ↗</a>
-  <a href="https://www.e-zpassny.com/ezpass/account-types" target="_blank" rel="noopener noreferrer">E-ZPass NY｜帳戶類型與 TTA ↗</a>
-  <a href="https://www.e-zpassny.com/ezpass/plans" target="_blank" rel="noopener noreferrer">E-ZPass NY｜方案與預付金 ↗</a>
+  <a href="https://www.ezpassnj.com/en/signup/signup.shtml" target="_blank" rel="noopener noreferrer">E-ZPass NJ｜申請帳戶 ↗</a>
   <a href="https://www.mta.info/fares-tolls/tolls/vehicle-types" target="_blank" rel="noopener noreferrer">MTA｜紐約市橋梁與隧道費率 ↗</a>
-  <a href="https://www.thruway.ny.gov/news/adjustment/toll-adjustment-facts.pdf" target="_blank" rel="noopener noreferrer">Thruway｜E-ZPass 與 Tolls by Mail 價差 ↗</a>
-  <a href="https://www.thruway.ny.gov/cashless-tolling/about-ezpass/discount-plans" target="_blank" rel="noopener noreferrer">Thruway｜折扣方案 ↗</a>
-  <a href="https://www.thruway.ny.gov/about/frequently-asked-questions" target="_blank" rel="noopener noreferrer">Thruway｜Tag 沒讀到與帳單 FAQ ↗</a>
-  <a href="https://www.ezpassnj.com/en/about/i_terms.pdf" target="_blank" rel="noopener noreferrer">E-ZPass NJ｜個人帳戶條款 ↗</a>
-  <a href="https://www.ezpassnj.com/en/about/faqs.shtml" target="_blank" rel="noopener noreferrer">E-ZPass NJ｜常見問題與租車設定 ↗</a>
+  <a href="https://www.panynj.gov/port-authority/en/help-center/faq/bridges-and-tunnels-faq.html" target="_blank" rel="noopener noreferrer">Port Authority｜NY／NJ 帳戶與橋隧收費 FAQ ↗</a>
+  <details className="sources-more">
+    <summary>更多官方資料</summary>
+    <a href="https://floridasturnpike.com/sunpassport/floridas-turnpike-now-accepts-e-zpass/" target="_blank" rel="noopener noreferrer">Florida’s Turnpike｜E-ZPass 適用道路與橋梁 ↗</a>
+    <a href="https://www.e-zpassny.com/ezpass/account-types" target="_blank" rel="noopener noreferrer">E-ZPass NY｜帳戶類型與 TTA ↗</a>
+    <a href="https://www.e-zpassny.com/ezpass/plans" target="_blank" rel="noopener noreferrer">E-ZPass NY｜預付與 Pay Per Trip 方案 ↗</a>
+    <a href="https://cdn.e-zpassny.com/cms-ny-upload/E-ZPass_Individual_Account_Application.pdf" target="_blank" rel="noopener noreferrer">E-ZPass NY｜個人帳戶條款與 PANYNJ 月費 ↗</a>
+    <a href="https://www.e-zpassny.com/tbm/tta-terms-and-conditions" target="_blank" rel="noopener noreferrer">Tolls by Mail NY｜TTA 條款 ↗</a>
+    <a href="https://www.thruway.ny.gov/news/adjustment/toll-adjustment-facts.pdf" target="_blank" rel="noopener noreferrer">Thruway｜E-ZPass 與 Tolls by Mail 價差 ↗</a>
+    <a href="https://www.thruway.ny.gov/cashless-tolling/about-ezpass/discount-plans" target="_blank" rel="noopener noreferrer">Thruway｜折扣方案 ↗</a>
+    <a href="https://www.thruway.ny.gov/about/frequently-asked-questions" target="_blank" rel="noopener noreferrer">Thruway｜Tag 沒讀到與帳單 FAQ ↗</a>
+    <a href="https://www.ezpassnj.com/en/about/i_terms.pdf" target="_blank" rel="noopener noreferrer">E-ZPass NJ｜個人帳戶條款 ↗</a>
+    <a href="https://www.ezpassnj.com/en/about/faqs.shtml" target="_blank" rel="noopener noreferrer">E-ZPass NJ｜常見問題與租車設定 ↗</a>
+    <a href="https://www.njta.gov/toll-discounts/" target="_blank" rel="noopener noreferrer">NJTA｜NJ Turnpike 與 Garden State Parkway 折扣 ↗</a>
+    <a href="https://www.driveezmd.com/on-the-go-transponder/" target="_blank" rel="noopener noreferrer">DriveEzMD｜外州地址月費與免收條件 ↗</a>
+    <a href="https://www.ezpassva.com/faq/" target="_blank" rel="noopener noreferrer">E-ZPass VA｜開戶預付金與常見問題 ↗</a>
+    <a href="https://www.ezpassva.com/media/ezpassva/content-assets/documents/agreement.pdf" target="_blank" rel="noopener noreferrer">E-ZPass VA｜帳戶條款與費用 ↗</a>
+    <a href="https://files.paturnpike.com/production/docs/default-source/resources/e-zpass/personal/personal_e-zpass_account_application.pdf" target="_blank" rel="noopener noreferrer">PA Turnpike｜個人帳戶申請、年費與押金 ↗</a>
+    <a href="https://www.ezdrivema.com/E-ZPass-MA/Fee-Schedule" target="_blank" rel="noopener noreferrer">EZDriveMA｜Tag 與帳單費用 ↗</a>
+    <a href="https://www.expresslanes.com/express-lanes-terms-and-conditions" target="_blank" rel="noopener noreferrer">Virginia Express Lanes｜E-ZPass 使用要求與行政費 ↗</a>
+  </details>
 </div>
