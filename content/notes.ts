@@ -62,7 +62,6 @@ const entries: NoteEntry[] = [
       { id: 'prepare', title: '要準備什麼' },
       { id: 'apply', title: '申請與付款設定' },
       { id: 'mount', title: '感應器怎麼裝' },
-      { id: 'tolls', title: '過路費與帳單' },
       { id: 'rental', title: '租車怎麼使用' },
       { id: 'checklist', title: '出發前檢查清單' },
       { id: 'sources', title: '官方資料' },
