@@ -31,6 +31,8 @@ type NoteEntry = {
   intro: string
   // 本文目錄：id 必須和正文的 <h2 id="..."> 相同；title 是目錄裡顯示的短標題。
   sections: { id: string; title: string }[]
+  // 草稿：正式網站不列出、網址 404；本機 npm run dev 仍看得到，方便預覽。
+  draft?: boolean
 }
 
 export type Note = NoteEntry & {
@@ -46,6 +48,7 @@ export type Note = NoteEntry & {
 const entries: NoteEntry[] = [
   {
     slug: 'ezpass-flex',
+    draft: true,
     title: 'E-ZPass Flex 怎麼用？HOV 共乘免過路費筆記',
     categorySlug: 'us-life',
     date: '2026-10-14',
@@ -188,7 +191,12 @@ function toNote(entry: NoteEntry): Note {
 }
 
 // 新到舊排列；同一天的照清單順序。
-export const notes: Note[] = entries.map(toNote).sort((a, b) => b.date.localeCompare(a.date))
+const showDrafts = process.env.NODE_ENV !== 'production'
+
+export const notes: Note[] = entries
+  .filter((entry) => showDrafts || !entry.draft)
+  .map(toNote)
+  .sort((a, b) => b.date.localeCompare(a.date))
 
 export function noteBySlug(slug: string) {
   return notes.find((note) => note.slug === slug)
