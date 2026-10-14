@@ -3,8 +3,8 @@
   --bg: #fff8f1;          /* 奶油底色 */
   --paper: #ffffff;
   --ink: #4a3428;         /* 小熊深咖啡（主要文字） */
-  --muted: #8a6f60;
-  --quiet: #b39b8c;
+  --muted: #7d6354;
+  --quiet: #84695a;
   --line: #f1e1d3;
   --bear: #9a5741;        /* 小熊色 */
   --accent: #c47f57;      /* 焦糖色（重點色） */
@@ -61,7 +61,7 @@ img { max-width: 100% }
   background: var(--paper); border: 2px solid var(--line); border-radius: 24px;
   font-size: 14px;
 }
-.sidebar-label { margin: 4px 10px 8px; color: var(--quiet); font: 800 11px/1.5 var(--sans); letter-spacing: .1em }
+.sidebar-label { margin: 4px 10px 8px; color: var(--quiet); font: 800 12px/1.5 var(--sans); letter-spacing: .1em }
 .sidebar-group { margin-top: 18px }
 .sidebar-link, .sidebar-home {
   display: flex; align-items: center; gap: 10px;
@@ -80,7 +80,7 @@ img { max-width: 100% }
 .sidebar-ext:hover { color: var(--bear) }
 .sidebar-ext svg { flex: none; width: 20px; height: 20px }
 .sidebar-ext-copy { line-height: 1.4 }
-.sidebar-ext small { display: block; color: var(--quiet); font-size: 12px; font-weight: 600 }
+.sidebar-ext small { display: block; color: var(--quiet); font-size: 13px; font-weight: 600 }
 
 /* ===== 首頁 ===== */
 .home-content { padding-top: 36px; min-width: 0 }
@@ -128,7 +128,7 @@ img { max-width: 100% }
 .note-copy, .entry-copy { display: flex; flex-direction: column; min-width: 0; flex: 1 }
 .note-copy strong, .entry-copy strong { font: 18px/1.5 var(--round) }
 .note-copy small, .entry-copy > span { color: var(--muted); font-size: 13px; line-height: 1.7 }
-.note-meta, .entry-meta { flex: none; text-align: right; color: var(--quiet); font-size: 12px; font-weight: 700; line-height: 1.7; padding-right: 6px }
+.note-meta, .entry-meta { flex: none; text-align: right; color: var(--quiet); font-size: 13px; font-weight: 700; line-height: 1.7; padding-right: 6px }
 .entry-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 4px }
 .entry-meta span { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--accent-soft); color: var(--accent) }
 
@@ -163,7 +163,7 @@ img { max-width: 100% }
 .toc-sidebar { margin-top: 18px; padding-top: 16px; border-top: 2px dashed var(--line) }
 .toc-sidebar p { margin-left: 10px !important }
 .toc-inline { display: none; margin-bottom: 20px; padding: 16px; background: var(--paper); border: 2px solid var(--line); border-radius: 20px }
-.toc p { margin: 0 0 8px; color: var(--accent); font: 800 11px/1.5 var(--sans); letter-spacing: .08em }
+.toc p { margin: 0 0 8px; color: var(--bear); font: 800 12px/1.5 var(--sans); letter-spacing: .08em }
 .toc a { display: block; padding: 5px 8px; border-radius: 10px; color: var(--muted); font-size: 13px; line-height: 1.6; text-decoration: none }
 .toc a:hover { background: var(--accent-soft); color: var(--bear) }
 
@@ -195,13 +195,14 @@ img { max-width: 100% }
 .article-body ul li::before { content: ''; position: absolute; left: 8px; top: .8em; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft) }
 .section-number {
   display: inline-block; margin: 46px 0 0 !important; padding: 3px 12px;
-  border-radius: 999px; background: var(--mint-soft); color: #3f8a67;
-  font: 800 11px/1.6 var(--sans); letter-spacing: .1em;
+  border-radius: 999px; background: var(--mint-soft); color: #2f6f50;
+  font: 800 12px/1.6 var(--sans); letter-spacing: .1em;
 }
 
 .article-body > .section-number:first-child { margin-top: 0 !important }
 .quick-box { position: relative; margin: 0 0 8px; padding: 20px 22px 4px; background: var(--honey-soft); border: 2px dashed var(--honey); border-radius: 22px }
 .quick-label { display: inline-block; margin-bottom: 8px; padding: 2px 12px; border-radius: 999px; background: var(--honey); color: var(--ink); font: 14px var(--round) }
+.article-body .quick-label { color: var(--ink) }
 
 .fact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 6px 0 24px }
 .fact-grid > div { display: flex; flex-direction: column; align-items: center; padding: 18px 10px; border-radius: 20px; text-align: center }
@@ -254,7 +255,7 @@ img { max-width: 100% }
 .compare-table .featured { background: var(--honey-soft); color: var(--bear); font-weight: 700 }
 .compare-table thead .featured { background: var(--honey); color: var(--ink) }
 .compare-table .no { color: var(--quiet) }
-.compare-table small { color: var(--quiet); font-size: 12px; font-weight: 600 }
+.compare-table small { color: var(--quiet); font-size: 13px; font-weight: 600 }
 /* 信用卡報銷表：金額和頻率不換行 */
 .card-table td:nth-child(2), .card-table td:nth-child(3) { white-space: nowrap }
 /* 面試文件清單：說明欄靠左，分組列加底色 */
@@ -320,6 +321,11 @@ img { max-width: 100% }
   .article-body h2 { font-size: 22px }
   .fact-grid, .fact-grid.two { grid-template-columns: 1fr }
   .article-body code { white-space: normal }
+  /* 手機上表格不設最小寬度，改成換行，避免右邊被切掉 */
+  .compare-table table { min-width: 0; font-size: 14px }
+  .compare-table th, .compare-table td { padding: 9px 10px }
+  .compare-table thead th { font-size: 15px }
+  .compare-table tbody th { font-size: 13px }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important }
