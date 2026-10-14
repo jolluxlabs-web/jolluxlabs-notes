@@ -45,6 +45,28 @@ export type Note = NoteEntry & {
 // 新文章先登記在這裡，首頁就會自動列出。
 const entries: NoteEntry[] = [
   {
+    slug: 'ezpass-flex',
+    title: 'E-ZPass Flex 怎麼用？HOV 共乘免過路費筆記',
+    categorySlug: 'us-life',
+    date: '2026-10-14',
+    summary: '整理提供 Flex 或共乘開關 Tag 的州，並以 Virginia 為主說明 HOV ON／OFF、路段人數門檻、申請換 Tag 及跨州優惠。',
+    coverImage: '/images/ezpass/flex.png',
+    coverAlt: 'Virginia 官方 E-ZPass Flex 感應器與 HOV ON／OFF 開關示意圖',
+    intro: '常和家人或同事共乘，會走 Express Lanes？E-ZPass Flex 多了 HOV 開關，符合指定路段的條件時能免過路費。這篇以 Virginia 為主，整理人數門檻、開關設定和申請方式。',
+    sections: [
+      { id: 'overview', title: 'Flex 是什麼' },
+      { id: 'states', title: '哪些州有發行 Flex' },
+      { id: 'compare', title: '和一般 E-ZPass 的差別' },
+      { id: 'switch', title: 'HOV ON／OFF 怎麼用' },
+      { id: 'roads', title: '哪些路段有共乘優惠' },
+      { id: 'apply', title: '申請與更換 Tag' },
+      { id: 'travel', title: '跨州與帳戶折扣' },
+      { id: 'charged', title: '共乘卻被扣款' },
+      { id: 'checklist', title: '出發前檢查清單' },
+      { id: 'sources', title: '官方資料' },
+    ],
+  },
+  {
     slug: 'ezpass-east-coast',
     title: 'E-ZPass 怎麼申請？東岸開車的過路費筆記',
     categorySlug: 'us-life',
