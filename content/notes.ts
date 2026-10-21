@@ -52,8 +52,8 @@ const entries: NoteEntry[] = [
     categorySlug: 'us-life',
     date: '2026-10-14',
     summary: 'DMV 通勤必看：E-ZPass Flex 在 Virginia Express Lanes 共乘免過路費，整理各路段人數門檻、I-66 收費時段、開關切法、申請與費用。',
-    coverImage: '/images/ezpass/flex.png',
-    coverAlt: 'Virginia 官方 E-ZPass Flex 感應器與 HOV ON／OFF 開關示意圖',
+    coverImage: '/images/ezpass/flex-cover.jpg',
+    coverAlt: 'E-ZPass Flex 是什麼？DMV 通勤必看，Express Lanes 共乘過路費直接 $0',
     intro: 'DMV 通勤必看！共乘人數夠，Virginia Express Lanes 過路費直接 $0。E-ZPass Flex 多了 HOV 開關，這篇整理哪些路可以共乘免費、I-66 的收費時段、開關怎麼切，以及怎麼拿到 Flex。',
     sections: [
       { id: 'overview', title: 'Flex 是什麼' },
