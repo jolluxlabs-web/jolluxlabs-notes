@@ -1,205 +1,181 @@
 <aside className="quick-box">
   <strong className="quick-label">先看重點</strong>
   <ul>
-    <li><strong>Flex 多了共乘開關</strong>：平常像一般 E-ZPass 扣款，符合指定路段的共乘條件時可免過路費</li>
-    <li><strong>先查路段，再數人數</strong>：HOV 優惠、人數門檻和適用時段依道路而異</li>
-    <li><strong>HOV ON 要自己切</strong>：車上人數符合條件，也要在進入車道前設定好</li>
-    <li><strong>跨州能扣款，不代表共乘都免費</strong>：一般收費道路照常收費，折扣仍看帳戶與路段</li>
-    <li><strong>同車只用一個 Tag</strong>：換成 Flex 後，依發行機構指示退回或收妥舊 Tag</li>
+    <li><strong>Flex 多了 HOV 開關</strong>：在 Virginia 的 Express Lanes 共乘人數夠，過路費直接 $0</li>
+    <li><strong>人數門檻看路段</strong>：北維 95、395、495、66 要 3 人以上，南維 I-64 要 2 人以上，都包含駕駛</li>
+    <li><strong>進車道前就切好</strong>：人數夠切 HOV ON，不夠切回 OFF；人數不夠卻開 ON，罰款 $125 起</li>
+    <li><strong>裝置免費</strong>：開戶每個 Tag 至少預存 $20，全數用來付之後的過路費</li>
+    <li><strong>換下的一般 Tag 要退回</strong>：用錫箔紙包好再寄，未退回收 $10</li>
   </ul>
 </aside>
 
 <p className="section-number">01 / OVERVIEW</p>
 <h2 id="overview">E-ZPass Flex 是什麼？</h2>
 
-**E-ZPass Flex 是有 HOV 開關的 E-ZPass 感應器。** HOV 是 High-Occupancy Vehicle，指達到指定乘員人數的共乘車輛。
+**E-ZPass Flex 就是多了 HOV（共乘）開關的 E-ZPass。** 人數夠時切到 HOV ON，Virginia Express Lanes <strong className="hl">過路費直接 $0</strong>。
 
-平常開車，它和一般 E-ZPass 一樣用來付過路費；在支援共乘優惠的 Express Lanes（快速收費車道），符合人數等條件並切到 **HOV ON**，就能使用該路段的優惠。
-
-這篇以 **Virginia 的一般小客車**為主，另外整理北卡常見路段的差異。第一次辦帳戶，可以先看 [E-ZPass 申請與帳戶選擇](/notes/ezpass-east-coast)。
+這篇以 **Virginia 的一般小客車**為主。第一次辦帳戶，可以先看 [E-ZPass 申請與帳戶選擇](/notes/ezpass-east-coast)。
 
 <figure className="article-figure native-figure">
   <img src="/images/ezpass/flex.png" alt="Virginia 官方 E-ZPass Flex 示意圖，兩款感應器都有 HOV OFF 與 HOV ON 的切換開關" width="306" height="352" loading="lazy" />
   <figcaption>Virginia 官方示意圖：Flex 外觀可能不同，使用前確認 HOV ON／OFF 標示。<a href="https://www.ezpassva.com/about/" target="_blank" rel="noopener noreferrer">圖片來源 ↗</a></figcaption>
 </figure>
 
-<p className="section-number">02 / ISSUING STATES</p>
-<h2 id="states">哪些州有發行 Flex？</h2>
-
-依各州官方資料，目前查到以下 **4 州**提供 Flex 或同類共乘開關的感應器（2026 年 10 月查核）：
-
 <div className="compare-table">
   <table>
-    <thead><tr><th>發行州</th><th>感應器名稱與官方入口</th><th>使用提醒</th></tr></thead>
+    <thead><tr><th>路段</th><th>一般 E-ZPass</th><th className="featured">Flex（HOV ON）</th></tr></thead>
     <tbody>
-      <tr><th>Virginia 維吉尼亞</th><td><a href="https://www.ezpassva.com/about/" target="_blank" rel="noopener noreferrer">E-ZPass Flex ↗</a></td><td>可在支援的 Virginia Express Lanes 申報共乘，人數門檻依路段而異</td></tr>
-      <tr><th>Maryland 馬里蘭</th><td><a href="https://driveezmd.com/acct-types/e-zpass-faq/" target="_blank" rel="noopener noreferrer">E-ZPass Flex ↗</a></td><td>有發行 Flex；共乘優惠仍看實際行駛路段，不是 Maryland 所有收費路都免費</td></tr>
-      <tr><th>North Carolina 北卡羅來納</th><td><a href="https://www.ncquickpass.com/transponder-options/" target="_blank" rel="noopener noreferrer">NC Quick Pass Flex ↗</a></td><td>支援 I-77 共乘優惠，也可用於 Virginia 指定共乘車道</td></tr>
-      <tr><th>Minnesota 明尼蘇達</th><td><a href="https://www.dot.state.mn.us/ezpassmn/tag.html" target="_blank" rel="noopener noreferrer">Minnesota E-ZPass Switchable Tag ↗</a></td><td>同類共乘開關感應器；當地共乘與外州 Tag 的規則要另外確認</td></tr>
+      <tr><th>VA Express Lanes<br /><small>共乘人數夠</small></th><td>付費</td><td className="featured">免費 ✓</td></tr>
+      <tr><th>其他收費路段</th><td>付費</td><td>付費</td></tr>
     </tbody>
   </table>
 </div>
 
-**發行州和優惠路段是兩回事。** 例如 Maryland 發的 Flex，可以在支援的 Virginia、北卡路段申報共乘；申請前要同時確認帳戶費用、裝置相容性及常走路段的優惠。
+**一個人開車也可以用 Flex**，切到 HOV OFF，就跟一般 E-ZPass 一樣扣款。
 
 <aside className="quick-box">
-  <strong className="quick-label">備註：Minnesota 的共乘設定要另查</strong>
-  <p>Minnesota 官方稱它為 Switchable Tag，可切換「single」與「HOV」。依 MnDOT 說明，外州 E-ZPass Tag 在當地通常按付費模式處理；共乘時要依當地指示使用 Minnesota 的可切換 Tag，或移除外州 Tag，不能直接套用 Virginia 的 HOV ON 做法。</p>
+  <strong className="quick-label">很少共乘，一般 E-ZPass 就夠了</strong>
+  <p>Virginia FAQ 提醒：Flex 連續 12 個月沒用過 HOV ON，可能會被要求換回一般 Tag。</p>
 </aside>
 
-<p className="section-number">03 / STANDARD VS FLEX</p>
-<h2 id="compare">和一般 E-ZPass 差在哪？</h2>
+<p className="section-number">02 / WHERE IT WORKS</p>
+<h2 id="roads">哪些路可以共乘免費？</h2>
 
-<div className="compare-table">
-  <table>
-    <thead><tr><th>功能</th><th>一般 E-ZPass</th><th>E-ZPass Flex</th></tr></thead>
-    <tbody>
-      <tr><th>在支援路段付過路費</th><td>可以</td><td>可以</td></tr>
-      <tr><th>HOV ON／OFF 開關</th><td>沒有</td><td className="featured">有</td></tr>
-      <tr><th>Virginia 共乘免過路費</th><td>一般車內 Tag 無法用開關申報</td><td>符合路段條件，並切到 HOV ON 才適用</td></tr>
-      <tr><th>比較適合誰</th><td>主要付一般過路費、很少共乘</td><td>常和家人或同事共乘，會走支援優惠的車道</td></tr>
-    </tbody>
-  </table>
+人數門檻依路段不同，人數<strong className="hl">包含駕駛</strong>（2026 年 10 月查核）：
+
+<div className="route-panel">
+  <div className="route-panel-head"><span>VA</span>Express Lanes</div>
+  <div className="route-row"><div><strong>95、395、495 Express Lanes</strong><small>北維</small></div><span className="route-pill">3 人以上</span></div>
+  <div className="route-row"><div><strong>66 Express Lanes</strong><small>北維，Beltway 內、外</small></div><span className="route-pill">3 人以上</span></div>
+  <div className="route-row"><div><strong>64 Express Lanes</strong><small>Hampton Roads（南維）</small></div><span className="route-pill two">2 人以上</span></div>
 </div>
 
-**一個人開車也可以用 Flex**，只是要切到 HOV OFF，照路段費率付費。如果幾乎不使用共乘優惠，一般 Tag 通常就夠了。
+<figure className="article-figure map-figure">
+  <a href="/images/ezpass/nova-express-lanes-map.jpg" target="_blank" rel="noopener noreferrer"><img src="/images/ezpass/nova-express-lanes-map.jpg" alt="北維 Express Lanes 路線圖：綠色為 95／395、橘黃色為 495、橘色為 66 Beltway 內、藍色為 66 Beltway 外" width="1200" height="1432" loading="lazy" /></a>
+  <figcaption>北維 Express Lanes 路線圖（未依比例）：綠色 95／395、黃色 495、橘色 66 Beltway 內、藍色 66 Beltway 外。點圖看大圖。</figcaption>
+</figure>
 
-<p className="section-number">04 / HOV ON & OFF</p>
-<h2 id="switch">HOV ON／OFF 怎麼用？</h2>
+人數夠之外，還要有可用的 Flex、正確安裝並切到 HOV ON；車種、開放方向和收費時段以現場標示為準。
 
-在支援 Flex 共乘優惠的車道，開關可以這樣選：
-
-<div className="compare-table">
-  <table>
-    <thead><tr><th>開關</th><th>什麼時候用</th><th>收費方式</th></tr></thead>
-    <tbody>
-      <tr><th>HOV OFF</th><td>未達共乘人數，或這趟要付費通行</td><td>依路段費率從帳戶扣款</td></tr>
-      <tr><th>HOV ON</th><td>符合該路段的共乘人數及其他條件</td><td className="featured">依該路段的 HOV 優惠辦理</td></tr>
-    </tbody>
-  </table>
-</div>
-
-1. **先查路段**：是否有 HOV 優惠？需要 2 人還是 3 人？什麼時段適用？
-2. **確認車上人數**：包含駕駛。例如 HOV-3+ 是總共至少 3 人，也就是駕駛加至少 2 位乘客。
-3. **停好車時先切開關**：在進入車道前完成設定；切到 HOV ON 時，Virginia Flex 會發出提示音。
-4. **下一趟重新確認**：這趟共乘、下一趟自己開，出發前就要切回 HOV OFF。
-
-<aside className="quick-box">
-  <strong className="quick-label">HOV ON 不會自動判斷人數</strong>
-  <p>它是你向收費系統申報共乘狀態的開關。人數不足卻開 HOV ON，仍可能被收過路費，並面臨違規處理。</p>
-</aside>
-
-<p className="section-number">05 / WHERE IT WORKS</p>
-<h2 id="roads">哪些路段有共乘優惠？</h2>
-
-以下整理一般小客車常見的路段（2026 年 10 月查核）。**人數達標之外，還要有可用的 Flex、正確安裝並切到 HOV ON**；車種、開放方向和收費時段仍依現場標示。
-
-<div className="compare-table">
-  <table>
-    <thead><tr><th>路段</th><th>共乘人數</th><th>Flex 優惠</th></tr></thead>
-    <tbody>
-      <tr><th>Virginia：I-95／I-395／I-495 Express Lanes</th><td>HOV-3+，至少 3 人</td><td className="featured">符合條件免過路費</td></tr>
-      <tr><th>Virginia：I-66 Inside the Beltway（靠近華府）</th><td>HOV-3+，至少 3 人</td><td>指定收費時段內，符合共乘條件免過路費；其他時段免費</td></tr>
-      <tr><th>Virginia：I-66 Outside the Beltway（往郊區）</th><td>HOV-3+，至少 3 人</td><td>Express 快速車道符合共乘條件免過路費；一般車道原本就免費</td></tr>
-      <tr><th>Virginia：Hampton Roads 的 I-64 Express Lanes</th><td>HOV-2+，至少 2 人</td><td>符合條件免過路費</td></tr>
-      <tr><th>North Carolina：I-77 Express Lanes</th><td>HOV-3+，至少 3 人</td><td>支援 Virginia／Maryland E-ZPass Flex 的共乘設定</td></tr>
-    </tbody>
-  </table>
-</div>
+<p className="section-number">03 / I-66</p>
+<h2 id="i66">66 不同路段，收費不一樣</h2>
 
 **Beltway 就是 I-495（華府環城公路），I-66 以它為界分成兩段：**
 
-- **Inside（環城公路內側，靠近華府）**：I-495 到 Rosslyn 這段。在指定平日尖峰時段，通勤方向的所有車道會收費；其他時段免費。
-- **Outside（環城公路外側，往郊區）**：I-495 到 Gainesville 這段。一般車道免費，選擇走 Express 快速車道才依規則收費；符合 3 人共乘並開啟 Flex 的 HOV ON，可免過路費。
+- **Beltway 外（I-495 以西）**：一般車道免費，Express Lanes 收費，3 人共乘切 HOV ON 免費。
+- **Beltway 內（I-495 以東，往 DC）**：只有一種車道，**尖峰時整條路都收費**。
+
+<div className="compare-table">
+  <table>
+    <thead><tr><th>Beltway 內</th><th>東向（往 DC）</th><th>西向（離開 DC）</th></tr></thead>
+    <tbody>
+      <tr><th>平日 5:30–9:30</th><td className="featured">💰 收費</td><td>免費</td></tr>
+      <tr><th>平日 15:00–19:00</th><td>免費</td><td className="featured">💰 收費</td></tr>
+      <tr><th>其他時間、週末</th><td>免費</td><td>免費</td></tr>
+    </tbody>
+  </table>
+</div>
+
+收費時段內，沒有 E-ZPass Flex 或人數不夠，就要**付費**。
+
+<p className="section-number">04 / HOV ON & OFF</p>
+<h2 id="switch">開關怎麼切？</h2>
+
+1. **出發前數人數**：包含駕駛，確認有沒有達到該路段的門檻。
+2. **人數夠：切 HOV ON**：切到 HOV ON 時會「嗶」一聲，達共乘門檻即可免費。
+3. **人數不夠：切 HOV OFF**：照一般 E-ZPass 付過路費。
+4. **進車道前就切好**：進入時仍在 HOV OFF，即使人數夠也會被收費。
 
 <aside className="quick-box">
-  <strong className="quick-label">北卡 I-77 和 I-485 規則不同</strong>
-  <p>I-77 Express Lanes 有 HOV-3+ 免過路費方案；<strong>I-485 Express Lanes 沒有一般共乘車輛的 HOV 折扣或免費通行</strong>，開 HOV ON 也不會因此免費。</p>
+  <strong className="quick-label">⚠️ HOV ON 不會自動判斷人數</strong>
+  <p>它是你向收費系統申報共乘的開關，路上也會查核人數。<strong>人數不夠卻開 HOV ON，違規罰款 $125 起，累犯最高 $1,000。</strong>這趟共乘、下一趟自己開，記得切回 OFF。</p>
 </aside>
 
-其他州或路段，先查當地官方規定。Flex 能在接受 E-ZPass 的設施扣款，**不代表每個州都接受同樣的 HOV 設定**。
+<p className="section-number">05 / GET ONE</p>
+<h2 id="apply">E-ZPass Flex 怎麼拿到？</h2>
 
-<p className="section-number">06 / APPLY & EXCHANGE</p>
-<h2 id="apply">怎麼申請？已有 Tag 可以換嗎？</h2>
+<div className="compare-table">
+  <table>
+    <thead><tr><th>方式</th><th>怎麼做</th></tr></thead>
+    <tbody>
+      <tr><th>線上申請</th><td>到 <a href="https://www.ezpassva.com/" target="_blank" rel="noopener noreferrer">E-ZPass VA 官網 ↗</a> 開戶並選 Flex；已有 VA 帳戶，在 Transponder 頁籤申請更換</td></tr>
+      <tr><th>服務中心</th><td>開戶或更換，可當天取得</td></tr>
+      <tr><th>零售店</th><td>到指定零售店買 On-the-Go 套組，再上網註冊到帳戶</td></tr>
+    </tbody>
+  </table>
+</div>
 
-<h3>第一次申請：以 Virginia 為例</h3>
+<h3>換下的一般 Tag 要退回</h3>
 
-1. 到 [E-ZPass VA 官網](https://www.ezpassva.com/) 開個人帳戶，選 **Flex Transponder**。
-2. 準備聯絡地址、車牌與車輛資料，以及付款資料。
-3. 線上或客服中心開戶，**每個 Tag 至少先預付 US$20 過路費**。
-4. 收到後依說明安裝，確認帳戶及 Tag 已啟用，再上路。
-
-Virginia 不收 Tag 使用費；預付金是帳戶餘額，用來支付過路費。Flex 遺失、損壞或關戶時未歸還，可能收 **US$20**，與開戶預付金不同。
-
-也可以在 Virginia 指定商店買 **On-the-Go Flex**。售價 US$35 全部是預付餘額，其中 US$15 可先在 Virginia 使用，另 US$20 在註冊後加入；跨州使用要預留註冊與同步時間。
-
-<h3>已有 Virginia 一般 Tag</h3>
-
-登入 VA 帳戶，在 **Transponder** 頁籤申請更換，或聯絡客服中心。收到 Flex 後，依指示退回舊 Tag，寄回時使用原防讀取袋或鋁箔包好。
+- **申請更換**：收到 Flex 後退回舊 Tag，未退回收 **$10**。
+- **買 On-the-Go**：若要停用舊 Tag，寄回或交至服務中心。
 
 <aside className="quick-box">
-  <strong className="quick-label">備註：很少共乘，不一定需要 Flex</strong>
-  <p>Virginia FAQ 提醒：連續 12 個月沒有使用 Flex 的共乘功能，可能會被要求換回一般 Tag。</p>
+  <strong className="quick-label">郵寄時用錫箔紙包好</strong>
+  <p>舊 Tag 可郵寄或交回服務中心。寄回時用錫箔紙或原防讀取袋包好，避免途中經過收費站被感應扣款。同一台車只放一個可讀取的 Tag。</p>
 </aside>
 
-如果你已有 **NY、NJ 或其他機構的帳戶**，先問原機構是否提供適合路線的 Flex；另辦帳戶時，也要比較固定費用和原有路段折扣。住 Maryland、DC 等地，可以向 VA 或 Maryland 的官方客服確認申請資格及適合的方案。
+<p className="section-number">06 / COST</p>
+<h2 id="cost">E-ZPass Flex 要多少錢？</h2>
 
-<p className="section-number">07 / OUT-OF-STATE TRAVEL</p>
-<h2 id="travel">換成 Flex，其他州的優惠也一樣嗎？</h2>
+**Flex 裝置免費**，付的錢全數變成預存通行費，用來付之後的過路費。
 
-**跨州扣款可以，但折扣仍看帳戶發行機構。** Flex 多的是 HOV 開關，沒有把各州優惠全部合在一起。
+<div className="compare-table">
+  <table>
+    <thead><tr><th>項目</th><th>金額</th></tr></thead>
+    <tbody>
+      <tr><th>VA 開戶預存<br /><small>每個 Tag</small></th><td className="featured">$20 起</td></tr>
+      <tr><th>On-the-Go 套組</th><td className="featured">$35</td></tr>
+    </tbody>
+  </table>
+</div>
 
-例如，MTA 橋隧的 NY E-ZPass 優惠限 NYCSC 帳戶；如果換用 VA 發的 Flex，仍按非 NY 帳戶費率計算。選帳戶前，先想想自己更常走 Virginia 共乘車道，還是紐約的橋隧。
+On-the-Go 套組會先存 $15，可以先在 Virginia 使用；註冊完成後，再存入剩下的 $20。
 
-在**不支援 Flex HOV 功能的一般收費道路**，不論開關位置，它都像一般 E-ZPass 正常扣款。跨州前確認使用範圍、帳戶餘額與 Tag 啟用狀態；同一台車只使用一個可讀取的 Tag。
+- ⚠️ **E-ZPass Flex 弄丟或被偷要賠 $20**，這筆不會存進帳戶。
+- 💡 **共乘免費也要帳戶有餘額**，否則可能被判定為無效 Tag。
 
-<p className="section-number">08 / CHARGED A TOLL</p>
-<h2 id="charged">明明有共乘，為什麼還被扣款？</h2>
+<p className="section-number">07 / OUT-OF-STATE</p>
+<h2 id="travel">在其他州也能共乘免費嗎？</h2>
 
-先核對這幾件事：
+**Flex 在其他州能照常扣款，但 HOV 開關不一定有用。** 在不支援 Flex 的一般收費道路，不論開關位置，都像一般 E-ZPass 扣款。
 
-- **路段與時段**：是否有你以為的 HOV 優惠？
-- **人數與開關**：進入車道前，人數已達門檻，且確實切到 HOV ON？
-- **Tag 和帳戶**：有正確固定在擋風玻璃上、帳戶正常且餘額足夠？
-- **其他 Tag**：車上是否還有舊 Tag 或租車公司的裝置被讀到？
+- **Maryland**：也有發行 E-ZPass Flex，一樣可以在 Virginia Express Lanes 申報共乘。
+- **North Carolina I-77 Express Lanes**：接受 VA／MD Flex 的 3 人共乘設定。
+- **North Carolina I-485 Express Lanes**：沒有一般共乘優惠，開 HOV ON 也照常收費。
+- **帳戶折扣看發行機構**：例如 MTA 橋隧的 NY E-ZPass 優惠只限 NY 帳戶，換用 VA 的 Flex 會按非 NY 帳戶費率計算。
 
-收費系統也會查核乘員人數。若條件都符合卻被扣款，保存通行日期、時間、路段、車牌與交易紀錄，向**該路段營運機構**反映；Tag 或帳戶異常則找發行機構。不要直接忽略帳單。
+<p className="section-number">08 / BEFORE YOU DRIVE</p>
+<h2 id="checklist">使用前的四個提醒</h2>
 
-<p className="section-number">09 / BEFORE YOU DRIVE</p>
-<h2 id="checklist">出發前，快速檢查</h2>
+- 🔢 **先數人數**：北維 Express Lanes 要 3 人以上（含駕駛）
+- 🔘 **進車道前切好**：人數夠切 HOV ON，不夠切回 OFF
+- 🚨 **切錯會被罰**：違規罰款 $125 起，累犯最高 $1,000
+- 📦 **換下的 Tag 要退回**：包好錫箔紙寄回，一般 Tag 未退回收 $10
 
-- **路段**：確認 HOV 優惠、門檻、時段與行車方向
-- **人數**：包含駕駛，達到該路段的要求
-- **開關**：停好車時先設定 HOV ON／OFF
-- **Tag**：正確固定、已啟用，同車沒有其他可讀取的 Tag
-- **帳戶**：餘額足夠，車牌和付款資料正確
+租車使用自己的 Flex，還要先確認租車公司的收費條款，以及原有裝置如何處理，可參考 [E-ZPass 租車注意事項](/notes/ezpass-east-coast#rental)。
 
-租車使用自己的 Flex，還要先確認租車公司的收費條款，以及原有裝置如何處理。車牌登錄和租期設定可參考 [E-ZPass 租車注意事項](/notes/ezpass-east-coast#rental)。
+<p className="section-number">09 / SOURCES</p>
+<h2 id="sources">官方資料</h2>
 
-<p className="section-number">10 / SOURCES</p>
-<h2 id="sources">官方資料與更新日期</h2>
-
-本文依官方資料整理，查核日期 **2026 年 10 月 14 日**。共乘優惠、費用與開放方式可能調整，以帳戶發行機構、路段營運機構及現場標示為準。
+查核日期 **2026 年 10 月 19 日**。費用與規定可能調整，出發前以 E-ZPass VA 官網和現場標示為準。
 
 <div className="sources">
-  <h3>官方資料</h3>
-  <a href="https://www.ezpassva.com/about/" target="_blank" rel="noopener noreferrer">E-ZPass VA｜Flex 功能、圖示與費用 ↗</a>
-  <a href="https://www.ezpassva.com/faq/" target="_blank" rel="noopener noreferrer">E-ZPass VA｜申請、換 Tag 與常見問題 ↗</a>
-  <a href="https://www.vdot.virginia.gov/travel-traffic/commuters/hov/" target="_blank" rel="noopener noreferrer">VDOT｜Virginia 各路段 HOV 規則 ↗</a>
-  <a href="https://www.expresslanes.com/faqs" target="_blank" rel="noopener noreferrer">95／395／495 Express Lanes｜開關與收費 FAQ ↗</a>
-  <a href="https://www.ncquickpass.com/hov/" target="_blank" rel="noopener noreferrer">NC Quick Pass｜I-77 共乘優惠與支援的 Flex ↗</a>
+  <h3>主要參考</h3>
+  <a href="https://www.ezpassva.com/about/" target="_blank" rel="noopener noreferrer">E-ZPass VA｜Flex 是什麼、裝置與費用 ↗</a>
+  <a href="https://www.ezpassva.com/faq/" target="_blank" rel="noopener noreferrer">E-ZPass VA｜開戶預存、換 Tag、退回舊 Tag ↗</a>
+  <a href="https://www.vdot.virginia.gov/travel-traffic/commuters/hov/" target="_blank" rel="noopener noreferrer">VDOT｜各路段共乘人數門檻 ↗</a>
+  <a href="https://www.vdot.virginia.gov/projects/major-projects/66expresslanes/faqs/" target="_blank" rel="noopener noreferrer">VDOT｜I-66 Beltway 內收費時段 ↗</a>
+  <a href="https://www.expresslanes.com/hov-enforcement" target="_blank" rel="noopener noreferrer">Express Lanes｜人數查核與罰款 ↗</a>
   <details className="sources-more">
     <summary>更多官方資料</summary>
-    <a href="https://www.vdot.virginia.gov/projects/major-projects/66expresslanes/faqs/" target="_blank" rel="noopener noreferrer">VDOT｜I-66 Inside 路段、收費時段與方向 ↗</a>
-    <a href="https://www.vdot.virginia.gov/projects/major-projects/transform66/transform66-outside/faqs/" target="_blank" rel="noopener noreferrer">VDOT｜I-66 Outside 一般車道與 Express 車道 ↗</a>
-    <a href="https://driveezmd.com/acct-types/e-zpass-faq/" target="_blank" rel="noopener noreferrer">DriveEzMD｜Maryland Flex 與感應器種類 ↗</a>
-    <a href="https://www.ncquickpass.com/transponder-options/" target="_blank" rel="noopener noreferrer">NC Quick Pass｜Flex 感應器與適用路段 ↗</a>
-    <a href="https://www.dot.state.mn.us/ezpassmn/tag.html" target="_blank" rel="noopener noreferrer">MnDOT｜Minnesota 可切換 Tag ↗</a>
-    <a href="https://www.dot.state.mn.us/ezpassmn/network.html" target="_blank" rel="noopener noreferrer">MnDOT｜外州 Tag 與 Minnesota 共乘規則 ↗</a>
-    <a href="https://www.e-zpassgroup.org/e-zpass-program" target="_blank" rel="noopener noreferrer">E-ZPass Group｜Flex 與跨州使用範圍 ↗</a>
-    <a href="https://www.ezpassva.com/media/ezpassva/content-assets/documents/agreement.pdf" target="_blank" rel="noopener noreferrer">E-ZPass VA｜帳戶與 Flex 使用條款 ↗</a>
-    <a href="https://www.expresslanes.com/hov-enforcement" target="_blank" rel="noopener noreferrer">Express Lanes｜人數計算與 HOV 查核 ↗</a>
-    <a href="https://www.ncquickpass.com/i-485-faq/" target="_blank" rel="noopener noreferrer">NC Quick Pass｜I-485 不適用一般 HOV 優惠 ↗</a>
-    <a href="https://www.mta.info/fares-tolls/tolls/vehicle-types" target="_blank" rel="noopener noreferrer">MTA｜NY 與非 NY 帳戶橋隧費率 ↗</a>
+    <a href="https://www.vdot.virginia.gov/projects/major-projects/transform66/transform66-outside/faqs/" target="_blank" rel="noopener noreferrer">VDOT｜I-66 Beltway 外 ↗</a>
+    <a href="https://www.vdot.virginia.gov/projects/major-projects/64expresslanes/using-the-lanes/faqs/" target="_blank" rel="noopener noreferrer">VDOT｜I-64 Express Lanes ↗</a>
+    <a href="https://www.expresslanes.com/faqs" target="_blank" rel="noopener noreferrer">Express Lanes｜95／395／495 常見問題 ↗</a>
+    <a href="https://law.lis.virginia.gov/vacode/title33.2/chapter5/section33.2-503/" target="_blank" rel="noopener noreferrer">Virginia Code §33.2-503｜HOV 違規罰款 ↗</a>
+    <a href="https://driveezmd.com/acct-types/e-zpass-faq/" target="_blank" rel="noopener noreferrer">DriveEzMD｜Maryland E-ZPass Flex ↗</a>
+    <a href="https://www.ncquickpass.com/hov/" target="_blank" rel="noopener noreferrer">NC Quick Pass｜I-77 共乘優惠 ↗</a>
+    <a href="https://www.ncquickpass.com/i-485-faq/" target="_blank" rel="noopener noreferrer">NC Quick Pass｜I-485 常見問題 ↗</a>
+    <a href="https://www.mta.info/fares-tolls/tolls/vehicle-types" target="_blank" rel="noopener noreferrer">MTA｜NY 與非 NY 帳戶費率 ↗</a>
   </details>
 </div>
