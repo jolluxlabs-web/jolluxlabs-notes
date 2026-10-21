@@ -237,6 +237,8 @@ img { max-width: 100% }
 /* 說明小圖：用原始尺寸，不放大糊掉 */
 .native-figure img { width: auto; max-width: 100%; margin: 6px auto 0; border-radius: 0 }
 .figure-narrow { max-width: 420px; margin-inline: auto }
+/* 直式地圖：限制高度，點圖看原圖 */
+.map-figure img { width: auto; max-width: 100%; max-height: 570px; margin: 6px auto 0 }
 .article-figure figcaption { padding: 8px 6px 4px; color: var(--quiet); font-size: 13px; line-height: 1.7; text-align: center }
 
 .fact-grid.two { grid-template-columns: repeat(2, 1fr) }
@@ -256,6 +258,17 @@ img { max-width: 100% }
 .compare-table thead .featured { background: var(--honey); color: var(--ink) }
 .compare-table .no { color: var(--quiet) }
 .compare-table small { color: var(--quiet); font-size: 13px; font-weight: 600 }
+
+/* 路段清單：左邊路名，右邊人數標籤 */
+.route-panel { margin: 6px 0 26px; padding: 6px 20px; background: #fff; border: 2px solid var(--line); border-radius: 22px }
+.route-panel-head { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 0; border-bottom: 1px solid var(--line); font: 16px/1.4 var(--round) }
+.route-panel-head span { padding: 2px 10px; border: 1px solid var(--mint); border-radius: 999px; background: var(--mint-soft); color: #4f7a62; font-size: 13px; font-weight: 700 }
+.route-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line) }
+.route-row:last-child { border-bottom: 0 }
+.route-row strong { display: block; font-size: 16px; line-height: 1.5 }
+.route-row small { color: var(--quiet); font-size: 13px; font-weight: 600 }
+.route-pill { flex: none; padding: 4px 14px; border: 1px solid var(--mint); border-radius: 999px; background: var(--mint-soft); color: #4f7a62; font-size: 14px; font-weight: 700; white-space: nowrap }
+.route-pill.two { border-color: #f0c9b4; background: var(--accent-soft); color: var(--bear) }
 /* 信用卡報銷表：金額和頻率不換行 */
 .card-table td:nth-child(2), .card-table td:nth-child(3) { white-space: nowrap }
 /* 面試文件清單：說明欄靠左，分組列加底色 */
