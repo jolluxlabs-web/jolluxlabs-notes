@@ -203,6 +203,18 @@ img { max-width: 100% }
 .quick-box { position: relative; margin: 0 0 8px; padding: 20px 22px 4px; background: var(--honey-soft); border: 2px dashed var(--honey); border-radius: 22px }
 .quick-label { display: inline-block; margin-bottom: 8px; padding: 2px 12px; border-radius: 999px; background: var(--honey); color: var(--ink); font: 14px var(--round) }
 .article-body .quick-label { color: var(--ink) }
+.quick-label.place-label { padding: 4px 16px; font-size: 17px }
+.callout { margin: 4px 0 22px; padding: 12px 16px; background: var(--mint-soft); border-left: 4px solid var(--mint); border-radius: 12px; font-size: 15px }
+.faq { margin: 0 0 12px; background: var(--paper); border: 2px solid var(--line); border-radius: 18px; transition: border-color .2s }
+.faq[open] { border-color: var(--honey) }
+.faq summary { display: flex; align-items: center; gap: 12px; padding: 14px 18px; list-style: none; cursor: pointer; font: 16px/1.5 var(--round) }
+.faq summary::-webkit-details-marker { display: none }
+.faq summary::before { content: 'Q'; flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--honey); color: var(--ink); font: 800 14px var(--sans) }
+.faq summary::after { content: '+'; flex: none; margin-left: auto; color: var(--accent); font-size: 24px; line-height: 1; transition: transform .2s }
+.faq[open] summary::after { transform: rotate(45deg) }
+.faq summary:focus-visible { outline: 3px dashed var(--accent); outline-offset: 2px; border-radius: 16px }
+.faq-answer { padding: 0 18px 4px 58px }
+.faq-answer ul { margin: 0 0 12px }
 
 .fact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 6px 0 24px }
 .fact-grid > div { display: flex; flex-direction: column; align-items: center; padding: 18px 10px; border-radius: 20px; text-align: center }
