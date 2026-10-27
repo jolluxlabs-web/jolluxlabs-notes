@@ -47,6 +47,29 @@ export type Note = NoteEntry & {
 // 新文章先登記在這裡，首頁就會自動列出。
 const entries: NoteEntry[] = [
   {
+    slug: 'dv-lottery',
+    title: '抽美國樂透綠卡：台灣人資格與 DV-2027 新規定',
+    categorySlug: 'identity-documents',
+    date: '2026-10-26',
+    summary: '台灣出生可以抽。整理 DV-2027 法院命令的時程、US$1 登記費、護照新規定、照片規格、中籤後流程與防詐騙。',
+    coverImage: '/images/dv-lottery/cover.png',
+    coverAlt: '封面文字：抽美國樂透綠卡，台灣出生可以抽，DV-2027 最新規則整理',
+    intro: '美國樂透綠卡（DV Lottery）每年最多發 55,000 張移民簽證，台灣出生的人可以參加。DV-2027 經歷暫停、法院命令和上訴，規則和時程都跟往年不同。這篇依官方資料整理今年的規定，登記前仍請以國務院最新公告為準。',
+    sections: [
+      { id: 'status', title: '今年還有嗎' },
+      { id: 'quota', title: '55,000 張怎麼發' },
+      { id: 'eligible', title: '台灣人可以抽嗎' },
+      { id: 'requirement', title: '學歷或工作經驗' },
+      { id: 'new-rules', title: '今年的新規定' },
+      { id: 'steps', title: '怎麼登記' },
+      { id: 'photo', title: '照片規格' },
+      { id: 'photo-where', title: '去哪裡拍' },
+      { id: 'results', title: '抽中之後' },
+      { id: 'cost', title: '要準備多少錢' },
+      { id: 'scams', title: '小心詐騙' },
+    ],
+  },
+  {
     slug: 'ezpass-flex',
     title: 'E-ZPass Flex 怎麼用？HOV 共乘免過路費筆記',
     categorySlug: 'us-life',
