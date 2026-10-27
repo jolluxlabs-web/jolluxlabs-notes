@@ -38,7 +38,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         {children}
         {/* Vercel Web Analytics */}
         <Analytics />
-        {site.gaId && (
+        {/* 只在 Vercel 正式網站載入，本機預覽和預覽部署不計入流量 */}
+        {site.gaId && process.env.VERCEL_ENV === 'production' && (
           <>
             {/* Google Analytics（gtag.js） */}
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${site.gaId}`} strategy="afterInteractive" />
