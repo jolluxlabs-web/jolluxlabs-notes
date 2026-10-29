@@ -188,6 +188,7 @@ img { max-width: 100% }
 .article-body > :first-child { margin-top: 0 }
 .article-body h2 { margin: 6px 0 14px; font: 26px/1.5 var(--round); scroll-margin-top: 100px }
 .article-body h3 { margin: 0 0 4px; font: 18px/1.5 var(--round) }
+.article-body > h3:not(.numbered)::before { content: '🐾'; margin-right: 8px; font-size: .85em }
 .article-body p { margin: 0 0 18px }
 .article-body a { color: var(--bear); font-weight: 700; text-decoration-color: var(--accent); text-decoration-thickness: 2px }
 .article-body ul { padding-left: 0; list-style: none }
