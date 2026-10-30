@@ -51,6 +51,7 @@ const entries: NoteEntry[] = [
     title: '抽美國樂透綠卡：台灣人資格與 DV-2027 新規定',
     categorySlug: 'identity-documents',
     date: '2026-10-26',
+    draft: true,
     summary: '台灣出生可以抽。整理 DV-2027 時程、台灣中籤人數、登記要求、照片規格與哪裡拍、登記步驟。',
     coverImage: '/images/dv-lottery/cover.png',
     coverAlt: '封面文字：抽美國樂透綠卡，台灣出生可以抽，DV-2027 最新規則整理',
