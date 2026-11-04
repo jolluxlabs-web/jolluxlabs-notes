@@ -72,7 +72,6 @@ const entries: NoteEntry[] = [
     title: 'IRA 怎麼選？Traditional、Roth 與 Backdoor Roth 整理',
     categorySlug: 'work-taxes',
     date: '2026-10-30',
-    draft: true,
     summary: '2026 年 IRA 額度 US$7,500、Traditional 抵稅與 Roth 收入上限、提早提領的稅和罰款、該選哪一種，以及收入太高時的 Backdoor Roth。',
     coverImage: '/images/ira/cover.png',
     coverAlt: '封面文字：IRA 退休帳戶怎麼選，Traditional、Roth、Backdoor，2026 額度與步驟整理',
