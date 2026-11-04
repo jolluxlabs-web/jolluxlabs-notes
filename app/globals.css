@@ -188,7 +188,8 @@ img { max-width: 100% }
 .article-body > :first-child { margin-top: 0 }
 .article-body h2 { margin: 6px 0 14px; font: 26px/1.5 var(--round); scroll-margin-top: 100px }
 .article-body h3 { margin: 0 0 4px; font: 18px/1.5 var(--round) }
-.article-body > h3:not(.numbered)::before { content: '🐾'; margin-right: 8px; font-size: .85em }
+.article-body > h3 { margin-top: 34px }
+.article-body > h3:not(.numbered)::before { content: ''; display: inline-block; width: 4px; height: 1em; margin-right: 10px; border-radius: 2px; background: var(--accent); vertical-align: -.12em }
 .article-body p { margin: 0 0 18px }
 .article-body a { color: var(--bear); font-weight: 700; text-decoration-color: var(--accent); text-decoration-thickness: 2px }
 .article-body ul { padding-left: 0; list-style: none }
@@ -206,6 +207,7 @@ img { max-width: 100% }
 .article-body .quick-label { color: var(--ink) }
 .quick-label.place-label { padding: 4px 16px; font-size: 17px }
 .callout { margin: 4px 0 22px; padding: 12px 16px; background: var(--mint-soft); border-left: 4px solid var(--mint); border-radius: 12px; font-size: 15px }
+.callout.honey { padding-left: 28px; background: var(--honey-soft); border-left: 0 }
 .faq { margin: 0 0 12px; background: var(--paper); border: 2px solid var(--line); border-radius: 18px; transition: border-color .2s }
 .faq[open] { border-color: var(--honey) }
 .faq summary { display: flex; align-items: center; gap: 12px; padding: 14px 18px; list-style: none; cursor: pointer; font: 16px/1.5 var(--round) }
@@ -230,6 +232,15 @@ img { max-width: 100% }
 .steps > li:not(:last-child)::after { content: ''; position: absolute; left: 21px; top: 46px; bottom: 4px; border-left: 2px dashed var(--line) }
 .steps > li > span { display: grid; place-items: center; flex: none; width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: #fff; font: 800 14px var(--sans); box-shadow: 0 4px 0 rgba(196, 127, 87, .3) }
 .steps > li > div { flex: 1; padding: 12px 16px; background: #fffaf6; border: 2px solid var(--line); border-radius: 18px }
+/* 編號放在卡片裡、沒有連接線的版本 */
+.steps.inbox > li { padding-bottom: 12px }
+.steps.inbox > li::after { display: none }
+.steps.inbox > li > div { background: #eef5fc; border-color: #d3e5f5 }
+.steps.inbox h3 span { display: inline-block; width: 46px; color: var(--accent); font: 800 26px var(--sans); vertical-align: -3px }
+.steps.inbox ul { padding-left: 46px }
+.steps.inbox ul li { padding-left: 0 }
+.steps.inbox ul li::before { display: none }
+.steps.inbox .pick { margin: 0 8px 0 4px; color: #2f5d85; font-size: 17px }
 .steps li p { margin: 0; color: var(--muted); font-size: 15px }
 .steps ul, .quick-box ul { margin: 4px 0 0 }
 .steps ul li { margin-bottom: 2px; color: var(--muted); font-size: 15px }
@@ -239,9 +250,10 @@ img { max-width: 100% }
 .article-body ul ul li { margin-bottom: 0 }
 .article-body ul ul li::before { width: 6px; height: 6px; left: 9px; background: var(--quiet); box-shadow: none }
 .article-body strong { color: var(--bear) }
+.article-body mark { padding: 2px 6px; border-radius: 6px; background: var(--honey-soft); color: inherit }
 .article-body h3 + ul { margin-top: 6px }
 .article-body h2 + h3 { margin-top: 4px }
-.article-body ul + h3 { margin-top: 22px }
+.article-body ul + h3 { margin-top: 34px }
 
 .article-figure { margin: 10px 0 28px; padding: 10px 10px 4px; background: #fff; border: 2px solid var(--line); border-radius: 22px; box-shadow: 0 4px 0 rgba(154, 87, 65, .05) }
 .article-figure img { display: block; width: 100%; border-radius: 14px }
@@ -267,6 +279,7 @@ img { max-width: 100% }
 .compare-table tr:last-child > * { border-bottom: 0 }
 .compare-table thead th { font: 16px/1.4 var(--round); color: var(--ink); background: #fffaf6 }
 .compare-table tbody th { width: 28%; text-align: left; color: var(--muted); font-size: 14px; font-weight: 700 }
+.compare-table.compact-label tbody th { width: 1%; white-space: nowrap }
 .compare-table .featured { background: var(--honey-soft); color: var(--bear); font-weight: 700 }
 .compare-table thead .featured { background: var(--honey); color: var(--ink) }
 .compare-table .no { color: var(--quiet) }
@@ -290,7 +303,7 @@ img { max-width: 100% }
 .article-body ol:not(.steps) { padding-left: 0; list-style: none; counter-reset: item }
 .article-body ol:not(.steps) > li { position: relative; padding-left: 36px; margin-bottom: 10px; counter-increment: item }
 .article-body ol:not(.steps) > li::before { content: counter(item); position: absolute; left: 0; top: .25em; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--accent-soft); color: var(--bear); font: 800 12px/1 var(--sans) }
-.article-body ol + h3 { margin-top: 22px }
+.article-body ol + h3 { margin-top: 34px }
 .sources { margin-top: 36px; padding: 20px 22px; background: var(--mint-soft); border-radius: 22px }
 .sources h3 { margin-bottom: 8px }
 .sources a { display: block; padding: 4px 0; font-size: 14px; font-weight: 700 }

@@ -1,0 +1,506 @@
+<aside className="quick-box">
+  <strong className="quick-label">先看重點</strong>
+  <ul>
+    <li>2026 年每人最多存 <strong>US$7,500</strong>（50 歲以上 US$8,600），Traditional 和 Roth <strong>合計</strong></li>
+    <li>要有<strong>工作收入</strong>才能存，存入金額不能超過當年的工作收入</li>
+    <li><strong>Traditional</strong> 現在抵稅、退休提領時繳稅；<strong>Roth</strong> 現在繳稅、退休提領免稅</li>
+    <li>收入超過 Roth 上限，用 <strong>Backdoor Roth</strong>：先存 Traditional，再轉換成 Roth</li>
+  </ul>
+</aside>
+
+<p className="section-number">01 / OVERVIEW</p>
+<h2 id="overview">IRA 是什麼？兩種一次看</h2>
+
+**IRA**（Individual Retirement Account，個人退休帳戶）是自己開、自己存的退休帳戶。最常見的有兩種，差別在於**什麼時候繳稅**：
+
+- **Traditional IRA**：退休提領時繳
+- **Roth IRA**：存進去之前先繳
+
+<div className="compare-table compact-label">
+  <table>
+    <thead>
+      <tr><th></th><th>Traditional IRA</th><th>Roth IRA</th></tr>
+    </thead>
+    <tbody>
+      <tr><th>存入時</th><td>可能抵稅</td><td>不能抵稅</td></tr>
+      <tr><th>投資獲利</th><td>先不課稅</td><td>不課稅</td></tr>
+      <tr><th>退休提領</th><td>當收入繳稅</td><td>全部免稅</td></tr>
+      <tr><th>收入限制</th><td>沒有（但影響能不能抵稅）</td><td>有</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p className="section-number">02 / LIMITS</p>
+<h2 id="limits">2026 年可以存多少？</h2>
+
+<div className="compare-table">
+  <table>
+    <thead>
+      <tr><th></th><th>2026 年</th></tr>
+    </thead>
+    <tbody>
+      <tr><th>每人額度</th><td>US$7,500</td></tr>
+      <tr><th>50 歲以上額外</th><td>US$1,100</td></tr>
+      <tr><th>50 歲以上合計</th><td>US$8,600</td></tr>
+      <tr><th>存款期限</th><td>2027 年 4 月 15 日</td></tr>
+    </tbody>
+  </table>
+</div>
+
+- **Traditional 和 Roth 共用額度**：例如 Traditional 存了 US$3,000，Roth 只能再存 US$4,500
+- **存款期限是隔年 4 月 15 日**：存的時候要選**存入哪一年**
+- **要有工作收入**：薪資、自僱收入才算，存入金額不能超過工作收入
+
+<p className="callout honey">自己沒有工作也可以存：只要<strong>配偶有工作收入</strong>、夫妻<strong>合併報稅</strong>，就能用配偶的收入幫自己存一份，帳戶一樣是 Traditional 或 Roth（Spousal IRA）。</p>
+
+<p className="section-number">03 / TRADITIONAL</p>
+<h2 id="traditional">Traditional IRA：現在抵稅</h2>
+
+一句話：**現在少繳稅，退休提領時再繳**。
+
+<p className="callout honey">存入的錢不需要繳稅；但退休提領時，本金和獲利都當收入繳稅。</p>
+
+<h3>我可以抵稅嗎？</h3>
+
+先看你和配偶**有沒有公司退休計畫**（例如 401(k)），再看收入：
+
+<figure className="article-figure">
+  <svg viewBox="0 0 480 464" role="img" aria-label="Traditional IRA 能不能抵稅，2026 年：你和配偶都沒有公司退休計畫，收入多少都可以全額抵稅。單身、你有公司退休計畫：US$81,000 以下全額抵稅，US$81,000–91,000 抵一部分，US$91,000 以上不能抵稅。夫妻合併報稅、你有公司退休計畫：US$129,000 以下全額，US$129,000–149,000 抵一部分，US$149,000 以上不能抵。夫妻合併報稅、只有配偶有：US$242,000 以下全額，US$242,000–252,000 抵一部分，US$252,000 以上不能抵。" style={{ display: 'block', width: '100%', fontFamily: "'Nunito', 'Noto Sans TC', sans-serif", fontVariantNumeric: 'tabular-nums' }}>
+    <defs>
+      <pattern id="ira-partial" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+        <rect width="6" height="6" fill="#eaf7f0" />
+        <line x1="0" y1="0" x2="0" y2="6" stroke="#4f9a74" strokeWidth="2.5" />
+      </pattern>
+      <clipPath id="ira-ded-0"><rect x="40" y="136" width="400" height="28" rx="6" /></clipPath>
+      <clipPath id="ira-ded-1"><rect x="40" y="228" width="400" height="28" rx="6" /></clipPath>
+      <clipPath id="ira-ded-2"><rect x="40" y="320" width="400" height="28" rx="6" /></clipPath>
+      <clipPath id="ira-ded-3"><rect x="40" y="412" width="400" height="28" rx="6" /></clipPath>
+    </defs>
+
+    <text x="40" y="30" fontSize="12" fontWeight="700" letterSpacing="1.5" fill="#84695a">TRADITIONAL IRA · 2026</text>
+    <text x="40" y="54" fontSize="17" fontWeight="700" fill="#4a3428">收入多少以下可以抵稅？</text>
+
+    {/* 圖例 */}
+    <rect x="40" y="68" width="14" height="14" rx="3" fill="#4f9a74" />
+    <text x="60" y="80" fontSize="13" fill="#4a3428">全額抵稅</text>
+    <rect x="140" y="68" width="14" height="14" rx="3" fill="url(#ira-partial)" />
+    <text x="160" y="80" fontSize="13" fill="#4a3428">抵一部分</text>
+    <rect x="240" y="68" width="14" height="14" rx="3" fill="#eadbcd" />
+    <text x="260" y="80" fontSize="13" fill="#4a3428">不能抵稅</text>
+
+    {/* 每一列：收入由左到右，US$0–300,000 = 400px */}
+    <text x="40" y="124" fontSize="14" fontWeight="700" fill="#4a3428">你和配偶都沒有公司退休計畫</text>
+    <g clipPath="url(#ira-ded-0)">
+      <rect x="40" y="136" width="400" height="28" fill="#4f9a74"><title>收入多少都可以全額抵稅</title></rect>
+    </g>
+    <text x="240" y="155" textAnchor="middle" fontSize="14" fontWeight="700" fill="#ffffff">收入多少都可以全額抵稅</text>
+    <text x="40" y="216" fontSize="14" fontWeight="700" fill="#4a3428">單身，你有公司退休計畫</text>
+    <g clipPath="url(#ira-ded-1)">
+      <rect x="40" y="228" width="107.0" height="28" fill="#4f9a74"><title>US$81,000 以下：全額抵稅</title></rect>
+      <rect x="149.0" y="228" width="11.3" height="28" fill="url(#ira-partial)"><title>US$81,000–91,000：抵一部分</title></rect>
+      <rect x="162.3" y="228" width="277.7" height="28" fill="#eadbcd"><title>US$91,000 以上：不能抵稅</title></rect>
+    </g>
+    <text x="94.0" y="247" textAnchor="middle" fontSize="13" fontWeight="700" fill="#ffffff">全額抵稅</text>
+    <text x="300.6" y="247" textAnchor="middle" fontSize="13" fontWeight="700" fill="#84695a">不能抵稅</text>
+    <line x1="148" y1="256" x2="148" y2="264" stroke="#4a3428" strokeWidth="1.5" />
+    <text x="145" y="278" textAnchor="end" fontSize="14" fontWeight="700" fill="#4a3428">$81k</text>
+    <line x1="161.3" y1="256" x2="161.3" y2="264" stroke="#4a3428" strokeWidth="1.5" />
+    <text x="164.3" y="278" fontSize="14" fontWeight="700" fill="#4a3428">$91k</text>
+    <text x="40" y="308" fontSize="14" fontWeight="700" fill="#4a3428">夫妻合併報稅，你有公司退休計畫</text>
+    <g clipPath="url(#ira-ded-2)">
+      <rect x="40" y="320" width="171.0" height="28" fill="#4f9a74"><title>US$129,000 以下：全額抵稅</title></rect>
+      <rect x="213.0" y="320" width="24.7" height="28" fill="url(#ira-partial)"><title>US$129,000–149,000：抵一部分</title></rect>
+      <rect x="239.7" y="320" width="200.3" height="28" fill="#eadbcd"><title>US$149,000 以上：不能抵稅</title></rect>
+    </g>
+    <text x="126.0" y="339" textAnchor="middle" fontSize="13" fontWeight="700" fill="#ffffff">全額抵稅</text>
+    <text x="339.4" y="339" textAnchor="middle" fontSize="13" fontWeight="700" fill="#84695a">不能抵稅</text>
+    <line x1="212" y1="348" x2="212" y2="356" stroke="#4a3428" strokeWidth="1.5" />
+    <text x="209" y="370" textAnchor="end" fontSize="14" fontWeight="700" fill="#4a3428">$129k</text>
+    <line x1="238.7" y1="348" x2="238.7" y2="356" stroke="#4a3428" strokeWidth="1.5" />
+    <text x="241.7" y="370" fontSize="14" fontWeight="700" fill="#4a3428">$149k</text>
+    <text x="40" y="400" fontSize="14" fontWeight="700" fill="#4a3428">夫妻合併報稅，只有配偶有</text>
+    <g clipPath="url(#ira-ded-3)">
+      <rect x="40" y="412" width="321.7" height="28" fill="#4f9a74"><title>US$242,000 以下：全額抵稅</title></rect>
+      <rect x="363.7" y="412" width="11.3" height="28" fill="url(#ira-partial)"><title>US$242,000–252,000：抵一部分</title></rect>
+      <rect x="377.0" y="412" width="63.0" height="28" fill="#eadbcd"><title>US$252,000 以上：不能抵稅</title></rect>
+    </g>
+    <text x="408.5" y="431" textAnchor="middle" fontSize="12" fontWeight="700" fill="#84695a">不能抵稅</text>
+    <text x="201.3" y="431" textAnchor="middle" fontSize="13" fontWeight="700" fill="#ffffff">全額抵稅</text>
+    <line x1="362.7" y1="440" x2="362.7" y2="448" stroke="#4a3428" strokeWidth="1.5" />
+    <text x="359.7" y="462" textAnchor="end" fontSize="14" fontWeight="700" fill="#4a3428">$242k</text>
+    <line x1="376" y1="440" x2="376" y2="448" stroke="#4a3428" strokeWidth="1.5" />
+    <text x="379" y="462" fontSize="14" fontWeight="700" fill="#4a3428">$252k</text>
+  </svg>
+  <figcaption>收入是稅表上的收入（MAGI）：單身看自己的，夫妻合併報稅看<strong>兩人加總</strong>。</figcaption>
+</figure>
+
+<p className="callout"><strong>不能抵稅也可以存：</strong>但存的是稅後的錢，獲利提領時還要繳稅，不如 Roth 獲利免稅。這種情況通常改存 Roth；收入超過 Roth 上限，就用 <a href="#backdoor">Backdoor Roth</a></p>
+
+<h3>什麼時候可以提領？</h3>
+
+<div className="compare-table compact-label">
+  <table>
+    <thead>
+      <tr><th>年齡</th><th>可以領嗎</th><th>要繳什麼</th></tr>
+    </thead>
+    <tbody>
+      <tr><th>59½ 歲前</th><td>可以，但通常有罰款</td><td>所得稅 + 10% 罰款</td></tr>
+      <tr><th>59½ 歲後</th><td>隨時可以領</td><td>所得稅</td></tr>
+      <tr><th>75 歲起</th><td>每年一定要領一部分（RMD）</td><td>所得稅</td></tr>
+    </tbody>
+  </table>
+</div>
+
+- **提早提領要繳多少**：看<a href="#early-withdrawal">提早提領，要繳多少？</a>，免罰款的例外看<a href="#exceptions">哪些情況免罰款</a>
+- **強制提領（RMD）幾歲開始**：1960 年以後出生是 75 歲，1951–1959 年出生是 73 歲
+
+<p className="section-number">04 / ROTH</p>
+<h2 id="roth">Roth IRA：退休免稅</h2>
+
+一句話：**現在先繳稅，退休提領全部免稅**。剛好跟 Traditional 相反。
+
+<p className="callout honey">存進去的錢不能抵稅；但退休提領時本金加獲利都免稅。</p>
+
+<h3>我可以存嗎？</h3>
+
+收入太高就不能直接存，2026 年的範圍如下：
+
+<figure className="article-figure">
+  <svg viewBox="0 0 480 296" role="img" aria-label="Roth IRA 能不能直接存，2026 年：單身 US$153,000 以下可以存全額，US$153,000–168,000 可以存一部分，US$168,000 以上不能直接存。夫妻合併報稅 US$242,000 以下可以存全額，US$242,000–252,000 可以存一部分，US$252,000 以上不能直接存。" style={{ display: 'block', width: '100%', fontFamily: "'Nunito', 'Noto Sans TC', sans-serif", fontVariantNumeric: 'tabular-nums' }}>
+    <defs>
+      <pattern id="roth-partial" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+        <rect width="6" height="6" fill="#eaf7f0" />
+        <line x1="0" y1="0" x2="0" y2="6" stroke="#4f9a74" strokeWidth="2.5" />
+      </pattern>
+      <clipPath id="roth-limit-0"><rect x="40" y="136" width="400" height="28" rx="6" /></clipPath>
+      <clipPath id="roth-limit-1"><rect x="40" y="228" width="400" height="28" rx="6" /></clipPath>
+    </defs>
+
+    <text x="40" y="30" fontSize="12" fontWeight="700" letterSpacing="1.5" fill="#84695a">ROTH IRA · 2026</text>
+    <text x="40" y="54" fontSize="17" fontWeight="700" fill="#4a3428">收入多少以下可以直接存？</text>
+
+    {/* 圖例 */}
+    <rect x="40" y="68" width="14" height="14" rx="3" fill="#4f9a74" />
+    <text x="60" y="80" fontSize="13" fill="#4a3428">可以存全額</text>
+    <rect x="150" y="68" width="14" height="14" rx="3" fill="url(#roth-partial)" />
+    <text x="170" y="80" fontSize="13" fill="#4a3428">存一部分</text>
+    <rect x="250" y="68" width="14" height="14" rx="3" fill="#eadbcd" />
+    <text x="270" y="80" fontSize="13" fill="#4a3428">不能直接存</text>
+
+    {/* 每一列：收入由左到右，US$0–300,000 = 400px，跟 Traditional 抵稅圖同一個刻度 */}
+    <text x="40" y="124" fontSize="14" fontWeight="700" fill="#4a3428">單身</text>
+    <g clipPath="url(#roth-limit-0)">
+      <rect x="40" y="136" width="203.0" height="28" fill="#4f9a74"><title>US$153,000 以下：可以存全額</title></rect>
+      <rect x="245.0" y="136" width="18.0" height="28" fill="url(#roth-partial)"><title>US$153,000–168,000：可以存一部分</title></rect>
+      <rect x="265.0" y="136" width="175.0" height="28" fill="#eadbcd"><title>US$168,000 以上：不能直接存</title></rect>
+    </g>
+    <text x="142.0" y="155" textAnchor="middle" fontSize="13" fontWeight="700" fill="#ffffff">可以存全額</text>
+    <text x="352.0" y="155" textAnchor="middle" fontSize="13" fontWeight="700" fill="#84695a">不能直接存</text>
+    <line x1="244" y1="164" x2="244" y2="172" stroke="#4a3428" strokeWidth="1.5" />
+    <text x="241.0" y="186" textAnchor="end" fontSize="14" fontWeight="700" fill="#4a3428">$153k</text>
+    <line x1="264" y1="164" x2="264" y2="172" stroke="#4a3428" strokeWidth="1.5" />
+    <text x="267.0" y="186" fontSize="14" fontWeight="700" fill="#4a3428">$168k</text>
+    <text x="40" y="216" fontSize="14" fontWeight="700" fill="#4a3428">夫妻合併報稅</text>
+    <g clipPath="url(#roth-limit-1)">
+      <rect x="40" y="228" width="321.7" height="28" fill="#4f9a74"><title>US$242,000 以下：可以存全額</title></rect>
+      <rect x="363.7" y="228" width="11.3" height="28" fill="url(#roth-partial)"><title>US$242,000–252,000：可以存一部分</title></rect>
+      <rect x="377.0" y="228" width="63.0" height="28" fill="#eadbcd"><title>US$252,000 以上：不能直接存</title></rect>
+    </g>
+    <text x="201.3" y="247" textAnchor="middle" fontSize="13" fontWeight="700" fill="#ffffff">可以存全額</text>
+    <text x="408.0" y="247" textAnchor="middle" fontSize="12" fontWeight="700" fill="#84695a">不能存</text>
+    <line x1="362.7" y1="256" x2="362.7" y2="264" stroke="#4a3428" strokeWidth="1.5" />
+    <text x="359.7" y="278" textAnchor="end" fontSize="14" fontWeight="700" fill="#4a3428">$242k</text>
+    <line x1="376" y1="256" x2="376" y2="264" stroke="#4a3428" strokeWidth="1.5" />
+    <text x="379.0" y="278" fontSize="14" fontWeight="700" fill="#4a3428">$252k</text>
+  </svg>
+  <figcaption>收入是稅表上的收入（MAGI）：單身看自己的，夫妻合併報稅看<strong>兩人加總</strong>。</figcaption>
+</figure>
+
+- 超過上限的話，可以用後面的 <a href="#backdoor">Backdoor Roth</a> 存進去
+
+<h3>什麼時候可以提領？</h3>
+
+- **本金**：自己存進去的錢，**隨時可以提領**，不用繳稅、也沒有罰款
+- **獲利**：要等 **59½ 歲以後**，而且**第一次存 Roth 滿 5 年**，才能免稅提領
+- **不用強制提領**：可以一直放著，不像 Traditional IRA 75 歲就要開始提領
+- **提早提領要繳多少**：看<a href="#early-withdrawal">提早提領，要繳多少？</a>
+
+<p className="section-number">05 / BACKDOOR</p>
+<h2 id="backdoor">Backdoor Roth 是什麼？</h2>
+
+一句話：**收入太高不能直接存 Roth，就先存 Traditional，再轉成 Roth**。
+
+<p className="callout honey">直接存 Roth IRA 有收入上限，但把 Traditional 轉成 Roth（Roth conversion）沒有收入限制。</p>
+
+- 這是 IRS 允許的做法，不是漏洞
+- 名下有其他**稅前 IRA** 的話，轉換時會按比例繳稅，動手前要先處理
+- 報稅時一定要填 **Form 8606**
+
+詳細步驟和三種轉換手法，看<a href="/notes/backdoor-roth">Backdoor Roth 怎麼做</a>。
+
+<p className="section-number">06 / EARLY WITHDRAWAL</p>
+<h2 id="early-withdrawal">提早提領，要繳多少？</h2>
+
+59½ 歲前提領，Traditional 和 Roth 的算法不一樣：
+
+- **Traditional**：本金和獲利都要當收入繳稅，再加 **10% 罰款**，沒有先後順序
+- **Roth**：一律**先領本金**，免稅也沒有罰款；本金領完才動到獲利，獲利要繳稅加罰款
+
+<h3>同一個例子比一比</h3>
+
+餘額 US$10,000（本金 US$7,500、獲利 US$2,500），40 歲提領，假設所得稅率 22%、Traditional 存入時有抵稅：
+
+<div className="compare-table compact-label">
+  <table>
+    <thead>
+      <tr><th>要繳多少</th><th>Traditional IRA</th><th>Roth IRA</th></tr>
+    </thead>
+    <tbody>
+      <tr><th>只提領 $7,500</th><td>US$2,400</td><td>US$0</td></tr>
+      <tr><th>全部提領 $10,000</th><td>US$3,200</td><td>US$800</td></tr>
+    </tbody>
+  </table>
+</div>
+
+Roth 的本金當初是繳過稅的錢，所以領出來不用再繳；Traditional 的本金當初有抵稅，領出來就要補繳。
+
+<h3>Traditional IRA 怎麼算</h3>
+
+<figure className="article-figure">
+  <svg viewBox="0 0 480 340" role="img" aria-label="例子：Traditional IRA 餘額 US$10,000，其中本金 US$7,500、獲利 US$2,500，存入時有抵稅，40 歲全部提領。本金 US$7,500 以稅率 22% 試算要繳所得稅 US$1,650，另罰 US$750，共 US$2,400；獲利 US$2,500 要繳所得稅 US$550，另罰 US$250，共 US$800。全部提領要繳 US$3,200。" style={{ display: 'block', width: '100%', fontFamily: "'Nunito', 'Noto Sans TC', sans-serif", fontVariantNumeric: 'tabular-nums' }}>
+    <text x="40" y="30" fontSize="12" fontWeight="700" letterSpacing="1.5" fill="#84695a">EARLY WITHDRAWAL</text>
+    <text x="40" y="54" fontSize="17" fontWeight="700" fill="#4a3428">Traditional IRA 餘額 US$10,000，40 歲全部提領</text>
+    <text x="40" y="78" fontSize="14" fill="#9a5741">假設所得稅率 22%、存入時有抵稅</text>
+
+    {/* 餘額組成：本金和獲利都要繳稅，沒有先後 */}
+    <text x="40" y="112" fontSize="13" fill="#7d6354">本金和獲利都要繳稅</text>
+    <rect x="40" y="122" width="298" height="38" rx="3" fill="#c47f57" />
+    <rect x="340" y="122" width="100" height="38" rx="3" fill="#9a5741" />
+    <text x="189" y="146" textAnchor="middle" fontSize="15" fontWeight="700" fill="#ffffff">本金 US$7,500</text>
+    <text x="390" y="146" textAnchor="middle" fontSize="15" fontWeight="700" fill="#ffffff">獲利 $2,500</text>
+    <line x1="40" y1="170" x2="440" y2="170" stroke="#d9c6b6" />
+    <line x1="40" y1="170" x2="40" y2="176" stroke="#d9c6b6" />
+    <line x1="339" y1="170" x2="339" y2="176" stroke="#d9c6b6" />
+    <line x1="440" y1="170" x2="440" y2="176" stroke="#d9c6b6" />
+    <text x="40" y="191" fontSize="12" fill="#84695a">$0</text>
+    <text x="339" y="191" textAnchor="middle" fontSize="12" fill="#84695a">$7,500</text>
+    <text x="440" y="191" textAnchor="end" fontSize="12" fill="#84695a">$10,000</text>
+
+    {/* 提領明細：所得稅假設稅率 22% */}
+    <text x="40" y="236" fontSize="13" fontWeight="700" fill="#84695a">項目</text>
+    <text x="178" y="236" textAnchor="end" fontSize="13" fontWeight="700" fill="#84695a">金額</text>
+    <text x="280" y="236" textAnchor="end" fontSize="13" fontWeight="700" fill="#84695a">所得稅 22%</text>
+    <text x="355" y="236" textAnchor="end" fontSize="13" fontWeight="700" fill="#84695a">罰款</text>
+    <text x="440" y="236" textAnchor="end" fontSize="13" fontWeight="700" fill="#84695a">要繳合計</text>
+    <line x1="40" y1="246" x2="440" y2="246" stroke="#4a3428" strokeWidth="1.5" />
+    <rect x="40" y="260" width="10" height="10" rx="2" fill="#c47f57" />
+    <text x="58" y="270" fontSize="15" fill="#4a3428">本金</text>
+    <text x="178" y="270" textAnchor="end" fontSize="15" fill="#4a3428">$7,500</text>
+    <text x="280" y="270" textAnchor="end" fontSize="15" fill="#c47f57">$1,650</text>
+    <text x="355" y="270" textAnchor="end" fontSize="15" fill="#c47f57">$750</text>
+    <text x="440" y="270" textAnchor="end" fontSize="15" fontWeight="700" fill="#c47f57">$2,400</text>
+    <line x1="40" y1="286" x2="440" y2="286" stroke="#eadbcd" />
+    <rect x="40" y="300" width="10" height="10" rx="2" fill="#9a5741" />
+    <text x="58" y="310" fontSize="15" fill="#4a3428">獲利</text>
+    <text x="178" y="310" textAnchor="end" fontSize="15" fill="#4a3428">$2,500</text>
+    <text x="280" y="310" textAnchor="end" fontSize="15" fill="#c47f57">$550</text>
+    <text x="355" y="310" textAnchor="end" fontSize="15" fill="#c47f57">$250</text>
+    <text x="440" y="310" textAnchor="end" fontSize="15" fontWeight="700" fill="#c47f57">$800</text>
+    <line x1="40" y1="326" x2="440" y2="326" stroke="#4a3428" strokeWidth="1.5" />
+
+  </svg>
+  <figcaption>Traditional 提領沒有先後順序，本金和獲利都當收入繳稅，59½ 歲前另外再罰 10%。</figcaption>
+</figure>
+
+<h3>Roth IRA 怎麼算</h3>
+
+<figure className="article-figure">
+  <svg viewBox="0 0 480 340" role="img" aria-label="例子：Roth IRA 餘額 US$10,000，其中本金 US$7,500、獲利 US$2,500，40 歲全部提領。先提領本金 US$7,500，所得稅和罰款都是 0；再提領獲利 US$2,500，以稅率 22% 試算要繳所得稅 US$550，另罰 US$250，共 US$800。" style={{ display: 'block', width: '100%', fontFamily: "'Nunito', 'Noto Sans TC', sans-serif", fontVariantNumeric: 'tabular-nums' }}>
+    <text x="40" y="30" fontSize="12" fontWeight="700" letterSpacing="1.5" fill="#84695a">WITHDRAWAL ORDER</text>
+    <text x="40" y="54" fontSize="17" fontWeight="700" fill="#4a3428">Roth IRA 餘額 US$10,000，40 歲全部提領</text>
+    <text x="40" y="78" fontSize="14" fill="#9a5741">假設所得稅率 22%</text>
+
+    {/* 餘額組成：左邊先提領 */}
+    <text x="40" y="112" fontSize="13" fill="#7d6354">① 本金先提領</text>
+    <text x="440" y="112" textAnchor="end" fontSize="13" fill="#7d6354">② 獲利最後</text>
+    <rect x="40" y="122" width="298" height="38" rx="3" fill="#4a3428" />
+    <rect x="340" y="122" width="100" height="38" rx="3" fill="#c47f57" />
+    <text x="189" y="146" textAnchor="middle" fontSize="15" fontWeight="700" fill="#ffffff">本金 US$7,500</text>
+    <text x="390" y="146" textAnchor="middle" fontSize="15" fontWeight="700" fill="#ffffff">獲利 $2,500</text>
+    <line x1="40" y1="170" x2="440" y2="170" stroke="#d9c6b6" />
+    <line x1="40" y1="170" x2="40" y2="176" stroke="#d9c6b6" />
+    <line x1="339" y1="170" x2="339" y2="176" stroke="#d9c6b6" />
+    <line x1="440" y1="170" x2="440" y2="176" stroke="#d9c6b6" />
+    <text x="40" y="191" fontSize="12" fill="#84695a">$0</text>
+    <text x="339" y="191" textAnchor="middle" fontSize="12" fill="#84695a">$7,500</text>
+    <text x="440" y="191" textAnchor="end" fontSize="12" fill="#84695a">$10,000</text>
+
+    {/* 提領明細：所得稅假設稅率 22% */}
+    <text x="40" y="236" fontSize="13" fontWeight="700" fill="#84695a">項目</text>
+    <text x="178" y="236" textAnchor="end" fontSize="13" fontWeight="700" fill="#84695a">金額</text>
+    <text x="280" y="236" textAnchor="end" fontSize="13" fontWeight="700" fill="#84695a">所得稅 22%</text>
+    <text x="355" y="236" textAnchor="end" fontSize="13" fontWeight="700" fill="#84695a">罰款</text>
+    <text x="440" y="236" textAnchor="end" fontSize="13" fontWeight="700" fill="#84695a">要繳合計</text>
+    <line x1="40" y1="246" x2="440" y2="246" stroke="#4a3428" strokeWidth="1.5" />
+    <rect x="40" y="260" width="10" height="10" rx="2" fill="#4a3428" />
+    <text x="58" y="270" fontSize="15" fill="#4a3428">① 本金</text>
+    <text x="178" y="270" textAnchor="end" fontSize="15" fill="#4a3428">$7,500</text>
+    <text x="280" y="270" textAnchor="end" fontSize="15" fill="#4a3428">$0</text>
+    <text x="355" y="270" textAnchor="end" fontSize="15" fill="#4a3428">$0</text>
+    <text x="440" y="270" textAnchor="end" fontSize="15" fontWeight="700" fill="#4a3428">$0</text>
+    <line x1="40" y1="286" x2="440" y2="286" stroke="#eadbcd" />
+    <rect x="40" y="300" width="10" height="10" rx="2" fill="#c47f57" />
+    <text x="58" y="310" fontSize="15" fill="#4a3428">② 獲利</text>
+    <text x="178" y="310" textAnchor="end" fontSize="15" fill="#4a3428">$2,500</text>
+    <text x="280" y="310" textAnchor="end" fontSize="15" fill="#c47f57">$550</text>
+    <text x="355" y="310" textAnchor="end" fontSize="15" fill="#c47f57">$250</text>
+    <text x="440" y="310" textAnchor="end" fontSize="15" fontWeight="700" fill="#c47f57">$800</text>
+    <line x1="40" y1="326" x2="440" y2="326" stroke="#4a3428" strokeWidth="1.5" />
+
+  </svg>
+  <figcaption>提領一律先算本金，本金領完才動到獲利。提早提領的獲利要繳所得稅，另外再罰 10%。</figcaption>
+</figure>
+
+<p className="section-number">07 / EXCEPTIONS</p>
+<h2 id="exceptions">提早提領，哪些情況免罰款？</h2>
+
+59½ 歲前提領，通常要多付 **10% 罰款**。<mark>以下情況可以免罰款</mark>，Traditional 和 Roth 都適用。
+
+<div className="compare-table compact-label">
+  <table>
+    <thead>
+      <tr><th>情況</th><th>條件與上限</th></tr>
+    </thead>
+    <tbody>
+      <tr><th>買第一間房</th><td>終身最多 US$10,000</td></tr>
+      <tr><th>付大學學費</th><td>自己、配偶、子女或孫子女的學費、書本等</td></tr>
+      <tr><th>生小孩或領養</th><td>每個孩子最多 US$5,000，出生或領養後一年內領</td></tr>
+      <tr><th>大額醫療費</th><td>超過當年收入 7.5% 的部分</td></tr>
+      <tr><th>失業時付健保費</th><td>領失業救濟金 12 週以上</td></tr>
+      <tr><th>緊急支出</th><td>每年 1 次，最多 US$1,000</td></tr>
+      <tr><th>完全失能</th><td>無法工作、且預期會長期持續</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p className="callout honey">免罰款不等於免稅：Traditional 提領的錢還是要當收入繳稅；Roth 只有提領到獲利的部分要繳。</p>
+
+<p className="section-number">08 / WHICH ONE</p>
+<h2 id="which">該選哪一種？</h2>
+
+核心問題是：**現在的稅率比較高，還是退休時比較高？** 現在稅率高，先抵稅划算；現在稅率低，先繳稅划算。
+
+<ol className="steps inbox">
+  <li><div><h3><span>01</span>現在稅率高，而且 Traditional 可以全額抵稅嗎？</h3><ul><li>是的話 <strong className="pick">Traditional</strong></li></ul></div></li>
+  <li><div><h3><span>02</span>收入在 Roth 上限以內嗎？</h3><ul><li>是的話 <strong className="pick">Roth</strong> 例如剛開始工作、稅率低，或 Traditional 不能抵稅</li></ul></div></li>
+  <li><div><h3><span>03</span>以上都不是</h3><ul><li>選 <strong className="pick">Backdoor Roth</strong> 收入超過 Roth 上限</li></ul></div></li>
+</ol>
+
+- 收入接近 Roth 上限、不確定會不會超過，**直接用 Backdoor** 最省事
+
+<p className="section-number">09 / EXAMPLE</p>
+<h2 id="example">25 歲存到 60 歲，差多少？</h2>
+
+同樣每年存 US$7,500，從 25 歲存到 60 歲（共 35 年），假設年報酬 7%，現在和退休時的所得稅率都是 22%。比較三種情況：
+
+<figure className="article-figure">
+  <svg viewBox="0 0 480 394" role="img" aria-label="例子：每年存 US$7,500，從 25 歲存到 60 歲，年報酬 7%，所得稅率 22%。60 歲時三種帳戶餘額都是約 US$1,109,000。Roth IRA 全部免稅，實拿 US$1,109,000。全部有抵稅的 Traditional IRA 提領要繳稅約 US$244,000，實拿約 US$865,000，但 35 年共省稅 US$57,750，這筆錢也拿去投資的話，60 歲時約 US$244,000，跟 Roth 打平。全部未抵稅的 Traditional IRA 沒有省到稅，提領時獲利還要繳稅約 US$186,000，實拿約 US$923,000，比 Roth 少約 US$186,000。" style={{ display: 'block', width: '100%', fontFamily: "'Nunito', 'Noto Sans TC', sans-serif", fontVariantNumeric: 'tabular-nums' }}>
+    <defs>
+      <pattern id="ira-tax" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+        <rect width="6" height="6" fill="#fbeee6" />
+        <line x1="0" y1="0" x2="0" y2="6" stroke="#c47f57" strokeWidth="2" />
+      </pattern>
+    </defs>
+    <text x="40" y="30" fontSize="12" fontWeight="700" letterSpacing="1.5" fill="#84695a">TRADITIONAL VS ROTH</text>
+    <text x="40" y="54" fontSize="17" fontWeight="700" fill="#4a3428">每年存 $7,500，25 歲存到 60 歲</text>
+    <text x="40" y="78" fontSize="14" fill="#9a5741">假設年報酬 7%，所得稅率 22%</text>
+
+    {/* 60 歲時的帳戶餘額：$1,109,000 = 400px；深色是實拿，斜線是提領時要繳的稅 */}
+    <text x="40" y="114" fontSize="13" fontWeight="700" fill="#4a3428">Traditional IRA（全部有抵稅）</text>
+    <text x="440" y="114" textAnchor="end" fontSize="13" fill="#c47f57">繳稅 $244,000</text>
+    <rect x="40" y="122" width="310" height="36" rx="3" fill="#4a3428" />
+    <rect x="352" y="122" width="88" height="36" rx="3" fill="url(#ira-tax)" stroke="#c47f57" strokeWidth="1.5" />
+    <text x="54" y="145" fontSize="14" fontWeight="700" fill="#ffffff">實拿 $865,000</text>
+    <text x="396" y="145" textAnchor="middle" fontSize="13" fontWeight="700" fill="#9a5741" stroke="#fbeee6" strokeWidth="5" paintOrder="stroke">繳稅</text>
+
+    <text x="40" y="188" fontSize="13" fontWeight="700" fill="#4a3428">Traditional IRA（全部未抵稅）</text>
+    <text x="440" y="188" textAnchor="end" fontSize="13" fill="#c47f57">繳稅 $186,000（只有獲利）</text>
+    <rect x="40" y="196" width="331" height="36" rx="3" fill="#4a3428" />
+    <rect x="373" y="196" width="67" height="36" rx="3" fill="url(#ira-tax)" stroke="#c47f57" strokeWidth="1.5" />
+    <text x="54" y="219" fontSize="14" fontWeight="700" fill="#ffffff">實拿 $923,000</text>
+    <text x="406.5" y="219" textAnchor="middle" fontSize="13" fontWeight="700" fill="#9a5741" stroke="#fbeee6" strokeWidth="5" paintOrder="stroke">繳稅</text>
+
+    <text x="40" y="252" fontSize="13" fontWeight="700" fill="#c47f57">↑ 比 Roth 少拿 $186,000，不如做 Backdoor Roth</text>
+
+    <text x="40" y="284" fontSize="13" fontWeight="700" fill="#4a3428">Roth IRA</text>
+    <text x="440" y="284" textAnchor="end" fontSize="13" fill="#84695a">提領免稅</text>
+    <rect x="40" y="292" width="400" height="36" rx="3" fill="#4a3428" />
+    <text x="54" y="315" fontSize="14" fontWeight="700" fill="#ffffff">實拿 $1,109,000</text>
+
+    <text x="40" y="352" fontSize="12" fill="#84695a">三個帳戶 60 歲時的餘額都是 $1,109,000（本金 $262,500）</text>
+    <rect x="40" y="363" width="12" height="12" rx="2" fill="#4a3428" />
+    <text x="56" y="373" fontSize="12" fill="#84695a">實拿到手的錢</text>
+    <rect x="150" y="363" width="12" height="12" rx="2" fill="url(#ira-tax)" stroke="#c47f57" />
+    <text x="168" y="373" fontSize="12" fill="#84695a">繳給政府的稅</text>
+  </svg>
+</figure>
+
+<p className="callout honey"><strong>全部未抵稅的 Traditional，不如做 Backdoor Roth</strong>：前面沒省到稅，後面獲利還要繳稅，比 Roth 少拿約 $186,000。不能抵稅時，存進 Traditional 後馬上轉換成 Roth 就好，詳見 <a href="#backdoor">Backdoor Roth</a>。</p>
+
+- **退休後稅率變低**：選 **Traditional**，現在省的稅比之後繳的多
+  - 例如 : 退休收入不高
+- **退休後稅率變高**：選 **Roth**，趁現在稅率低先繳掉
+  - 例如 : 現在剛開始工作
+- **稅率不變的話，兩者其實一樣**：
+  - Traditional 每年少繳 $1,650 的稅，這筆錢也拿去投資，60 歲時會變成約 $244,000，剛好等於退休時要繳的稅。
+  - 但如果省下的錢花掉的話，Roth 就拿得比較多
+ 
+這是簡化試算：每年存 US$7,500、報酬固定 7%。實際的稅是分級計算，退休後通常也是分很多年提領。
+
+<p className="section-number">10 / FAQ</p>
+<h2 id="faq">其他相關問題</h2>
+
+<details className="faq">
+  <summary>沒有綠卡、拿工作簽證可以存 IRA 嗎？</summary>
+  <div className="faq-answer">
+    <ul>
+      <li><strong>看的是報稅身分和工作收入，不是簽證</strong>。在美國工作、以稅務居民（resident alien）身分報稅，就跟美國人一樣可以存</li>
+      <li>還是<strong>非稅務居民</strong>（例如 F-1 學生前幾年）的話，情況比較複雜，建議先問會計師</li>
+      <li>以後可能<strong>搬回台灣</strong>的話，IRA 帳戶可以留著，但提領時美國和台灣的稅務都要注意，也建議先問會計師</li>
+    </ul>
+  </div>
+</details>
+
+<details className="faq">
+  <summary>存超過額度怎麼辦？</summary>
+  <div className="faq-answer">
+    <ul>
+      <li>超額的部分每年要付 <strong>6% 罰款</strong>，直到處理掉為止</li>
+      <li>在報稅截止日前，請券商把<strong>超額的錢和這筆錢的獲利</strong>一起退回（return of excess contribution），就不會被罰</li>
+      <li>收入超過 Roth 上限卻直接存了 Roth，也算超額，可以請券商改成存 Traditional（recharacterization），再做 Backdoor，步驟看<a href="/notes/backdoor-roth#recharacterize">這裡</a></li>
+    </ul>
+  </div>
+</details>
+
+<details className="faq">
+  <summary>有 401(k) 還要存 IRA 嗎？</summary>
+  <div className="faq-answer">
+    <ul>
+      <li>兩者<strong>額度分開</strong>，可以都存</li>
+      <li>常見順序：先存到 401(k) <strong>公司配合（match）拿滿</strong>，再存 IRA，有餘力再把 401(k) 存滿</li>
+      <li>IRA 可以自己選券商和投資標的，選擇通常比公司 401(k) 多</li>
+    </ul>
+  </div>
+</details>
+
+<aside className="quick-box">
+  <strong className="quick-label">最後</strong>
+  <p>這篇依 IRS 公告整理 2026 年的規定，不是稅務建議。收入接近上限、名下有其他 IRA，或身分比較特殊的話，動手前建議先問會計師；額度和收入上限每年都會調整，請以 IRS 最新公告為準。</p>
+</aside>
+
+<div className="sources">
+  <h3>參考資料</h3>
+  <a href="https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500" target="_blank" rel="noopener noreferrer">IRS｜2026 年 401(k) 與 IRA 額度公告 ↗</a>
+  <a href="https://www.irs.gov/publications/p590a" target="_blank" rel="noopener noreferrer">IRS Publication 590-A｜IRA 存入規定 ↗</a>
+  <a href="https://www.irs.gov/publications/p590b" target="_blank" rel="noopener noreferrer">IRS Publication 590-B｜IRA 提領規定 ↗</a>
+</div>
