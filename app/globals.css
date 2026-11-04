@@ -190,6 +190,9 @@ img { max-width: 100% }
 .article-body h3 { margin: 0 0 4px; font: 18px/1.5 var(--round) }
 .article-body > h3 { margin-top: 34px }
 .article-body > h3:not(.numbered)::before { content: ''; display: inline-block; width: 4px; height: 1em; margin-right: 10px; border-radius: 2px; background: var(--accent); vertical-align: -.12em }
+.article-body h3.numbered span { margin-right: 10px; color: var(--accent); font: 800 24px var(--sans); vertical-align: -2px }
+.article-body > h3.numbered:has(mark) { margin-bottom: 14px }
+.article-body h3.numbered mark { padding: 0 4px; border-radius: 0; background: linear-gradient(transparent 58%, var(--honey) 58%) }
 .article-body p { margin: 0 0 18px }
 .article-body a { color: var(--bear); font-weight: 700; text-decoration-color: var(--accent); text-decoration-thickness: 2px }
 .article-body ul { padding-left: 0; list-style: none }

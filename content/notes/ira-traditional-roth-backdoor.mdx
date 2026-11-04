@@ -13,8 +13,8 @@
 
 **IRA**（Individual Retirement Account，個人退休帳戶）是自己開、自己存的退休帳戶。最常見的有兩種，差別在於**什麼時候繳稅**：
 
-- **Traditional IRA**：退休提領時繳
-- **Roth IRA**：存進去之前先繳
+- **Traditional IRA**：先省稅、後繳稅
+- **Roth IRA**：先繳稅、後免稅
 
 <div className="compare-table compact-label">
   <table>
@@ -262,101 +262,71 @@
 
 Roth 的本金當初是繳過稅的錢，所以領出來不用再繳；Traditional 的本金當初有抵稅，領出來就要補繳。
 
-<h3>Traditional IRA 怎麼算</h3>
+<h3>一張圖看懂</h3>
 
 <figure className="article-figure">
-  <svg viewBox="0 0 480 340" role="img" aria-label="例子：Traditional IRA 餘額 US$10,000，其中本金 US$7,500、獲利 US$2,500，存入時有抵稅，40 歲全部提領。本金 US$7,500 以稅率 22% 試算要繳所得稅 US$1,650，另罰 US$750，共 US$2,400；獲利 US$2,500 要繳所得稅 US$550，另罰 US$250，共 US$800。全部提領要繳 US$3,200。" style={{ display: 'block', width: '100%', fontFamily: "'Nunito', 'Noto Sans TC', sans-serif", fontVariantNumeric: 'tabular-nums' }}>
+  <svg viewBox="0 0 480 412" role="img" aria-label="例子：帳戶 US$10,000，其中本金 US$7,500、獲利 US$2,500，40 歲全部提領，所得稅率 22%、罰款 10%。Traditional IRA（存入時有抵稅）本金和獲利都要繳稅加罰款：所得稅共 US$2,200、罰款共 US$1,000，共被扣 US$3,200，實拿 US$6,800。Roth IRA 本金先領、不用繳，只有獲利被扣所得稅 US$550 和罰款 US$250，共 US$800，實拿 US$9,200。" style={{ display: 'block', width: '100%', fontFamily: "'Nunito', 'Noto Sans TC', sans-serif", fontVariantNumeric: 'tabular-nums' }}>
+    <defs>
+      <pattern id="ew-tax" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+        <rect width="6" height="6" fill="#fbeee6" />
+        <line x1="0" y1="0" x2="0" y2="6" stroke="#c47f57" strokeWidth="2" />
+      </pattern>
+      <pattern id="ew-pen" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+        <rect width="6" height="6" fill="#fdeeea" />
+        <line x1="0" y1="0" x2="0" y2="6" stroke="#d9705c" strokeWidth="2.5" />
+      </pattern>
+    </defs>
     <text x="40" y="30" fontSize="12" fontWeight="700" letterSpacing="1.5" fill="#84695a">EARLY WITHDRAWAL</text>
-    <text x="40" y="54" fontSize="17" fontWeight="700" fill="#4a3428">Traditional IRA 餘額 US$10,000，40 歲全部提領</text>
-    <text x="40" y="78" fontSize="14" fill="#9a5741">假設所得稅率 22%、存入時有抵稅</text>
+    <text x="40" y="54" fontSize="17" fontWeight="700" fill="#4a3428">40 歲把 $10,000 全部領出來</text>
+    <text x="40" y="78" fontSize="14" fill="#9a5741">假設所得稅率 22%、罰款 10%，Traditional 存入時有抵稅</text>
 
-    {/* 餘額組成：本金和獲利都要繳稅，沒有先後 */}
-    <text x="40" y="112" fontSize="13" fill="#7d6354">本金和獲利都要繳稅</text>
-    <rect x="40" y="122" width="298" height="38" rx="3" fill="#c47f57" />
-    <rect x="340" y="122" width="100" height="38" rx="3" fill="#9a5741" />
-    <text x="189" y="146" textAnchor="middle" fontSize="15" fontWeight="700" fill="#ffffff">本金 US$7,500</text>
-    <text x="390" y="146" textAnchor="middle" fontSize="15" fontWeight="700" fill="#ffffff">獲利 $2,500</text>
-    <line x1="40" y1="170" x2="440" y2="170" stroke="#d9c6b6" />
-    <line x1="40" y1="170" x2="40" y2="176" stroke="#d9c6b6" />
-    <line x1="339" y1="170" x2="339" y2="176" stroke="#d9c6b6" />
-    <line x1="440" y1="170" x2="440" y2="176" stroke="#d9c6b6" />
-    <text x="40" y="191" fontSize="12" fill="#84695a">$0</text>
-    <text x="339" y="191" textAnchor="middle" fontSize="12" fill="#84695a">$7,500</text>
-    <text x="440" y="191" textAnchor="end" fontSize="12" fill="#84695a">$10,000</text>
+    {/* 帳戶組成：$10,000 = 400px */}
+    <text x="40" y="114" fontSize="14" fontWeight="700" fill="#4a3428">帳戶餘額 $10,000</text>
+    <rect x="40" y="122" width="298" height="36" rx="3" fill="#4a3428" />
+    <rect x="340" y="122" width="100" height="36" rx="3" fill="#c47f57" />
+    <text x="189" y="145" textAnchor="middle" fontSize="14" fontWeight="700" fill="#ffffff">本金 $7,500</text>
+    <text x="390" y="145" textAnchor="middle" fontSize="14" fontWeight="700" fill="#ffffff">獲利 $2,500</text>
+    <line x1="40" y1="182" x2="440" y2="182" stroke="#eadbcd" />
 
-    {/* 提領明細：所得稅假設稅率 22% */}
-    <text x="40" y="236" fontSize="13" fontWeight="700" fill="#84695a">項目</text>
-    <text x="178" y="236" textAnchor="end" fontSize="13" fontWeight="700" fill="#84695a">金額</text>
-    <text x="280" y="236" textAnchor="end" fontSize="13" fontWeight="700" fill="#84695a">所得稅 22%</text>
-    <text x="355" y="236" textAnchor="end" fontSize="13" fontWeight="700" fill="#84695a">罰款</text>
-    <text x="440" y="236" textAnchor="end" fontSize="13" fontWeight="700" fill="#84695a">要繳合計</text>
-    <line x1="40" y1="246" x2="440" y2="246" stroke="#4a3428" strokeWidth="1.5" />
-    <rect x="40" y="260" width="10" height="10" rx="2" fill="#c47f57" />
-    <text x="58" y="270" fontSize="15" fill="#4a3428">本金</text>
-    <text x="178" y="270" textAnchor="end" fontSize="15" fill="#4a3428">$7,500</text>
-    <text x="280" y="270" textAnchor="end" fontSize="15" fill="#c47f57">$1,650</text>
-    <text x="355" y="270" textAnchor="end" fontSize="15" fill="#c47f57">$750</text>
-    <text x="440" y="270" textAnchor="end" fontSize="15" fontWeight="700" fill="#c47f57">$2,400</text>
-    <line x1="40" y1="286" x2="440" y2="286" stroke="#eadbcd" />
-    <rect x="40" y="300" width="10" height="10" rx="2" fill="#9a5741" />
-    <text x="58" y="310" fontSize="15" fill="#4a3428">獲利</text>
-    <text x="178" y="310" textAnchor="end" fontSize="15" fill="#4a3428">$2,500</text>
-    <text x="280" y="310" textAnchor="end" fontSize="15" fill="#c47f57">$550</text>
-    <text x="355" y="310" textAnchor="end" fontSize="15" fill="#c47f57">$250</text>
-    <text x="440" y="310" textAnchor="end" fontSize="15" fontWeight="700" fill="#c47f57">$800</text>
-    <line x1="40" y1="326" x2="440" y2="326" stroke="#4a3428" strokeWidth="1.5" />
+    {/* Traditional：本金和獲利都扣稅 22%（焦糖斜線）＋罰款 10%（紅色反斜線） */}
+    <text x="40" y="212" fontSize="13" fontWeight="700" fill="#4a3428">Traditional IRA</text>
+    <text x="440" y="212" textAnchor="end" fontSize="13" fontWeight="700" fill="#4a3428">實拿 $6,800</text>
+    <rect x="40" y="220" width="202" height="36" rx="3" fill="#4a3428" />
+    <rect x="244" y="220" width="64" height="36" rx="3" fill="url(#ew-tax)" stroke="#c47f57" strokeWidth="1.5" />
+    <rect x="310" y="220" width="28" height="36" rx="3" fill="url(#ew-pen)" stroke="#d9705c" strokeWidth="1.5" />
+    <rect x="340" y="220" width="66" height="36" rx="3" fill="#c47f57" />
+    <rect x="408" y="220" width="20" height="36" rx="3" fill="url(#ew-tax)" stroke="#c47f57" strokeWidth="1.5" />
+    <rect x="430" y="220" width="10" height="36" rx="3" fill="url(#ew-pen)" stroke="#d9705c" strokeWidth="1.5" />
+    <text x="141" y="243" textAnchor="middle" fontSize="14" fontWeight="700" fill="#ffffff">本金 $5,100</text>
+    <text x="276" y="243" textAnchor="middle" fontSize="12" fontWeight="700" fill="#9a5741" stroke="#fbeee6" strokeWidth="4" paintOrder="stroke">稅 $1,650</text>
+    <text x="324" y="243" textAnchor="middle" fontSize="12" fontWeight="700" fill="#b4473a" stroke="#fdeeea" strokeWidth="4" paintOrder="stroke">罰</text>
+    <text x="373" y="243" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ffffff">$1,700</text>
+    <text x="418" y="243" textAnchor="middle" fontSize="12" fontWeight="700" fill="#9a5741" stroke="#fbeee6" strokeWidth="4" paintOrder="stroke">稅</text>
+    <text x="440" y="274" textAnchor="end" fontSize="12" fill="#c47f57">稅 $2,200 ＋ 罰款 $1,000 ＝ 被扣 $3,200</text>
 
+    {/* Roth：本金先領不用繳，只有獲利扣稅＋罰款 */}
+    <text x="40" y="308" fontSize="13" fontWeight="700" fill="#4a3428">Roth IRA</text>
+    <text x="440" y="308" textAnchor="end" fontSize="13" fontWeight="700" fill="#4a3428">實拿 $9,200</text>
+    <rect x="40" y="316" width="298" height="36" rx="3" fill="#4a3428" />
+    <rect x="340" y="316" width="66" height="36" rx="3" fill="#c47f57" />
+    <rect x="408" y="316" width="20" height="36" rx="3" fill="url(#ew-tax)" stroke="#c47f57" strokeWidth="1.5" />
+    <rect x="430" y="316" width="10" height="36" rx="3" fill="url(#ew-pen)" stroke="#d9705c" strokeWidth="1.5" />
+    <text x="189" y="339" textAnchor="middle" fontSize="14" fontWeight="700" fill="#ffffff">本金 $7,500</text>
+    <text x="373" y="339" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ffffff">$1,700</text>
+    <text x="418" y="339" textAnchor="middle" fontSize="12" fontWeight="700" fill="#9a5741" stroke="#fbeee6" strokeWidth="4" paintOrder="stroke">稅</text>
+    <text x="440" y="370" textAnchor="end" fontSize="12" fill="#c47f57">稅 $550 ＋ 罰款 $250 ＝ 被扣 $800（只有獲利）</text>
+
+    {/* 圖例 */}
+    <rect x="40" y="390" width="12" height="12" rx="2" fill="#4a3428" />
+    <text x="58" y="400" fontSize="12" fill="#84695a">本金</text>
+    <rect x="104" y="390" width="12" height="12" rx="2" fill="#c47f57" />
+    <text x="122" y="400" fontSize="12" fill="#84695a">獲利</text>
+    <rect x="168" y="390" width="12" height="12" rx="2" fill="url(#ew-tax)" stroke="#c47f57" />
+    <text x="186" y="400" fontSize="12" fill="#84695a">所得稅 22%</text>
+    <rect x="266" y="390" width="12" height="12" rx="2" fill="url(#ew-pen)" stroke="#d9705c" />
+    <text x="284" y="400" fontSize="12" fill="#84695a">罰款 10%</text>
   </svg>
-  <figcaption>Traditional 提領沒有先後順序，本金和獲利都當收入繳稅，59½ 歲前另外再罰 10%。</figcaption>
-</figure>
-
-<h3>Roth IRA 怎麼算</h3>
-
-<figure className="article-figure">
-  <svg viewBox="0 0 480 340" role="img" aria-label="例子：Roth IRA 餘額 US$10,000，其中本金 US$7,500、獲利 US$2,500，40 歲全部提領。先提領本金 US$7,500，所得稅和罰款都是 0；再提領獲利 US$2,500，以稅率 22% 試算要繳所得稅 US$550，另罰 US$250，共 US$800。" style={{ display: 'block', width: '100%', fontFamily: "'Nunito', 'Noto Sans TC', sans-serif", fontVariantNumeric: 'tabular-nums' }}>
-    <text x="40" y="30" fontSize="12" fontWeight="700" letterSpacing="1.5" fill="#84695a">WITHDRAWAL ORDER</text>
-    <text x="40" y="54" fontSize="17" fontWeight="700" fill="#4a3428">Roth IRA 餘額 US$10,000，40 歲全部提領</text>
-    <text x="40" y="78" fontSize="14" fill="#9a5741">假設所得稅率 22%</text>
-
-    {/* 餘額組成：左邊先提領 */}
-    <text x="40" y="112" fontSize="13" fill="#7d6354">① 本金先提領</text>
-    <text x="440" y="112" textAnchor="end" fontSize="13" fill="#7d6354">② 獲利最後</text>
-    <rect x="40" y="122" width="298" height="38" rx="3" fill="#4a3428" />
-    <rect x="340" y="122" width="100" height="38" rx="3" fill="#c47f57" />
-    <text x="189" y="146" textAnchor="middle" fontSize="15" fontWeight="700" fill="#ffffff">本金 US$7,500</text>
-    <text x="390" y="146" textAnchor="middle" fontSize="15" fontWeight="700" fill="#ffffff">獲利 $2,500</text>
-    <line x1="40" y1="170" x2="440" y2="170" stroke="#d9c6b6" />
-    <line x1="40" y1="170" x2="40" y2="176" stroke="#d9c6b6" />
-    <line x1="339" y1="170" x2="339" y2="176" stroke="#d9c6b6" />
-    <line x1="440" y1="170" x2="440" y2="176" stroke="#d9c6b6" />
-    <text x="40" y="191" fontSize="12" fill="#84695a">$0</text>
-    <text x="339" y="191" textAnchor="middle" fontSize="12" fill="#84695a">$7,500</text>
-    <text x="440" y="191" textAnchor="end" fontSize="12" fill="#84695a">$10,000</text>
-
-    {/* 提領明細：所得稅假設稅率 22% */}
-    <text x="40" y="236" fontSize="13" fontWeight="700" fill="#84695a">項目</text>
-    <text x="178" y="236" textAnchor="end" fontSize="13" fontWeight="700" fill="#84695a">金額</text>
-    <text x="280" y="236" textAnchor="end" fontSize="13" fontWeight="700" fill="#84695a">所得稅 22%</text>
-    <text x="355" y="236" textAnchor="end" fontSize="13" fontWeight="700" fill="#84695a">罰款</text>
-    <text x="440" y="236" textAnchor="end" fontSize="13" fontWeight="700" fill="#84695a">要繳合計</text>
-    <line x1="40" y1="246" x2="440" y2="246" stroke="#4a3428" strokeWidth="1.5" />
-    <rect x="40" y="260" width="10" height="10" rx="2" fill="#4a3428" />
-    <text x="58" y="270" fontSize="15" fill="#4a3428">① 本金</text>
-    <text x="178" y="270" textAnchor="end" fontSize="15" fill="#4a3428">$7,500</text>
-    <text x="280" y="270" textAnchor="end" fontSize="15" fill="#4a3428">$0</text>
-    <text x="355" y="270" textAnchor="end" fontSize="15" fill="#4a3428">$0</text>
-    <text x="440" y="270" textAnchor="end" fontSize="15" fontWeight="700" fill="#4a3428">$0</text>
-    <line x1="40" y1="286" x2="440" y2="286" stroke="#eadbcd" />
-    <rect x="40" y="300" width="10" height="10" rx="2" fill="#c47f57" />
-    <text x="58" y="310" fontSize="15" fill="#4a3428">② 獲利</text>
-    <text x="178" y="310" textAnchor="end" fontSize="15" fill="#4a3428">$2,500</text>
-    <text x="280" y="310" textAnchor="end" fontSize="15" fill="#c47f57">$550</text>
-    <text x="355" y="310" textAnchor="end" fontSize="15" fill="#c47f57">$250</text>
-    <text x="440" y="310" textAnchor="end" fontSize="15" fontWeight="700" fill="#c47f57">$800</text>
-    <line x1="40" y1="326" x2="440" y2="326" stroke="#4a3428" strokeWidth="1.5" />
-
-  </svg>
-  <figcaption>提領一律先算本金，本金領完才動到獲利。提早提領的獲利要繳所得稅，另外再罰 10%。</figcaption>
+  <figcaption>焦糖色斜線是所得稅、紅色斜線是罰款。Traditional 本金和獲利都要繳；Roth 本金先領，不用繳，只有獲利要繳。</figcaption>
 </figure>
 
 <p className="section-number">07 / EXCEPTIONS</p>
@@ -402,7 +372,7 @@ Roth 的本金當初是繳過稅的錢，所以領出來不用再繳；Tradition
 同樣每年存 US$7,500，從 25 歲存到 60 歲（共 35 年），假設年報酬 7%，現在和退休時的所得稅率都是 22%。比較三種情況：
 
 <figure className="article-figure">
-  <svg viewBox="0 0 480 394" role="img" aria-label="例子：每年存 US$7,500，從 25 歲存到 60 歲，年報酬 7%，所得稅率 22%。60 歲時三種帳戶餘額都是約 US$1,109,000。Roth IRA 全部免稅，實拿 US$1,109,000。全部有抵稅的 Traditional IRA 提領要繳稅約 US$244,000，實拿約 US$865,000，但 35 年共省稅 US$57,750，這筆錢也拿去投資的話，60 歲時約 US$244,000，跟 Roth 打平。全部未抵稅的 Traditional IRA 沒有省到稅，提領時獲利還要繳稅約 US$186,000，實拿約 US$923,000，比 Roth 少約 US$186,000。" style={{ display: 'block', width: '100%', fontFamily: "'Nunito', 'Noto Sans TC', sans-serif", fontVariantNumeric: 'tabular-nums' }}>
+  <svg viewBox="0 0 480 544" role="img" aria-label="例子：每年存 US$7,500，從 25 歲存到 60 歲，年報酬 7%，所得稅率 22%。60 歲時三種帳戶餘額都是約 US$1,109,000，其中本金 US$262,500、獲利 US$846,500。Roth IRA 全部免稅，實拿 US$1,109,000。全部有抵稅的 Traditional IRA 提領時本金要繳稅 US$57,750、獲利要繳稅約 US$186,250，共約 US$244,000，實拿約 US$865,000（本金 US$204,750、獲利 US$660,250），但 35 年共省稅 US$57,750，這筆錢也拿去投資的話，60 歲時約 US$244,000，跟 Roth 打平。全部未抵稅的 Traditional IRA 沒有省到稅，提領時獲利還要繳稅約 US$186,000，實拿約 US$923,000（本金 US$262,500、獲利 US$660,500），比 Roth 少約 US$186,000。" style={{ display: 'block', width: '100%', fontFamily: "'Nunito', 'Noto Sans TC', sans-serif", fontVariantNumeric: 'tabular-nums' }}>
     <defs>
       <pattern id="ira-tax" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
         <rect width="6" height="6" fill="#fbeee6" />
@@ -413,33 +383,54 @@ Roth 的本金當初是繳過稅的錢，所以領出來不用再繳；Tradition
     <text x="40" y="54" fontSize="17" fontWeight="700" fill="#4a3428">每年存 $7,500，25 歲存到 60 歲</text>
     <text x="40" y="78" fontSize="14" fill="#9a5741">假設年報酬 7%，所得稅率 22%</text>
 
-    {/* 60 歲時的帳戶餘額：$1,109,000 = 400px；深色是實拿，斜線是提領時要繳的稅 */}
-    <text x="40" y="114" fontSize="13" fontWeight="700" fill="#4a3428">Traditional IRA（全部有抵稅）</text>
-    <text x="440" y="114" textAnchor="end" fontSize="13" fill="#c47f57">繳稅 $244,000</text>
-    <rect x="40" y="122" width="310" height="36" rx="3" fill="#4a3428" />
-    <rect x="352" y="122" width="88" height="36" rx="3" fill="url(#ira-tax)" stroke="#c47f57" strokeWidth="1.5" />
-    <text x="54" y="145" fontSize="14" fontWeight="700" fill="#ffffff">實拿 $865,000</text>
-    <text x="396" y="145" textAnchor="middle" fontSize="13" fontWeight="700" fill="#9a5741" stroke="#fbeee6" strokeWidth="5" paintOrder="stroke">繳稅</text>
+    {/* 60 歲帳戶組成：$1,109,000 = 400px，本金 $262,500、獲利 $846,500 */}
+    <text x="40" y="114" fontSize="14" fontWeight="700" fill="#4a3428">60 歲帳戶餘額 $1,109,000</text>
+    <rect x="40" y="122" width="93" height="36" rx="3" fill="#4a3428" />
+    <rect x="135" y="122" width="305" height="36" rx="3" fill="#c47f57" />
+    <text x="86.5" y="145" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ffffff">本金 $262,500</text>
+    <text x="287.5" y="145" textAnchor="middle" fontSize="14" fontWeight="700" fill="#ffffff">獲利 $846,500</text>
+    <text x="40" y="178" fontSize="12" fill="#84695a">35 年自己存了 $262,500，其他都是投資賺的</text>
+    <line x1="40" y1="196" x2="440" y2="196" stroke="#eadbcd" />
 
-    <text x="40" y="188" fontSize="13" fontWeight="700" fill="#4a3428">Traditional IRA（全部未抵稅）</text>
-    <text x="440" y="188" textAnchor="end" fontSize="13" fill="#c47f57">繳稅 $186,000（只有獲利）</text>
-    <rect x="40" y="196" width="331" height="36" rx="3" fill="#4a3428" />
-    <rect x="373" y="196" width="67" height="36" rx="3" fill="url(#ira-tax)" stroke="#c47f57" strokeWidth="1.5" />
-    <text x="54" y="219" fontSize="14" fontWeight="700" fill="#ffffff">實拿 $923,000</text>
-    <text x="406.5" y="219" textAnchor="middle" fontSize="13" fontWeight="700" fill="#9a5741" stroke="#fbeee6" strokeWidth="5" paintOrder="stroke">繳稅</text>
+    {/* 三種做法 60 歲時實拿：同樣 $1,109,000 = 400px；深色本金、焦糖色獲利、斜線是繳稅 */}
+    <text x="40" y="226" fontSize="13" fontWeight="700" fill="#4a3428">Traditional IRA（全部有抵稅）</text>
+    <text x="440" y="226" textAnchor="end" fontSize="13" fontWeight="700" fill="#4a3428">實拿 $865,000</text>
+    <rect x="40" y="234" width="72" height="36" rx="3" fill="#4a3428" />
+    <rect x="114" y="234" width="20" height="36" rx="3" fill="url(#ira-tax)" stroke="#c47f57" strokeWidth="1.5" />
+    <text x="124" y="257" textAnchor="middle" fontSize="12" fontWeight="700" fill="#9a5741" stroke="#fbeee6" strokeWidth="4" paintOrder="stroke">稅</text>
+    <rect x="136" y="234" width="236" height="36" rx="3" fill="#c47f57" />
+    <rect x="374" y="234" width="66" height="36" rx="3" fill="url(#ira-tax)" stroke="#c47f57" strokeWidth="1.5" />
+    <text x="76" y="257" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ffffff">$204,750</text>
+    <text x="254" y="257" textAnchor="middle" fontSize="14" fontWeight="700" fill="#ffffff">獲利 $660,250</text>
+    <text x="407" y="257" textAnchor="middle" fontSize="13" fontWeight="700" fill="#9a5741" stroke="#fbeee6" strokeWidth="5" paintOrder="stroke">繳稅</text>
+    <text x="440" y="288" textAnchor="end" fontSize="12" fill="#c47f57">繳稅 $244,000（本金 $57,750 ＋ 獲利 $186,250）</text>
 
-    <text x="40" y="252" fontSize="13" fontWeight="700" fill="#c47f57">↑ 比 Roth 少拿 $186,000，不如做 Backdoor Roth</text>
+    <text x="40" y="322" fontSize="13" fontWeight="700" fill="#4a3428">Traditional IRA（全部未抵稅）</text>
+    <text x="440" y="322" textAnchor="end" fontSize="13" fontWeight="700" fill="#4a3428">實拿 $923,000</text>
+    <rect x="40" y="330" width="93" height="36" rx="3" fill="#4a3428" />
+    <text x="86.5" y="353" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ffffff">本金 $262,500</text>
+    <rect x="135" y="330" width="236" height="36" rx="3" fill="#c47f57" />
+    <text x="253" y="353" textAnchor="middle" fontSize="14" fontWeight="700" fill="#ffffff">獲利 $660,500</text>
+    <rect x="373" y="330" width="67" height="36" rx="3" fill="url(#ira-tax)" stroke="#c47f57" strokeWidth="1.5" />
+    <text x="406.5" y="353" textAnchor="middle" fontSize="13" fontWeight="700" fill="#9a5741" stroke="#fbeee6" strokeWidth="5" paintOrder="stroke">繳稅</text>
+    <text x="440" y="384" textAnchor="end" fontSize="12" fill="#c47f57">繳稅 $186,000（只有獲利）</text>
+    <text x="40" y="406" fontSize="13" fontWeight="700" fill="#c47f57">↑ 比 Roth 少拿 $186,000，不如做 Backdoor Roth</text>
 
-    <text x="40" y="284" fontSize="13" fontWeight="700" fill="#4a3428">Roth IRA</text>
-    <text x="440" y="284" textAnchor="end" fontSize="13" fill="#84695a">提領免稅</text>
-    <rect x="40" y="292" width="400" height="36" rx="3" fill="#4a3428" />
-    <text x="54" y="315" fontSize="14" fontWeight="700" fill="#ffffff">實拿 $1,109,000</text>
+    <text x="40" y="440" fontSize="13" fontWeight="700" fill="#4a3428">Roth IRA</text>
+    <text x="440" y="440" textAnchor="end" fontSize="13" fontWeight="700" fill="#4a3428">實拿 $1,109,000</text>
+    <rect x="40" y="448" width="93" height="36" rx="3" fill="#4a3428" />
+    <text x="86.5" y="471" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ffffff">本金 $262,500</text>
+    <rect x="135" y="448" width="305" height="36" rx="3" fill="#c47f57" />
+    <text x="287.5" y="471" textAnchor="middle" fontSize="14" fontWeight="700" fill="#ffffff">獲利 $846,500</text>
+    <text x="440" y="502" textAnchor="end" fontSize="12" fill="#84695a">全部免稅</text>
 
-    <text x="40" y="352" fontSize="12" fill="#84695a">三個帳戶 60 歲時的餘額都是 $1,109,000（本金 $262,500）</text>
-    <rect x="40" y="363" width="12" height="12" rx="2" fill="#4a3428" />
-    <text x="56" y="373" fontSize="12" fill="#84695a">實拿到手的錢</text>
-    <rect x="150" y="363" width="12" height="12" rx="2" fill="url(#ira-tax)" stroke="#c47f57" />
-    <text x="168" y="373" fontSize="12" fill="#84695a">繳給政府的稅</text>
+    {/* 圖例 */}
+    <rect x="40" y="520" width="12" height="12" rx="2" fill="#4a3428" />
+    <text x="58" y="530" fontSize="12" fill="#84695a">本金</text>
+    <rect x="110" y="520" width="12" height="12" rx="2" fill="#c47f57" />
+    <text x="128" y="530" fontSize="12" fill="#84695a">獲利</text>
+    <rect x="180" y="520" width="12" height="12" rx="2" fill="url(#ira-tax)" stroke="#c47f57" />
+    <text x="198" y="530" fontSize="12" fill="#84695a">繳給政府的稅</text>
   </svg>
 </figure>
 

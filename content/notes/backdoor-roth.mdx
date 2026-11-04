@@ -17,41 +17,206 @@
 
 <h3>誰需要做？</h3>
 
-2026 年收入超過下面的範圍，就不能直接存 Roth：
+2026 年收入超過下面的範圍，就不能直接存 Roth，要用 Backdoor：
 
-<div className="compare-table">
-  <table>
-    <thead>
-      <tr><th>報稅身分</th><th>可以存全額</th><th className="no">不能直接存</th></tr>
-    </thead>
-    <tbody>
-      <tr><th>單身</th><td>US$153,000 以下</td><td className="no">US$168,000 以上</td></tr>
-      <tr><th>夫妻合併報稅</th><td>US$242,000 以下</td><td className="no">US$252,000 以上</td></tr>
-    </tbody>
-  </table>
-</div>
+<figure className="article-figure">
+  <svg viewBox="0 0 480 296" role="img" aria-label="Roth IRA 能不能直接存，2026 年：單身 US$153,000 以下可以存全額，US$153,000–168,000 可以存一部分，US$168,000 以上不能直接存。夫妻合併報稅 US$242,000 以下可以存全額，US$242,000–252,000 可以存一部分，US$252,000 以上不能直接存。" style={{ display: 'block', width: '100%', fontFamily: "'Nunito', 'Noto Sans TC', sans-serif", fontVariantNumeric: 'tabular-nums' }}>
+    <defs>
+      <pattern id="bd-partial" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+        <rect width="6" height="6" fill="#eaf7f0" />
+        <line x1="0" y1="0" x2="0" y2="6" stroke="#4f9a74" strokeWidth="2.5" />
+      </pattern>
+      <clipPath id="bd-limit-0"><rect x="40" y="136" width="400" height="28" rx="6" /></clipPath>
+      <clipPath id="bd-limit-1"><rect x="40" y="228" width="400" height="28" rx="6" /></clipPath>
+    </defs>
+
+    <text x="40" y="30" fontSize="12" fontWeight="700" letterSpacing="1.5" fill="#84695a">ROTH IRA · 2026</text>
+    <text x="40" y="54" fontSize="17" fontWeight="700" fill="#4a3428">收入多少以上要做 Backdoor？</text>
+
+    {/* 圖例 */}
+    <rect x="40" y="68" width="14" height="14" rx="3" fill="#4f9a74" />
+    <text x="60" y="80" fontSize="13" fill="#4a3428">可以直接存</text>
+    <rect x="150" y="68" width="14" height="14" rx="3" fill="url(#bd-partial)" />
+    <text x="170" y="80" fontSize="13" fill="#4a3428">存一部分</text>
+    <rect x="250" y="68" width="14" height="14" rx="3" fill="#eadbcd" />
+    <text x="270" y="80" fontSize="13" fill="#4a3428">要做 Backdoor</text>
+
+    {/* 每一列：收入由左到右，US$0–300,000 = 400px，跟 Traditional 抵稅圖同一個刻度 */}
+    <text x="40" y="124" fontSize="14" fontWeight="700" fill="#4a3428">單身</text>
+    <g clipPath="url(#bd-limit-0)">
+      <rect x="40" y="136" width="203.0" height="28" fill="#4f9a74"><title>US$153,000 以下：可以存全額</title></rect>
+      <rect x="245.0" y="136" width="18.0" height="28" fill="url(#bd-partial)"><title>US$153,000–168,000：可以存一部分</title></rect>
+      <rect x="265.0" y="136" width="175.0" height="28" fill="#eadbcd"><title>US$168,000 以上：不能直接存，要做 Backdoor</title></rect>
+    </g>
+    <text x="142.0" y="155" textAnchor="middle" fontSize="13" fontWeight="700" fill="#ffffff">可以直接存</text>
+    <text x="352.0" y="155" textAnchor="middle" fontSize="13" fontWeight="700" fill="#84695a">要做 Backdoor</text>
+    <line x1="244" y1="164" x2="244" y2="172" stroke="#4a3428" strokeWidth="1.5" />
+    <text x="241.0" y="186" textAnchor="end" fontSize="14" fontWeight="700" fill="#4a3428">$153k</text>
+    <line x1="264" y1="164" x2="264" y2="172" stroke="#4a3428" strokeWidth="1.5" />
+    <text x="267.0" y="186" fontSize="14" fontWeight="700" fill="#4a3428">$168k</text>
+    <text x="40" y="216" fontSize="14" fontWeight="700" fill="#4a3428">夫妻合併報稅</text>
+    <g clipPath="url(#bd-limit-1)">
+      <rect x="40" y="228" width="321.7" height="28" fill="#4f9a74"><title>US$242,000 以下：可以存全額</title></rect>
+      <rect x="363.7" y="228" width="11.3" height="28" fill="url(#bd-partial)"><title>US$242,000–252,000：可以存一部分</title></rect>
+      <rect x="377.0" y="228" width="63.0" height="28" fill="#eadbcd"><title>US$252,000 以上：不能直接存，要做 Backdoor</title></rect>
+    </g>
+    <text x="201.3" y="247" textAnchor="middle" fontSize="13" fontWeight="700" fill="#ffffff">可以直接存</text>
+    <text x="408.0" y="247" textAnchor="middle" fontSize="12" fontWeight="700" fill="#84695a">Backdoor</text>
+    <line x1="362.7" y1="256" x2="362.7" y2="264" stroke="#4a3428" strokeWidth="1.5" />
+    <text x="359.7" y="278" textAnchor="end" fontSize="14" fontWeight="700" fill="#4a3428">$242k</text>
+    <line x1="376" y1="256" x2="376" y2="264" stroke="#4a3428" strokeWidth="1.5" />
+    <text x="379.0" y="278" fontSize="14" fontWeight="700" fill="#4a3428">$252k</text>
+  </svg>
+  <figcaption>收入是稅表上的收入（MAGI）：單身看自己的，夫妻合併報稅看<strong>兩人加總</strong>。</figcaption>
+</figure>
 
 - 收入在兩者**中間**、或不確定年底會不會超過，**直接做 Backdoor** 最省事
 - Traditional、Roth 的基本規定，看<a href="/notes/ira-traditional-roth-backdoor">IRA 怎麼選</a>
 
-<p className="section-number">02 / METHODS</p>
-<h2 id="methods">三種轉換手法一次看</h2>
+<p className="section-number">02 / WHY</p>
+<h2 id="why">為什麼要做 Backdoor Roth？</h2>
 
-<div className="compare-table compact-label">
-  <table>
-    <thead>
-      <tr><th>手法</th><th>適合誰</th></tr>
-    </thead>
-    <tbody>
-      <tr><th><a href="#standard">存入後馬上轉換</a></th><td>每年固定做，最常見的做法</td></tr>
-      <tr><th><a href="#two-years">一次做兩年</a></th><td>去年的額度還沒用，1 月到 4 月 15 日之間補做</td></tr>
-      <tr><th><a href="#recharacterize">Roth 改成 Traditional 再轉換</a></th><td>已經直接存了 Roth，才發現收入超過上限</td></tr>
-    </tbody>
-  </table>
-</div>
+收入超過上限的人，Roth 不能直接存，Traditional 通常也不能抵稅，存進去的是**稅後的錢**。同樣是稅後的錢，多做一步轉換成 Roth，有三個好處：
 
-<p className="section-number">03 / STANDARD</p>
-<h2 id="standard">手法一：存入後馬上轉換</h2>
+<h3 className="numbered"><span>01</span><mark>獲利全部免稅</mark></h3>
+
+留在 Traditional 的話，前面沒省到稅，獲利退休提領時還要繳稅；轉成 Roth，獲利就全部免稅。用<a href="/notes/ira-traditional-roth-backdoor#example">IRA 那篇</a>的例子：每年存 US$7,500，從 25 歲存到 60 歲，假設年報酬 7%、所得稅率 22%。
+
+<figure className="article-figure">
+  <svg viewBox="0 0 480 428" role="img" aria-label="例子：每年存 US$7,500，從 25 歲存到 60 歲，年報酬 7%，所得稅率 22%。60 歲時餘額約 US$1,109,000，其中本金 US$262,500、獲利 US$846,500。只存不能抵稅的 Traditional IRA，提領時獲利要繳稅約 US$186,000，實拿約 US$923,000（本金 US$262,500、獲利 US$660,500）。做 Backdoor 轉成 Roth IRA，提領全部免稅，實拿 US$1,109,000，多拿約 US$186,000。" style={{ display: 'block', width: '100%', fontFamily: "'Nunito', 'Noto Sans TC', sans-serif", fontVariantNumeric: 'tabular-nums' }}>
+    <defs>
+      <pattern id="backdoor-tax" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+        <rect width="6" height="6" fill="#fbeee6" />
+        <line x1="0" y1="0" x2="0" y2="6" stroke="#c47f57" strokeWidth="2" />
+      </pattern>
+    </defs>
+    <text x="40" y="30" fontSize="12" fontWeight="700" letterSpacing="1.5" fill="#84695a">WHY BACKDOOR</text>
+    <text x="40" y="54" fontSize="17" fontWeight="700" fill="#4a3428">每年存 $7,500，25 歲存到 60 歲</text>
+    <text x="40" y="78" fontSize="14" fill="#9a5741">假設年報酬 7%，所得稅率 22%</text>
+
+    {/* 60 歲帳戶組成：$1,109,000 = 400px，本金 $262,500、獲利 $846,500 */}
+    <text x="40" y="114" fontSize="14" fontWeight="700" fill="#4a3428">60 歲帳戶餘額 $1,109,000</text>
+    <rect x="40" y="122" width="93" height="36" rx="3" fill="#4a3428" />
+    <rect x="135" y="122" width="305" height="36" rx="3" fill="#c47f57" />
+    <text x="86.5" y="145" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ffffff">本金 $262,500</text>
+    <text x="287.5" y="145" textAnchor="middle" fontSize="14" fontWeight="700" fill="#ffffff">獲利 $846,500</text>
+    <text x="40" y="178" fontSize="12" fill="#84695a">35 年自己存了 $262,500，其他都是投資賺的</text>
+    <line x1="40" y1="196" x2="440" y2="196" stroke="#eadbcd" />
+
+    {/* 兩種做法 60 歲時實拿：同樣 $1,109,000 = 400px；深色本金、焦糖色獲利、斜線是繳稅 */}
+    <text x="40" y="228" fontSize="13" fontWeight="700" fill="#4a3428">只存 Traditional IRA（不能抵稅）</text>
+    <text x="440" y="228" textAnchor="end" fontSize="13" fontWeight="700" fill="#4a3428">實拿 $923,000</text>
+    <rect x="40" y="236" width="93" height="36" rx="3" fill="#4a3428" />
+    <rect x="135" y="236" width="236" height="36" rx="3" fill="#c47f57" />
+    <rect x="373" y="236" width="67" height="36" rx="3" fill="url(#backdoor-tax)" stroke="#c47f57" strokeWidth="1.5" />
+    <text x="86.5" y="259" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ffffff">本金 $262,500</text>
+    <text x="253" y="259" textAnchor="middle" fontSize="14" fontWeight="700" fill="#ffffff">獲利 $660,500</text>
+    <text x="406.5" y="259" textAnchor="middle" fontSize="13" fontWeight="700" fill="#9a5741" stroke="#fbeee6" strokeWidth="5" paintOrder="stroke">繳稅</text>
+    <text x="440" y="290" textAnchor="end" fontSize="12" fill="#c47f57">獲利要繳稅 $186,000</text>
+
+    <text x="40" y="324" fontSize="13" fontWeight="700" fill="#4a3428">做 Backdoor，轉成 Roth IRA</text>
+    <text x="440" y="324" textAnchor="end" fontSize="13" fontWeight="700" fill="#4a3428">實拿 $1,109,000</text>
+    <rect x="40" y="332" width="93" height="36" rx="3" fill="#4a3428" />
+    <rect x="135" y="332" width="305" height="36" rx="3" fill="#c47f57" />
+    <text x="86.5" y="355" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ffffff">本金 $262,500</text>
+    <text x="287.5" y="355" textAnchor="middle" fontSize="14" fontWeight="700" fill="#ffffff">獲利 $846,500</text>
+    <text x="440" y="386" textAnchor="end" fontSize="12" fill="#84695a">全部免稅</text>
+
+    {/* 圖例 */}
+    <rect x="40" y="404" width="12" height="12" rx="2" fill="#4a3428" />
+    <text x="58" y="414" fontSize="12" fill="#84695a">本金</text>
+    <rect x="110" y="404" width="12" height="12" rx="2" fill="#c47f57" />
+    <text x="128" y="414" fontSize="12" fill="#84695a">獲利</text>
+    <rect x="180" y="404" width="12" height="12" rx="2" fill="url(#backdoor-tax)" stroke="#c47f57" />
+    <text x="198" y="414" fontSize="12" fill="#84695a">繳給政府的稅</text>
+  </svg>
+</figure>
+
+<p className="callout honey">同樣的錢、同樣的投資，只是多做一步轉換，60 歲時<strong>多拿約 $186,000</strong>。</p>
+
+這是簡化試算：每年存 US$7,500、報酬固定 7%，實際的稅是分級計算。
+
+<h3 className="numbered"><span>02</span><mark>本金隨時可以領，不用繳稅、沒有罰款</mark></h3>
+
+59½ 歲前要用錢的話，Traditional 不能只領本金，每次都會按比例拆出一部分獲利來課稅；Roth 一律先領本金：
+
+<figure className="article-figure">
+  <svg viewBox="0 0 480 518" role="img" aria-label="例子：帳戶 US$10,000，其中本金 US$7,500、獲利 US$2,500，59½ 歲前領 US$4,000，所得稅率 22%。沒有抵稅的 Traditional IRA 要按比例拆，從本金領 US$3,000、從獲利領 US$1,000，獲利要繳所得稅 US$220 加罰款 US$100，共 US$320，實拿 US$3,680。Roth IRA 先領本金，US$4,000 全部從本金領，不用繳稅也沒有罰款，實拿 US$4,000。" style={{ display: 'block', width: '100%', fontFamily: "'Nunito', 'Noto Sans TC', sans-serif", fontVariantNumeric: 'tabular-nums' }}>
+    <defs>
+      <pattern id="wd-tax" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+        <rect width="6" height="6" fill="#fbeee6" />
+        <line x1="0" y1="0" x2="0" y2="6" stroke="#c47f57" strokeWidth="2" />
+      </pattern>
+      <pattern id="wd-pen" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+        <rect width="6" height="6" fill="#fdeeea" />
+        <line x1="0" y1="0" x2="0" y2="6" stroke="#d9705c" strokeWidth="2.5" />
+      </pattern>
+    </defs>
+    <text x="40" y="30" fontSize="12" fontWeight="700" letterSpacing="1.5" fill="#84695a">EARLY WITHDRAWAL</text>
+    <text x="40" y="54" fontSize="17" fontWeight="700" fill="#4a3428">59½ 歲前，從帳戶領 $4,000</text>
+    <text x="40" y="78" fontSize="14" fill="#9a5741">假設所得稅率 22%、罰款 10%</text>
+
+    {/* 帳戶 $10,000 = 400px */}
+    <text x="40" y="114" fontSize="14" fontWeight="700" fill="#4a3428">帳戶餘額 $10,000</text>
+    <rect x="40" y="122" width="298" height="36" rx="3" fill="#4a3428" />
+    <rect x="340" y="122" width="100" height="36" rx="3" fill="#c47f57" />
+    <text x="189" y="145" textAnchor="middle" fontSize="14" fontWeight="700" fill="#ffffff">本金 $7,500（75%）</text>
+    <text x="390" y="138" textAnchor="middle" fontSize="13" fontWeight="700" fill="#ffffff">獲利 $2,500</text>
+    <text x="390" y="152" textAnchor="middle" fontSize="11" fontWeight="700" fill="#ffffff">（25%）</text>
+
+    <line x1="40" y1="182" x2="440" y2="182" stroke="#eadbcd" />
+
+    {/* Traditional：本金和獲利各拿 40% */}
+    <text x="40" y="212" fontSize="14" fontWeight="700" fill="#4a3428">Traditional IRA（沒有抵稅）</text>
+    <text x="440" y="212" textAnchor="end" fontSize="13" fill="#84695a">本金和獲利按比例一起領</text>
+    <rect x="40" y="220" width="119" height="36" rx="3" fill="#4a3428" />
+    <rect x="161" y="220" width="177" height="36" rx="3" fill="#4a3428" fillOpacity=".18" />
+    <rect x="340" y="220" width="39" height="36" rx="3" fill="#c47f57" />
+    <rect x="381" y="220" width="59" height="36" rx="3" fill="#c47f57" fillOpacity=".22" />
+    <text x="40" y="276" fontSize="13" fontWeight="700" fill="#4a3428">↑ 領 $3,000（75%），本金不用繳</text>
+    {/* 領出的獲利 $1,000 放大：剩 $680、稅 $220（斜線）、罰款 $100（紅斜線） */}
+    <line x1="340" y1="258" x2="240" y2="290" stroke="#c47f57" strokeDasharray="3 3" />
+    <line x1="379" y1="258" x2="440" y2="290" stroke="#c47f57" strokeDasharray="3 3" />
+    <rect x="240" y="292" width="134" height="28" rx="3" fill="#c47f57" />
+    <rect x="376" y="292" width="42" height="28" rx="3" fill="url(#wd-tax)" stroke="#c47f57" strokeWidth="1.5" />
+    <rect x="420" y="292" width="20" height="28" rx="3" fill="url(#wd-pen)" stroke="#d9705c" strokeWidth="1.5" />
+    <text x="307" y="311" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ffffff">獲利剩 $680</text>
+    <text x="397" y="311" textAnchor="middle" fontSize="12" fontWeight="700" fill="#9a5741" stroke="#fbeee6" strokeWidth="4" paintOrder="stroke">稅</text>
+    <text x="430" y="311" textAnchor="middle" fontSize="11" fontWeight="700" fill="#b4473a" stroke="#fdeeea" strokeWidth="4" paintOrder="stroke">罰</text>
+    <text x="440" y="338" textAnchor="end" fontSize="12" fill="#c47f57">領出的獲利 $1,000（25%）：稅 $220 ＋ 罰款 $100</text>
+    <text x="40" y="311" fontSize="16" fontWeight="700" fill="#4a3428">實拿 $3,680</text>
+
+    <line x1="40" y1="358" x2="440" y2="358" stroke="#eadbcd" />
+
+    {/* Roth：先從本金拿 */}
+    <text x="40" y="388" fontSize="14" fontWeight="700" fill="#4a3428">Roth IRA（做了 Backdoor）</text>
+    <text x="440" y="388" textAnchor="end" fontSize="13" fill="#84695a">一律先領本金</text>
+    <rect x="40" y="396" width="159" height="36" rx="3" fill="#4a3428" />
+    <rect x="201" y="396" width="137" height="36" rx="3" fill="#4a3428" fillOpacity=".18" />
+    <rect x="340" y="396" width="100" height="36" rx="3" fill="#c47f57" fillOpacity=".22" />
+    <text x="119.5" y="452" textAnchor="middle" fontSize="13" fontWeight="700" fill="#4a3428">↑ 領 $4,000，全部是本金</text>
+    <text x="440" y="481" textAnchor="end" fontSize="13" fill="#84695a">不用繳稅、沒有罰款</text>
+    <text x="40" y="481" fontSize="16" fontWeight="700" fill="#4a3428">實拿 $4,000</text>
+
+    {/* 圖例 */}
+    <rect x="40" y="500" width="12" height="12" rx="2" fill="#4a3428" />
+    <text x="58" y="510" fontSize="12" fill="#84695a">領出來的錢</text>
+    <rect x="140" y="500" width="12" height="12" rx="2" fill="#4a3428" fillOpacity=".18" />
+    <text x="158" y="510" fontSize="12" fill="#84695a">留在帳戶裡</text>
+    <rect x="236" y="500" width="12" height="12" rx="2" fill="url(#wd-tax)" stroke="#c47f57" />
+    <text x="254" y="510" fontSize="12" fill="#84695a">所得稅 22%</text>
+    <rect x="326" y="500" width="12" height="12" rx="2" fill="url(#wd-pen)" stroke="#d9705c" />
+    <text x="344" y="510" fontSize="12" fill="#84695a">罰款 10%</text>
+  </svg>
+  <figcaption>Traditional 不能只領本金，每次提領都會按比例拆出一部分獲利來課稅；Roth 本金領完才動到獲利。</figcaption>
+</figure>
+
+<h3 className="numbered"><span>03</span><mark>不用強制提領</mark></h3>
+
+Traditional 75 歲起每年一定要領一部分（RMD），領出來還要繳稅；Roth 可以一直放著繼續免稅成長，也可以留給家人。
+
+<p className="section-number">03 / HOW TO</p>
+<h2 id="standard">怎麼做？存入後馬上轉換</h2>
 
 最常見的做法。很多人在**每年 1 月**就存滿當年額度並轉換，讓錢早點開始投資。以 Fidelity 為例，其他券商流程類似；還沒有帳戶的話，可以先看<a href="/notes/fidelity-account">在美國怎麼開 Fidelity</a>。
 
@@ -64,51 +229,57 @@
 </ol>
 
 - **存進去先放現金、盡快轉換**：中間產生的利息或獲利，轉換時要繳稅；馬上轉的話只有幾分錢
-- **轉換後不能反悔**：2018 年起，Roth conversion 不能再改回 Traditional。但**直接存進 Roth 的存款**還可以改，見<a href="#recharacterize">手法三</a>
+- **轉換後不能反悔**：2018 年起，Roth conversion 不能再改回 Traditional。但**直接存進 Roth 的存款**還可以改，見<a href="#faq">其他相關問題</a>
 
-<p className="section-number">04 / TWO YEARS</p>
-<h2 id="two-years">手法二：一次做兩年</h2>
-
-IRA 的額度可以存到**隔年報稅截止日**（4 月 15 日，不含延期）。所以 1 月到 4 月 15 日之間，可以<mark>同時存去年和今年的額度</mark>，一起轉換。
-
-<ol className="steps">
-  <li><span>01</span><div><h3>存入去年的額度</h3><ul><li>例如 2027 年 2 月存 US$7,500，存入年度選 <strong>2026</strong></li></ul></div></li>
-  <li><span>02</span><div><h3>存入今年的額度</h3><ul><li>再存一筆，存入年度選 <strong>2027</strong></li></ul></div></li>
-  <li><span>03</span><div><h3>一次轉換成 Roth</h3><ul><li>兩筆都入帳後，全部轉出</li></ul></div></li>
-</ol>
-
-<p className="callout"><strong>Note：</strong>「存入哪一年」和「轉換」是分開算的。上面的例子，2026 年度那筆存入報在 <strong>2026 年</strong>的 Form 8606，算成稅後本金帶到隔年；2027 年度那筆存入和兩筆的轉換，報在 <strong>2027 年</strong>的 Form 8606</p>
-
-<p className="section-number">05 / RECHARACTERIZE</p>
-<h2 id="recharacterize">手法三：已經存了 Roth 才發現超過上限</h2>
-
-年初直接存了 Roth，年底加薪或拿到獎金，收入超過上限，這筆就算**超額存款**，每年要罰 6%。不用把錢領出來，改成 Backdoor 就好。這裡改的是**直接存進 Roth 的存款**，不是轉換，所以可以改：
-
-<ol className="steps">
-  <li><span>01</span><div><h3>請券商做 recharacterization</h3><ul><li>把 Roth IRA 的那筆存款，<strong>連同這筆錢的獲利</strong>，改成存進 Traditional IRA</li><li>通常要打電話給券商，或填券商的申請表</li></ul></div></li>
-  <li><span>02</span><div><h3>轉換回 Roth IRA</h3><ul><li>錢進 Traditional 後，照手法一轉換成 Roth</li><li>轉回來的<strong>獲利部分要繳稅</strong>，本金不用</li></ul></div></li>
-  <li><span>03</span><div><h3>報稅時附上說明</h3><ul><li>Form 8606 照常填，並在稅表附上說明，寫清楚改了多少錢、從哪個帳戶改到哪個帳戶</li></ul></div></li>
-</ol>
-
-- **期限**：存入那一年的**報稅截止日（含延期）**以前，通常是隔年 10 月 15 日
-- 改過的那筆錢，視為**當初存入那天**就存進 Traditional
-
-<p className="section-number">06 / PRO-RATA</p>
+<p className="section-number">04 / PRO-RATA</p>
 <h2 id="pro-rata">最容易踩的坑：Pro-rata 規則</h2>
 
-做 IRA 的 Backdoor 前，先確認你名下**有沒有其他稅前的 IRA 錢**。如果有，轉換時**不能只挑稅後那筆轉**。IRS 會把你所有 Traditional、SEP、SIMPLE IRA 加起來，**按比例**算出轉換金額中有多少要繳稅。
+你的 Traditional IRA 裡如果**本來就有稅前的錢**，轉換時**不能只轉稅後那筆**，要按比例繳稅。
 
-<aside className="quick-box">
-  <strong className="quick-label">例子</strong>
-  <p>你有一個舊 401(k) 轉過來的 Rollover IRA，裡面有 <strong>US$67,500 稅前的錢</strong>。今年你存了 US$7,500 稅後的錢到 Traditional IRA，然後轉換 US$7,500 到 Roth。IRA 總共 US$75,000，稅後只占 10%，所以轉換的 US$7,500 裡，<strong>只有 US$750 免稅，US$6,750 要當收入繳稅</strong>。</p>
-</aside>
+<figure className="article-figure">
+  <svg viewBox="0 0 480 350" role="img" aria-label="例子：Traditional IRA 裡本來就有 US$7,500 稅前的錢，今年再存 US$7,500 稅後的錢，帳戶 US$15,000，一半稅前、一半稅後。轉換 US$7,500 到 Roth，也是一半一半：US$3,750 免稅，US$3,750 要當收入繳稅。還留在 Traditional 的 US$7,500 也是一半一半，明年轉換還是要按比例繳稅。" style={{ display: 'block', width: '100%', fontFamily: "'Nunito', 'Noto Sans TC', sans-serif", fontVariantNumeric: 'tabular-nums' }}>
+    <text x="40" y="30" fontSize="12" fontWeight="700" letterSpacing="1.5" fill="#84695a">PRO-RATA 例子</text>
+    <text x="40" y="54" fontSize="17" fontWeight="700" fill="#4a3428">轉換時，IRS 把整個 IRA 一起算</text>
 
-- 計算時看的是**轉換那一年 12 月 31 日**的 IRA 總餘額，所以就算先轉換、年底前才把舊 401(k) 轉進 IRA，一樣會被算進去
-- **配偶的 IRA 不合併計算**，每個人分開算
-- **401(k) 不算在內**：如果公司的 401(k) 接受轉入，可以先把稅前 IRA 的錢**轉進 401(k)**，IRA 餘額歸零，再做 Backdoor
-- 換工作時，舊 401(k) 打算做 Backdoor 的話，**先別轉進 IRA**，轉到新公司的 401(k) 或留在原處
+    {/* $15,000 = 400px：$7,500 = 200px、$3,750 = 100px */}
+    <text x="40" y="96" fontSize="13" fontWeight="700" fill="#4a3428">Traditional IRA $15,000</text>
+    <text x="440" y="96" textAnchor="end" fontSize="12" fill="#84695a">本來的 $7,500 ＋ 今年存的 $7,500</text>
+    <rect x="40" y="104" width="199" height="34" rx="3" fill="#c47f57" />
+    <rect x="241" y="104" width="199" height="34" rx="3" fill="#4a3428" />
+    <text x="139.5" y="126" textAnchor="middle" fontSize="13" fontWeight="700" fill="#ffffff">稅前 $7,500</text>
+    <text x="340.5" y="126" textAnchor="middle" fontSize="13" fontWeight="700" fill="#ffffff">稅後 $7,500</text>
+    <line x1="40" y1="160" x2="440" y2="160" stroke="#eadbcd" />
 
-<p className="section-number">07 / TAX FORM</p>
+    <text x="40" y="190" fontSize="13" fontWeight="700" fill="#4a3428">轉換 $7,500 到 Roth</text>
+    <text x="440" y="190" textAnchor="end" fontSize="12" fill="#84695a">不能只挑稅後那筆，一樣一半一半</text>
+    <rect x="40" y="198" width="99" height="34" rx="3" fill="#4a3428" />
+    <rect x="141" y="198" width="98" height="34" rx="3" fill="#c47f57" />
+    <text x="89.5" y="220" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ffffff">免稅 $3,750</text>
+    <text x="190" y="220" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ffffff">繳稅 $3,750</text>
+    <text x="252" y="220" fontSize="13" fontWeight="700" fill="#9a5741">$3,750 當收入繳稅</text>
+
+    <text x="40" y="268" fontSize="13" fontWeight="700" fill="#4a3428">還留在 Traditional 的 $7,500</text>
+    <rect x="40" y="276" width="99" height="34" rx="3" fill="#c47f57" />
+    <rect x="141" y="276" width="98" height="34" rx="3" fill="#4a3428" />
+    <text x="89.5" y="298" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ffffff">稅前 $3,750</text>
+    <text x="190" y="298" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ffffff">稅後 $3,750</text>
+    <text x="252" y="298" fontSize="12" fill="#84695a">明年轉換，還是要按比例繳稅</text>
+
+    {/* 圖例 */}
+    <rect x="40" y="330" width="12" height="12" rx="2" fill="#4a3428" />
+    <text x="58" y="340" fontSize="12" fill="#84695a">稅後的錢（轉換免稅）</text>
+    <rect x="190" y="330" width="12" height="12" rx="2" fill="#c47f57" />
+    <text x="208" y="340" fontSize="12" fill="#84695a">稅前的錢（轉換要繳稅）</text>
+  </svg>
+</figure>
+
+<p className="callout honey">只要 Traditional IRA 裡還有稅前的錢，<strong>每年轉換都會被按比例課稅</strong>，不會自己消失；放著漲的獲利也算稅前。</p>
+
+- **怎麼避免**：第一次做時就**全部轉完**（稅前的部分繳一次稅），或把 Traditional IRA 裡的錢**轉進公司的 401(k)**（401(k) 不算），讓 IRA 歸零
+- **換工作時**：舊 401(k) **先別轉進 IRA**
+- 看的是**轉換那年 12 月 31 日**的餘額；配偶的 IRA 分開算
+
+<p className="section-number">05 / TAX FORM</p>
 <h2 id="form-8606">報稅時要填 Form 8606</h2>
 
 做 Backdoor 的那一年，隔年初券商會寄兩份表給你：
@@ -123,7 +294,7 @@ IRA 的額度可以存到**隔年報稅截止日**（4 月 15 日，不含延期
 - 用 TurboTax 等報稅軟體時，回答「是否有 nondeductible contribution」「是否做了 Roth conversion」，軟體會幫你產生 Form 8606
 - **漏填 Form 8606** 的話，IRS 可能把轉換的錢全部當成要繳稅的收入，之後要補報
 
-<p className="section-number">08 / FAQ</p>
+<p className="section-number">06 / FAQ</p>
 <h2 id="faq">其他相關問題</h2>
 
 <details className="faq">
@@ -131,7 +302,20 @@ IRA 的額度可以存到**隔年報稅截止日**（4 月 15 日，不含延期
   <div className="faq-answer">
     <ul>
       <li>對。每年的額度要<strong>每年各自存入、轉換</strong>，沒用到的額度不能累積到隔年</li>
-      <li>去年的忘了做，只要還沒過 4 月 15 日，可以用<a href="#two-years">手法二</a>補做</li>
+      <li>去年的忘了做，只要還沒過 4 月 15 日，可以<strong>同時存去年和今年的額度</strong>，存入年度分別選去年和今年，再一起轉換</li>
+      <li>「存入哪一年」和「轉換」分開報：去年度那筆存入報在<strong>去年</strong>的 Form 8606；今年度那筆和兩筆的轉換，報在<strong>今年</strong>的 Form 8606</li>
+    </ul>
+  </div>
+</details>
+
+<details className="faq">
+  <summary>已經直接存了 Roth，才發現收入超過上限怎麼辦？</summary>
+  <div className="faq-answer">
+    <ul>
+      <li>這筆算<strong>超額存款</strong>，每年要罰 6%。不用把錢領出來，改成 Backdoor 就好</li>
+      <li>請券商做 <strong>recharacterization</strong>：把那筆 Roth 存款<strong>連同獲利</strong>改成存進 Traditional IRA，通常要打電話或填申請表</li>
+      <li>再照上面的步驟轉換回 Roth，轉回來的<strong>獲利部分要繳稅</strong>，本金不用</li>
+      <li>期限是存入那一年的<strong>報稅截止日（含延期）</strong>，通常是隔年 10 月 15 日；報稅時 Form 8606 照常填，並附上說明</li>
     </ul>
   </div>
 </details>
