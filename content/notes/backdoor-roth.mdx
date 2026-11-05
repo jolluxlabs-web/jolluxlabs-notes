@@ -291,6 +291,29 @@ Traditional 75 歲起每年一定要領一部分（RMD），領出來還要繳�
 
 - **Part I**：申報當年存入的稅後金額（nondeductible contribution），記錄你的稅後本金（basis）
 - **Part II**：申報轉換到 Roth 的金額，算出要繳稅的部分；沒有其他稅前 IRA 的話，通常只有幾分錢的利息要繳稅
+
+用一個例子看 Form 8606 怎麼填：
+
+<div className="compare-table compact-label">
+  <table>
+    <thead>
+      <tr className="example-row"><th colSpan={3}><strong>例子：</strong>今年存 US$7,500（不能抵稅），轉換前多了 US$2 利息，全部 US$7,502 轉進 Roth；名下沒有其他 Traditional IRA</th></tr>
+      <tr><th>欄位</th><th>填什麼</th><th>例子</th></tr>
+    </thead>
+    <tbody>
+      <tr className="group-row"><th colSpan={3}>Part I：記錄稅後本金</th></tr>
+      <tr><th>Line 1</th><td>今年存的稅後金額</td><td>$7,500</td></tr>
+      <tr><th>Line 2</th><td>以前累積的稅後本金（第一次做填 0）</td><td>$0</td></tr>
+      <tr><th>Line 6</th><td>12 月 31 日 Traditional IRA 餘額</td><td>$0</td></tr>
+      <tr><th>Line 8</th><td>轉換到 Roth 的金額</td><td>$7,502</td></tr>
+      <tr className="group-row"><th colSpan={3}>Part II：轉換到 Roth</th></tr>
+      <tr><th>Line 16</th><td>轉換的金額</td><td>$7,502</td></tr>
+      <tr><th>Line 17</th><td>其中的稅後本金</td><td>$7,500</td></tr>
+      <tr><th>Line 18</th><td><strong>要繳稅的部分</strong></td><td><strong>$2</strong></td></tr>
+    </tbody>
+  </table>
+</div>
+
 - 用 TurboTax 等報稅軟體時，回答「是否有 nondeductible contribution」「是否做了 Roth conversion」，軟體會幫你產生 Form 8606
 - **漏填 Form 8606** 的話，IRS 可能把轉換的錢全部當成要繳稅的收入，之後要補報
 

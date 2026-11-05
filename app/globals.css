@@ -286,6 +286,9 @@ img { max-width: 100% }
 .compare-table .featured { background: var(--honey-soft); color: var(--bear); font-weight: 700 }
 .compare-table thead .featured { background: var(--honey); color: var(--ink) }
 .compare-table .no { color: var(--quiet) }
+.compare-table .group-row th { width: auto; padding: 8px 16px; background: var(--accent-soft); color: var(--bear); font-size: 14px; text-align: left }
+.compare-table thead .example-row th { padding: 14px 18px; background: var(--honey-soft); font: 15px/1.7 var(--sans); text-align: left; border-bottom: 1px solid var(--line) }
+.compare-table .example-row strong { color: var(--bear) }
 .compare-table small { color: var(--quiet); font-size: 13px; font-weight: 600 }
 
 /* 路段清單：左邊路名，右邊人數標籤 */

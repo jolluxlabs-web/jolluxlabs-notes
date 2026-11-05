@@ -51,7 +51,6 @@ const entries: NoteEntry[] = [
     title: 'Backdoor Roth 怎麼做？轉換步驟與 Pro-rata 規則整理',
     categorySlug: 'work-taxes',
     date: '2026-11-03',
-    draft: true,
     summary: '收入超過 Roth 上限也能存 Roth IRA。整理在 Fidelity 存入後馬上轉換的步驟，以及 Pro-rata 規則和 Form 8606。',
     coverImage: '/images/ira/cover.png',
     coverAlt: '封面文字：IRA 退休帳戶怎麼選，Traditional、Roth、Backdoor，2026 額度與步驟整理',
