@@ -406,7 +406,54 @@ Traditional 75 歲起每年一定要領一部分（RMD），領出來還要繳�
   - 本金不會再被課稅，但**獲利以後要繳稅**；放在 Roth 的話，獲利免稅
 - **報稅比較麻煩**：每年報稅都要用 Form 8606 重算比例，還要記下剩下的稅後本金
 - **怎麼避免**：第一次做時就把 IRA 裡的錢**全部轉成 Roth**。稅前的部分那一年要繳一次稅，之後每年轉換就只有稅後的錢
-- **整年都要注意**：IRS 看的是轉換那年 **12 月 31 日** IRA 裡的錢。轉換時 IRA 是空的，但同一年後來又把稅前的錢轉進 IRA（例如舊公司的 401(k)），之前那次轉換一樣要按比例繳稅
+- **看年底，不是看轉換當天**：IRS 看的是轉換那年 **12 月 31 日** IRA 裡的錢。轉換時 IRA 是空的，但同一年後來又有稅前的錢轉進 IRA，之前那次轉換也要按比例算
+
+<figure className="article-figure">
+  <svg viewBox="0 0 480 486" role="img" aria-label="例子：1 月 IRA 是空的，存 US$7,500 稅後的錢，馬上轉換到 Roth，看起來不用繳稅。11 月把舊公司 401(k) 的 US$50,000 稅前的錢轉進 IRA。IRS 看的是 12 月 31 日 IRA 裡的錢，所以 1 月那次轉換要跟這 US$50,000 一起算比例：年底餘額加上轉換的錢共 US$57,500，稅後的 US$7,500 只佔 13%。1 月轉換的 US$7,500 也照這個比例分，只有 US$978 免稅，US$6,522 要當收入繳稅。轉換那天 IRA 是空的不夠，整年都不能有稅前的錢進 IRA。" style={{ display: 'block', width: '100%', fontFamily: "'Nunito', 'Noto Sans TC', sans-serif", fontVariantNumeric: 'tabular-nums' }}>
+    <text x="40" y="30" fontSize="12" fontWeight="700" letterSpacing="1.5" fill="#84695a">PRO-RATA 例子</text>
+    <text x="40" y="54" fontSize="17" fontWeight="700" fill="#4a3428">看年底，不是看轉換當天</text>
+    <text x="40" y="78" fontSize="14" fill="#9a5741">同一年先轉換，之後才把稅前的錢轉進 IRA</text>
+
+    {/* 時間順序 */}
+    <line x1="56" y1="104" x2="56" y2="208" stroke="#eadbcd" strokeWidth="2" />
+    <circle cx="56" cy="110" r="5" fill="#2a64a8" stroke="#fffaf3" strokeWidth="2" />
+    <text x="72" y="114" fontSize="13" fontWeight="700" fill="#4a3428">1 月</text>
+    <text x="126" y="114" fontSize="13" fill="#4a3428">存 $7,500 稅後的錢，馬上轉換到 Roth</text>
+    <text x="126" y="132" fontSize="12" fill="#84695a">這時 IRA 是空的，看起來不用繳稅</text>
+
+    <circle cx="56" cy="160" r="5" fill="#b8643a" stroke="#fffaf3" strokeWidth="2" />
+    <text x="72" y="164" fontSize="13" fontWeight="700" fill="#4a3428">11 月</text>
+    <text x="126" y="164" fontSize="13" fill="#4a3428">舊公司 401(k) 的 $50,000 轉進 IRA</text>
+    <text x="126" y="182" fontSize="12" fill="#84695a">這是稅前的錢</text>
+
+    <circle cx="56" cy="210" r="5" fill="#4a3428" stroke="#fffaf3" strokeWidth="2" />
+    <text x="72" y="214" fontSize="13" fontWeight="700" fill="#4a3428">12/31</text>
+    <text x="126" y="214" fontSize="13" fontWeight="700" fill="#4a3428">IRS 看這天 IRA 裡的錢</text>
+    <text x="126" y="232" fontSize="12" fill="#84695a">1 月那次轉換，要跟這 $50,000 一起算比例</text>
+
+    <line x1="40" y1="256" x2="440" y2="256" stroke="#eadbcd" />
+
+    {/* 報稅時怎麼算：$57,500 = 400px */}
+    <text x="40" y="284" fontSize="13" fontWeight="700" fill="#4a3428">報稅時怎麼算</text>
+    <text x="40" y="306" fontSize="12" fill="#84695a">年底餘額 $50,000 ＋ 1 月轉換的 $7,500 ＝ $57,500</text>
+    <rect x="40" y="314" width="50.2" height="30" rx="3" fill="#2a64a8" />
+    <rect x="92.2" y="314" width="347.8" height="30" rx="3" fill="#b8643a" />
+    <text x="266.1" y="334" textAnchor="middle" fontSize="13" fontWeight="700" fill="#ffffff">稅前 $50,000</text>
+    <text x="40" y="362" fontSize="12" fill="#4a3428">稅後的 $7,500 只佔 <tspan fontWeight="700">13%</tspan></text>
+
+    {/* 1 月的轉換：$7,500 = 200px */}
+    <text x="40" y="394" fontSize="12" fill="#84695a">1 月轉換的 $7,500，也照這個比例分</text>
+    <rect x="40" y="402" width="24.1" height="30" rx="3" fill="#2a64a8" />
+    <rect x="66.1" y="402" width="173.9" height="30" rx="3" fill="#b8643a" />
+    <text x="153.1" y="422" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ffffff">要繳稅 $6,522</text>
+    <text x="252" y="416" fontSize="12" fill="#4a3428">只有 $978 免稅</text>
+    <text x="252" y="432" fontSize="12" fill="#84695a">本來以為全部免稅</text>
+
+    <text x="40" y="470" fontSize="13" fontWeight="700" fill="#4a3428">轉換那天 IRA 是空的不夠，整年都不能有稅前的錢進 IRA</text>
+  </svg>
+</figure>
+
+- **怎麼解**：舊 401(k) 轉進新公司的 401(k) 或留在原處，不要轉進 IRA；已經轉進 IRA 的話，在 12 月 31 日前轉進現在公司的 401(k)（要先確認公司接受轉入）
 
 <p className="section-number">05 / TAX FORM</p>
 <h2 id="form-8606">報稅時要填 Form 8606</h2>
