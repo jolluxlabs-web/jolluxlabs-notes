@@ -150,7 +150,7 @@ img { max-width: 100% }
 .topic-hero > p:last-child { margin: 0; color: var(--muted); font-size: 15px }
 .article-hero .breadcrumb { margin-bottom: 16px }
 .pill { display: inline-block; padding: 4px 14px; border-radius: 999px; background: var(--accent-soft); color: var(--bear); font-size: 13px; font-weight: 700 }
-.post-meta { display: flex; gap: 8px; color: var(--quiet); font-size: 13px; font-weight: 700 }
+.post-meta { display: flex; flex-wrap: wrap; gap: 4px 8px; color: var(--quiet); font-size: 13px; font-weight: 700 }
 .deck { margin: 16px 0 0; padding: 14px 18px; border-radius: 18px; background: var(--honey-soft); color: var(--muted); font-size: 15px; line-height: 1.9 }
 
 .docs-section-label { display: flex; justify-content: space-between; margin-bottom: 14px; color: var(--muted); font: 16px var(--round) }

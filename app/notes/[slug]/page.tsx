@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: note.title,
       description: note.summary,
       publishedTime: note.date,
+      modifiedTime: note.modified,
       section: note.category.title,
       images: [{ url: note.coverImage, alt: note.coverAlt }],
     },
@@ -69,7 +70,7 @@ export default async function NotePage({ params }: Props) {
           <Breadcrumb trail={trailForNote(note)} />
           <span className="pill">{category.title}</span>
           <h1>{note.title}</h1>
-          <div className="post-meta"><time dateTime={note.date}>{note.dateDisplay}</time><span>·</span><Link href="/about">{site.author}</Link></div>
+          <div className="post-meta"><time dateTime={note.date}>{note.dateDisplay}</time>{note.updatedDisplay && <><span>·</span><span>更新於 <time dateTime={note.updated}>{note.updatedDisplay}</time></span></>}<span>·</span><Link href="/about">{site.author}</Link></div>
           <p className="deck">{note.intro}</p>
         </header>
         <div className="article-layout">

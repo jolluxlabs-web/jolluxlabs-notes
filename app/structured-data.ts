@@ -72,7 +72,7 @@ export function forNote(note: Note) {
       abstract: note.intro,
       image: absoluteUrl(note.coverImage),
       datePublished: note.date,
-      dateModified: note.date,
+      dateModified: note.modified,
       inLanguage: 'zh-Hant',
       articleSection: note.category.title,
       author: { '@type': 'Person', '@id': authorId, name: site.author, url: absoluteUrl('/about') },

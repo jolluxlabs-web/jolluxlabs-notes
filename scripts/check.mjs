@@ -6,6 +6,12 @@ import { notes } from '../content/notes.ts'
 import { forAllPages } from '../app/structured-data.ts'
 
 const problems = []
+
+function isValidDate(value) {
+  const [year, month, day] = value.split('-').map(Number)
+  const parsed = new Date(Date.UTC(year, month - 1, day))
+  return /^\d{4}-\d{2}-\d{2}$/.test(value) && parsed.getUTCMonth() === month - 1 && parsed.getUTCDate() === day
+}
 const seen = new Set()
 
 for (const note of notes) {
@@ -14,10 +20,10 @@ for (const note of notes) {
   if (seen.has(note.slug)) problems.push(`${where} slug 重複`)
   seen.add(note.slug)
 
-  const [year, month, day] = note.date.split('-').map(Number)
-  const parsed = new Date(Date.UTC(year, month - 1, day))
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(note.date) || parsed.getUTCMonth() !== month - 1 || parsed.getUTCDate() !== day) {
-    problems.push(`${where} date「${note.date}」不是合法的 YYYY-MM-DD 日期`)
+  if (!isValidDate(note.date)) problems.push(`${where} date「${note.date}」不是合法的 YYYY-MM-DD 日期`)
+  if (note.updated !== undefined) {
+    if (!isValidDate(note.updated)) problems.push(`${where} updated「${note.updated}」不是合法的 YYYY-MM-DD 日期`)
+    else if (note.updated <= note.date) problems.push(`${where} updated「${note.updated}」要晚於發布日期 ${note.date}`)
   }
 
   const file = `content/notes/${note.slug}.mdx`

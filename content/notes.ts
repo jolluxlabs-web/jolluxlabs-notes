@@ -25,6 +25,8 @@ type NoteEntry = {
   categorySlug: CategorySlug
   // 格式 YYYY-MM-DD
   date: string
+  // 最後更新日期，格式 YYYY-MM-DD。內容有實質修改（數字、規則、新段落）時才填；錯字和排版不用改。
+  updated?: string
   summary: string
   coverImage: string
   coverAlt: string
@@ -42,6 +44,10 @@ export type Note = NoteEntry & {
   dateLabel: string
   // 例如「2026 年 9 月 16 日」
   dateDisplay: string
+  // 最後修改日期：有 updated 就用 updated，沒有就是發布日期。給搜尋引擎和 sitemap 用。
+  modified: string
+  // 例如「2026 年 11 月 5 日」；沒有 updated 時不顯示。
+  updatedDisplay?: string
 }
 
 // 新文章先登記在這裡，首頁就會自動列出。
@@ -51,6 +57,7 @@ const entries: NoteEntry[] = [
     title: 'Backdoor Roth IRA 怎麼做？轉換步驟與 Pro-rata 規則整理',
     categorySlug: 'work-taxes',
     date: '2026-11-03',
+    updated: '2026-11-05',
     summary: '收入超過 Roth 上限也能存 Roth IRA。整理在 Fidelity 存入後馬上轉換的步驟，以及 Pro-rata 規則和 Form 8606。',
     coverImage: '/images/ira/cover.png',
     coverAlt: '封面文字：IRA 退休帳戶怎麼選，Traditional、Roth、Backdoor，2026 額度與步驟整理',
@@ -69,6 +76,7 @@ const entries: NoteEntry[] = [
     title: 'IRA 怎麼選？Traditional IRA、Roth IRA 整理',
     categorySlug: 'work-taxes',
     date: '2026-10-30',
+    updated: '2026-11-04',
     summary: '2026 年 IRA 額度 US$7,500、Traditional 抵稅與 Roth 收入上限、提早提領的稅和罰款、該選哪一種，以及收入太高時的 Backdoor Roth。',
     coverImage: '/images/ira/traditional-vs-roth.png',
     coverAlt: '封面文字：Traditional IRA vs Roth IRA，現在抵稅還是以後免稅，2026 額度與規則整理',
@@ -177,6 +185,7 @@ const entries: NoteEntry[] = [
     title: '台灣護照申請 Global Entry：從良民證到面試',
     categorySlug: 'travel',
     date: '2026-09-16',
+    updated: '2026-10-13',
     summary: '和 TSA PreCheck 的差別、良民證、TTP 填表、信用卡報銷、面試文件與通過後的使用方式。',
     coverImage: '/images/global-entry-logo.png',
     coverAlt: 'Global Entry 標誌',
@@ -259,15 +268,27 @@ export function categoryFor(slug: string): Category | undefined {
   return categories.find((category) => category.slug === slug)
 }
 
+function displayDate(date: string) {
+  const [year, month, day] = date.split('-').map(Number)
+  return `${year} 年 ${month} 月 ${day} 日`
+}
+
 function toNote(entry: NoteEntry): Note {
-  const [year, month, day] = entry.date.split('-').map(Number)
+  const [year, month] = entry.date.split('-').map(Number)
   return {
     ...entry,
     category: categoryFor(entry.categorySlug)!,
     href: `/notes/${entry.slug}`,
     dateLabel: `${year} 年 ${month} 月`,
-    dateDisplay: `${year} 年 ${month} 月 ${day} 日`,
+    dateDisplay: displayDate(entry.date),
+    modified: entry.updated ?? entry.date,
+    updatedDisplay: entry.updated && displayDate(entry.updated),
   }
+}
+
+// 這組筆記裡最近一次修改的日期。
+export function latestModified(list: Note[]) {
+  return list.map((note) => note.modified).sort().at(-1)
 }
 
 // 新到舊排列；同一天的照清單順序。
