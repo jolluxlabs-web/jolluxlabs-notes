@@ -48,7 +48,7 @@ export type Note = NoteEntry & {
 const entries: NoteEntry[] = [
   {
     slug: 'backdoor-roth',
-    title: 'Backdoor Roth 怎麼做？轉換步驟與 Pro-rata 規則整理',
+    title: 'Backdoor Roth IRA 怎麼做？轉換步驟與 Pro-rata 規則整理',
     categorySlug: 'work-taxes',
     date: '2026-11-03',
     summary: '收入超過 Roth 上限也能存 Roth IRA。整理在 Fidelity 存入後馬上轉換的步驟，以及 Pro-rata 規則和 Form 8606。',
@@ -56,7 +56,7 @@ const entries: NoteEntry[] = [
     coverAlt: '封面文字：IRA 退休帳戶怎麼選，Traditional、Roth、Backdoor，2026 額度與步驟整理',
     intro: '收入太高不能直接存 Roth IRA，可以先存 Traditional IRA 再轉換。這篇依 IRS 公告整理 2026 年的收入上限、在 Fidelity 的轉換步驟，以及最容易踩的 Pro-rata 規則和報稅要填的 Form 8606。',
     sections: [
-      { id: 'what', title: 'Backdoor Roth 是什麼' },
+      { id: 'what', title: 'Backdoor Roth IRA 是什麼' },
       { id: 'why', title: '為什麼要做' },
       { id: 'standard', title: '怎麼做' },
       { id: 'pro-rata', title: 'Pro-rata 規則' },
