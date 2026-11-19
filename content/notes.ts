@@ -53,6 +53,25 @@ export type Note = NoteEntry & {
 // 新文章先登記在這裡，首頁就會自動列出。
 const entries: NoteEntry[] = [
   {
+    slug: 'tsa-precheck-touchless',
+    title: 'TSA PreCheck 也要排很久？Touchless ID 免費開通，安檢再加速',
+    categorySlug: 'travel',
+    date: '2026-11-19',
+    summary: '有 PreCheck 或 Global Entry 就能免費開通，刷臉過安檢不用拿證件。整理資格、台灣護照能不能用、65 個機場、開通步驟與隱私規定。',
+    coverImage: '/images/tsa-touchless/touchless_id.png',
+    coverAlt: 'TSA PreCheck Touchless ID 標誌',
+    intro: '有 TSA PreCheck 或 Global Entry 的人，在航空公司 App 多按一個 Opt in，過安檢就能刷臉，不用再拿出證件和登機證。這篇依 TSA 官方資料整理資格、可用機場、開通步驟和照片保存規定。',
+    sections: [
+      { id: 'what', title: 'Touchless ID 是什麼' },
+      { id: 'eligible', title: '誰可以用' },
+      { id: 'airports', title: '哪些機場可以用' },
+      { id: 'setup', title: '怎麼開通' },
+      { id: 'checkpoint', title: '到了機場怎麼走' },
+      { id: 'privacy', title: '照片會被留多久' },
+      { id: 'faq', title: '其他相關問題' },
+    ],
+  },
+  {
     slug: 'backdoor-roth',
     title: 'Backdoor Roth IRA 怎麼做？轉換步驟與 Pro-rata 規則整理',
     categorySlug: 'work-taxes',

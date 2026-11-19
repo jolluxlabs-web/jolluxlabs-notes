@@ -1,0 +1,194 @@
+<aside className="quick-box">
+  <strong className="quick-label">先看重點</strong>
+  <ul>
+    <li><strong>刷臉過安檢</strong>：不用拿出證件和登機證，鏡頭比對完就能走</li>
+    <li><strong>要先有 TSA PreCheck</strong>：Global Entry 會員也算，因為 Global Entry 已包含 PreCheck</li>
+    <li><strong>免費</strong>：在航空公司會員資料填好 KTN 和護照，按 Opt in 就開通</li>
+    <li><strong>目前 65 個機場</strong>：要「機場 + 航空公司 + 安檢口」三個都對上才能用</li>
+    <li><strong>實體證件還是要帶</strong>：比對失敗或 TSA 要求時，要拿出符合 REAL ID 的證件</li>
+  </ul>
+</aside>
+
+<p className="section-number">01 / OVERVIEW</p>
+<h2 id="what">TSA PreCheck Touchless ID 是什麼？</h2>
+
+**Touchless ID 就是 TSA PreCheck 的「刷臉版」。** 一般 PreCheck 走到安檢口，還是要把駕照或護照交給 TSA 人員核對；開通 Touchless ID 後，改成站在鏡頭前拍一下，系統用你存在航空公司資料裡的護照比對身分，通過就直接進安檢。
+
+- **價格**：免費，已經有 PreCheck 或 Global Entry 就不用再多付錢
+- **在哪裡用**：機場**安全檢查口**的身分查驗；托運行李和登機是航空公司自己的流程，不在這篇範圍
+- **專用通道**：有些機場會另外開 Touchless ID 通道，排隊人數通常比一般 PreCheck 少
+
+<div className="compare-table">
+  <table>
+    <thead>
+      <tr><th></th><th>一般 TSA PreCheck</th><th className="featured">PreCheck + Touchless ID</th></tr>
+    </thead>
+    <tbody>
+      <tr><th>筆電、液體、鞋子</th><td>不用拿出來、不用脫</td><td className="featured">一樣不用</td></tr>
+      <tr><th>身分查驗</th><td>交證件給 TSA 人員</td><td className="featured">鏡頭刷臉</td></tr>
+      <tr><th>登機證</th><td>出示給 TSA 人員</td><td className="featured">不用拿出來</td></tr>
+      <tr><th>額外費用</th><td>—</td><td className="featured">免費</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p className="section-number">02 / ELIGIBILITY</p>
+<h2 id="eligible">誰可以用？</h2>
+
+TSA 官網列出三個條件，**三個都要有**：
+
+1. **目前有效的 TSA PreCheck 資格**
+   - **TSA PreCheck 會員**：Known Traveler Number（KTN）
+   - **Global Entry 會員**：PASS ID（等同 KTN）
+2. **有效護照**
+3. **參與的航空公司會員帳號**
+
+<h3>台灣護照可以嗎？</h3>
+
+- 只持台灣護照的人不能直接申請 TSA PreCheck，但可以透過 [Global Entry](/notes/global-entry) 拿到 PreCheck 資格
+- <span className="hl">TSA 官網沒有直接說明非美國護照能不能用</span>，建議照航空公司路線開通後，看登機證上有沒有出現 Touchless ID 標記，有標記就是開通成功
+
+<p className="section-number">03 / WHERE</p>
+<h2 id="airports">哪些機場、航空公司可以用？</h2>
+
+<h3>六家航空公司</h3>
+
+用會員資料開通的話，目前有六家：**Alaska、American、Delta、Hawaiian、Southwest、United**（2026 年 11 月查核）。Hawaiian 的開通方式在 Alaska 的網站上。
+
+<h3>65 個機場，但不是每個安檢口都有</h3>
+
+TSA 的清單是**依安檢口列出**的：同一個機場，不同航廈、不同航空公司可以用的安檢口可能不一樣。以紐約 JFK、華府 IAD 和洛杉磯 LAX 為例（2026 年 11 月 TSA 清單）：
+
+<div className="compare-table">
+  <table>
+    <thead><tr><th>機場</th><th>安檢口</th><th>航空公司</th></tr></thead>
+    <tbody>
+      <tr><th rowSpan="2">JFK<br /><small>紐約甘迺迪機場</small></th><td>Terminal 4 Main</td><td>Delta</td></tr>
+      <tr><td>Terminal 8</td><td>American、Alaska</td></tr>
+      <tr><th>IAD<br /><small>華府杜勒斯機場</small></th><td>主安檢區（PreCheck）</td><td>Delta、United、Alaska、American、Southwest</td></tr>
+      <tr><th rowSpan="6">LAX<br /><small>洛杉磯機場</small></th><td>Terminal 1</td><td>Southwest</td></tr>
+      <tr><td>Terminal 3</td><td>Delta</td></tr>
+      <tr><td>Terminal 4</td><td>American</td></tr>
+      <tr><td>Terminal 6</td><td>Alaska</td></tr>
+      <tr><td>Terminal 7</td><td>United</td></tr>
+      <tr><td>TBIT 國際航廈</td><td>Delta、American</td></tr>
+    </tbody>
+  </table>
+</div>
+
+其他大機場像 ATL、BOS、DCA、DEN、DFW、LGA、ORD、SEA、SFO 也都有。完整清單和各安檢口支援的航空公司，出發前到 <a href="https://www.tsa.gov/touchless-id/precheck-touchless-id-airport" target="_blank" rel="noopener noreferrer">TSA 機場清單 ↗</a>查一下，這份清單常常在加新機場。
+
+<p className="section-number">04 / SET UP</p>
+<h2 id="setup">怎麼開通？</h2>
+
+在航空公司 App 的會員資料裡開通，以下用 **United App** 舉例，其他航空公司的欄位名稱不同，但步驟差不多。
+
+<ol className="steps">
+  <li>
+    <span>01</span>
+    <div>
+      <h3>進入旅行證件設定</h3>
+      <ul><li>打開 United App，到 <strong>Account</strong></li><li>點 <strong>TSA PreCheck and travel documents</strong></li></ul>
+      <figure className="article-figure figure-phone">
+        <img src="/images/tsa-touchless/tsa_precheck.jpg" alt="United App 的 Account 頁面，紅框標出 TSA PreCheck and travel documents 選項" width="1206" height="1705" loading="lazy" />
+        <figcaption>Account 頁面裡的 TSA PreCheck and travel documents。</figcaption>
+      </figure>
+    </div>
+  </li>
+  <li><span>02</span><div><h3>填 KTN 和護照</h3><ul><li><strong>Known Traveler Number or PASS ID</strong>：點 Edit 填入；Global Entry 會員填 PASS ID</li><li><strong>Passport</strong>：填護照號碼和發照國家</li><li>資料要和護照完全一致，名字拼法和會員名字對不上，容易開通失敗</li></ul></div></li>
+  <li>
+    <span>03</span>
+    <div>
+      <h3>按 Opt in</h3>
+      <ul><li>同一頁最下面的 <strong>TSA PreCheck Touchless ID</strong>，點 <strong>Opt in</strong>，同意把資料分享給 TSA</li><li>每家航空公司要<strong>各自開通一次</strong>，在 United 開了不會帶到 Delta</li></ul>
+      <figure className="article-figure figure-phone">
+        <img src="/images/tsa-touchless/opt_in.jpg" alt="United App 的 TSA PreCheck and travel documents 頁面，依序是 Known Traveler Number or PASS ID、Redress number、Passport，最下面的 TSA PreCheck Touchless ID 旁有 Opt in 按鈕，用紅圈標出" width="1206" height="2007" loading="lazy" />
+        <figcaption>KTN 和護照填好後，點最下面的 Opt in。</figcaption>
+      </figure>
+    </div>
+  </li>
+  <li><span>04</span><div><h3>確認登機證標記</h3><ul><li>TSA 確認後，手機登機證上會出現 Touchless ID 標記</li><li>TSA 建議<strong>起飛前 24 小時</strong>就報到，先確認標記有出現</li></ul></div></li>
+</ol>
+
+<p className="section-number">05 / AT THE AIRPORT</p>
+<h2 id="checkpoint">到了機場怎麼走？</h2>
+
+<ol>
+  <li>打開<strong>手機登機證</strong>，確認有 Touchless ID 標記；沒有標記就走一般 PreCheck</li>
+  <li>
+    跟著現場標示找 <strong>TSA PreCheck Touchless ID</strong> 通道
+    <figure className="article-figure figure-narrow">
+      <img src="/images/tsa-touchless/touchless_diffrentlens.png" alt="機場安檢口的分流指示牌：左邊藍色是一般 TSA PreCheck 通道，右邊黑色是 Touchless ID 專用通道，上方寫著已開通 Touchless ID 的旅客請走指定通道" width="650" height="802" loading="lazy" />    </figure>
+  </li>
+  <li>站到鏡頭前拍照，系統自動比對身分</li>
+  <li>比對通過就直接往前，接著跟一般 PreCheck 一樣過 X 光</li>
+  <li>比對失敗也沒關係，TSA 人員會改用一般方式查證件</li>
+</ol>
+
+<aside className="quick-box">
+  <strong className="quick-label">證件一定要帶</strong>
+  <p>TSA 規定開通 Touchless ID 的人，仍然要<strong>隨身帶符合 REAL ID 的實體證件</strong>，TSA 人員要求時要出示。刷臉失敗時也要用它。台灣護照、綠卡、REAL ID 駕照都可以。</p>
+</aside>
+
+<p className="section-number">06 / PRIVACY</p>
+<h2 id="privacy">照片會被留多久？</h2>
+
+- **24 小時內刪除**：TSA 表示照片和個人資料會在**表定起飛時間後 24 小時內**刪除
+- **不做其他用途**：不用於執法、監控，也不分享給其他單位
+- **測試期間例外**：TSA 有時會在特定機場、特定時段暫時保留資料測試準確度，現場會有告示；不想參與可以當場拒絕，改走人工查證，**不會因此被排到隊伍後面**
+- **不想刷臉**：不開通就好；已開通的人到現場也可以要求改由 TSA 人員查證件
+
+<p className="section-number">07 / FAQ</p>
+<h2 id="faq">其他相關問題</h2>
+
+<details className="faq">
+  <summary>要多付錢嗎？</summary>
+  <div className="faq-answer">
+    <ul>
+      <li>不用。只要已經有 PreCheck 或 Global Entry，開通 Touchless ID <strong>免費</strong></li>
+    </ul>
+  </div>
+</details>
+
+<details className="faq">
+  <summary>同行的家人小孩可以一起走嗎？</summary>
+  <div className="faq-answer">
+    <ul>
+      <li>TSA 官網<strong>沒有說明</strong></li>
+      <li>每個人的登機證要<strong>各自有 Touchless ID 標記</strong>；家人沒有開通的話，最保險是一起走一般 PreCheck 通道</li>
+    </ul>
+  </div>
+</details>
+
+<details className="faq">
+  <summary>登機證上沒有出現標記怎麼辦？</summary>
+  <div className="faq-answer">
+    <ul>
+      <li>確認 KTN、護照號碼、名字和生日都<strong>跟證件一致</strong></li>
+      <li>確認這班飛機的出發機場和安檢口<strong>有支援這家航空公司</strong></li>
+      <li>確認有按 <strong>Opt in</strong>；換新護照後要記得更新會員資料</li>
+    </ul>
+  </div>
+</details>
+
+<details className="faq">
+  <summary>國際線可以用嗎？</summary>
+  <div className="faq-answer">
+    <ul>
+      <li>Touchless ID 只管<strong>美國機場出發時的安檢</strong>；國際線出發時，只要那個安檢口有支援你的航空公司就能用</li>
+      <li>從國外回美國的入境查驗是 CBP 的流程，要用 <a href="/notes/global-entry">Global Entry</a></li>
+    </ul>
+  </div>
+</details>
+
+<aside className="quick-box">
+  <strong className="quick-label">最後</strong>
+  <p>已經有 PreCheck 或 Global Entry 的話，花五分鐘到航空公司 App 開通，下次過安檢就不用再翻證件。本文整理自 TSA 官方資料，可用機場和規定常常更新，出發前請以官方最新公告為準。</p>
+</aside>
+
+<div className="sources">
+  <h3>官方資料</h3>
+  <a href="https://www.tsa.gov/touchless-id" target="_blank" rel="noopener noreferrer">TSA｜TSA PreCheck Touchless ID ↗</a>
+  <a href="https://www.tsa.gov/touchless-id/precheck-touchless-id-airport" target="_blank" rel="noopener noreferrer">TSA｜Touchless ID 機場與安檢口清單 ↗</a>
+  <a href="https://www.tsa.gov/precheck" target="_blank" rel="noopener noreferrer">TSA｜TSA PreCheck ↗</a>
+</div>
