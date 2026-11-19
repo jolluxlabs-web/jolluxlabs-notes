@@ -58,7 +58,7 @@ const entries: NoteEntry[] = [
     categorySlug: 'travel',
     date: '2026-11-19',
     summary: '有 PreCheck 或 Global Entry 就能免費開通，刷臉過安檢不用拿證件。整理資格、台灣護照能不能用、65 個機場、開通步驟與隱私規定。',
-    coverImage: '/images/tsa-touchless/touchless_id.png',
+    coverImage: '/images/tsa-touchless/cover.png',
     coverAlt: 'TSA PreCheck Touchless ID 標誌',
     intro: '有 TSA PreCheck 或 Global Entry 的人，在航空公司 App 多按一個 Opt in，過安檢就能刷臉，不用再拿出證件和登機證。這篇依 TSA 官方資料整理資格、可用機場、開通步驟和照片保存規定。',
     sections: [
