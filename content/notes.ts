@@ -53,6 +53,28 @@ export type Note = NoteEntry & {
 // 新文章先登記在這裡，首頁就會自動列出。
 const entries: NoteEntry[] = [
   {
+    slug: 'clear-plus',
+    title: 'CLEAR+ 值得辦嗎？Amex 白金卡全額報銷，台灣護照也能申請',
+    categorySlug: 'travel',
+    date: '2026-11-19',
+    draft: true,
+    summary: 'CLEAR+ 一年 US$219，Amex 白金卡每年最多報銷 US$219。整理和 PreCheck 的差別、家人價格、報銷規則、台灣護照申請與機場使用方式。',
+    coverImage: '/images/clear/cover.png',
+    coverAlt: 'CLEAR 標誌',
+    intro: 'CLEAR+ 讓你在安檢口刷臉驗身分，不用排隊給 TSA 看證件。一年 US$219 不便宜，但有 Amex 白金卡就能全額報銷。這篇依 CLEAR 和 American Express 官方資料整理價格、報銷規則、申請方式，以及和 PreCheck 怎麼搭配。',
+    sections: [
+      { id: 'what', title: 'CLEAR+ 是什麼' },
+      { id: 'eligible', title: '誰可以申請' },
+      { id: 'price', title: '要多少錢' },
+      { id: 'amex', title: 'Amex 報銷怎麼用' },
+      { id: 'save', title: '沒有白金卡怎麼省' },
+      { id: 'enroll', title: '怎麼申請' },
+      { id: 'airport', title: '到了機場怎麼走' },
+      { id: 'worth', title: '值得辦嗎' },
+      { id: 'faq', title: '其他相關問題' },
+    ],
+  },
+  {
     slug: 'tsa-precheck-touchless',
     title: 'TSA PreCheck 也要排很久？Touchless ID 免費開通，安檢再加速',
     categorySlug: 'travel',
