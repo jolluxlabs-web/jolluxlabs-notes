@@ -57,7 +57,6 @@ const entries: NoteEntry[] = [
     title: 'CLEAR+ 值得辦嗎？Amex 白金卡全額報銷，台灣護照也能申請',
     categorySlug: 'travel',
     date: '2026-11-19',
-    draft: true,
     summary: 'CLEAR+ 一年 US$219，Amex 白金卡每年最多報銷 US$219。整理和 PreCheck 的差別、家人價格、報銷規則、台灣護照申請與機場使用方式。',
     coverImage: '/images/clear/cover.png',
     coverAlt: 'CLEAR 標誌',
